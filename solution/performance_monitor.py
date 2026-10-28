@@ -4,9 +4,17 @@ import argparse
 import csv
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from simulator.loaders import day_input_paths
+
+
+def parse_time(time_str: str) -> float:
+    """Convert an 'HH:MM' string to floating-point minutes after midnight."""
+    if not time_str:
+        return 0.0
+    hours, minutes = map(int, time_str.split(":"))
+    return float(hours * 60 + minutes)
 
 
 def calculate_metrics(
@@ -15,21 +23,74 @@ def calculate_metrics(
     config: Dict[str, Any],
     events: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
-    """Return a JSON-serializable dictionary for the chosen performance metric.
+    """Return performance metrics including trip capacity utilization and custom total penalty."""
+    # 1. Map parcel sizes for trip capacity diagnostics
+    parcel_sizes = {p["parcel_id"]: float(p["size"]) for p in parcels}
+    capacity = float(config["capacity"])
 
-    parcels and distances are the rows of the day's CSV files, config is the
-    contents of config.json, and events are the records from the run's log.
-    CSV values are strings, so convert them before calculating. In particular,
-    parcel times are "HH:MM" strings while event times are minutes after
-    midnight: "17:00" is 17 * 60 = 1020.
-    """
-
-    # Illustration only: replace or extend this with your chosen metric.
+    # 2. Track trips and collect delivery timestamps from event logs
     number_of_trips = 0
+    trip_totals: Dict[Tuple[int, int], float] = {}
+    delivery_times: Dict[str, float] = {}
+
     for event in events:
-        if event["event_type"] == "hub_departure":
+        event_type = event.get("event_type")
+        if event_type == "hub_departure":
             number_of_trips += 1
-    return {"number_of_trips": number_of_trips}
+        elif event_type == "delivery":
+            key = (event["vehicle_id"], event["trip_id"])
+            size = parcel_sizes[event["parcel_id"]]
+            trip_totals[key] = trip_totals.get(key, 0.0) + size
+            # Capture delivery time in minutes after midnight
+            delivery_times[event["parcel_id"]] = float(event["time"])
+
+    # 3. Format per-trip capacity diagnostics
+    trips_summary = []
+    for (vehicle_id, trip_id), total_size in sorted(trip_totals.items()):
+        utilization_pct = (total_size / capacity * 100.0) if capacity > 0 else 0.0
+        trips_summary.append({
+            "vehicle_id": vehicle_id,
+            "trip_id": trip_id,
+            "total_size": round(total_size, 2),
+            "capacity_utilisation_pct": round(utilization_pct, 2),
+        })
+
+    # 4. Calculate delivery window deviations and parcel metrics
+    total_parcels = len(parcels)
+    delivered_parcels = 0
+    undelivered_parcels = 0
+    total_early_minutes = 0.0
+    total_late_minutes = 0.0
+
+    for p in parcels:
+        pid = p["parcel_id"]
+        window_start = parse_time(p.get("delivery_window_start", "00:00"))
+        window_end = parse_time(p["delivery_window_end"])
+
+        if pid in delivery_times:
+            delivered_parcels += 1
+            deliv_time = delivery_times[pid]
+            if deliv_time < window_start:
+                total_early_minutes += (window_start - deliv_time)
+            elif deliv_time > window_end:
+                total_late_minutes += (deliv_time - window_end)
+        else:
+            undelivered_parcels += 1
+
+    delivery_rate_pct = round((delivered_parcels / total_parcels * 100.0), 2) if total_parcels > 0 else 0.0
+    total_penalty = (240.0 * undelivered_parcels) + total_early_minutes + total_late_minutes
+
+    return {
+        "number_of_trips": number_of_trips,
+        "trips": trips_summary,
+        "total_parcels": total_parcels,
+        "delivered_parcels": delivered_parcels,
+        "undelivered_parcels": undelivered_parcels,
+        "delivery_rate_pct": delivery_rate_pct,
+        "total_early_minutes": round(total_early_minutes, 2),
+        "total_late_minutes": round(total_late_minutes, 2),
+        "total_penalty": round(total_penalty, 2),
+    }
 
 
 def main(argv: Optional[List[str]] = None) -> int:

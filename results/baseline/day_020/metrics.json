@@ -1,3 +1,138 @@
 {
-  "number_of_trips": 21
+  "number_of_trips": 21,
+  "trips": [
+    {
+      "vehicle_id": 1,
+      "trip_id": 1,
+      "total_size": 6.0,
+      "capacity_utilisation_pct": 20.0
+    },
+    {
+      "vehicle_id": 1,
+      "trip_id": 2,
+      "total_size": 25.4,
+      "capacity_utilisation_pct": 84.67
+    },
+    {
+      "vehicle_id": 2,
+      "trip_id": 1,
+      "total_size": 0.6,
+      "capacity_utilisation_pct": 2.0
+    },
+    {
+      "vehicle_id": 2,
+      "trip_id": 2,
+      "total_size": 9.9,
+      "capacity_utilisation_pct": 33.0
+    },
+    {
+      "vehicle_id": 2,
+      "trip_id": 3,
+      "total_size": 21.7,
+      "capacity_utilisation_pct": 72.33
+    },
+    {
+      "vehicle_id": 3,
+      "trip_id": 1,
+      "total_size": 15.4,
+      "capacity_utilisation_pct": 51.33
+    },
+    {
+      "vehicle_id": 3,
+      "trip_id": 2,
+      "total_size": 23.9,
+      "capacity_utilisation_pct": 79.67
+    },
+    {
+      "vehicle_id": 4,
+      "trip_id": 1,
+      "total_size": 12.0,
+      "capacity_utilisation_pct": 40.0
+    },
+    {
+      "vehicle_id": 4,
+      "trip_id": 2,
+      "total_size": 13.4,
+      "capacity_utilisation_pct": 44.67
+    },
+    {
+      "vehicle_id": 5,
+      "trip_id": 1,
+      "total_size": 13.3,
+      "capacity_utilisation_pct": 44.33
+    },
+    {
+      "vehicle_id": 5,
+      "trip_id": 2,
+      "total_size": 29.0,
+      "capacity_utilisation_pct": 96.67
+    },
+    {
+      "vehicle_id": 6,
+      "trip_id": 1,
+      "total_size": 8.0,
+      "capacity_utilisation_pct": 26.67
+    },
+    {
+      "vehicle_id": 6,
+      "trip_id": 2,
+      "total_size": 16.5,
+      "capacity_utilisation_pct": 55.0
+    },
+    {
+      "vehicle_id": 7,
+      "trip_id": 1,
+      "total_size": 8.6,
+      "capacity_utilisation_pct": 28.67
+    },
+    {
+      "vehicle_id": 7,
+      "trip_id": 2,
+      "total_size": 26.7,
+      "capacity_utilisation_pct": 89.0
+    },
+    {
+      "vehicle_id": 8,
+      "trip_id": 1,
+      "total_size": 6.3,
+      "capacity_utilisation_pct": 21.0
+    },
+    {
+      "vehicle_id": 8,
+      "trip_id": 2,
+      "total_size": 29.8,
+      "capacity_utilisation_pct": 99.33
+    },
+    {
+      "vehicle_id": 9,
+      "trip_id": 1,
+      "total_size": 6.0,
+      "capacity_utilisation_pct": 20.0
+    },
+    {
+      "vehicle_id": 9,
+      "trip_id": 2,
+      "total_size": 26.9,
+      "capacity_utilisation_pct": 89.67
+    },
+    {
+      "vehicle_id": 10,
+      "trip_id": 1,
+      "total_size": 7.7,
+      "capacity_utilisation_pct": 25.67
+    },
+    {
+      "vehicle_id": 10,
+      "trip_id": 2,
+      "total_size": 19.1,
+      "capacity_utilisation_pct": 63.67
+    }
+  ],
+  "total_parcels": 782,
+  "delivered_parcels": 324,
+  "undelivered_parcels": 458,
+  "delivery_rate_pct": 41.43,
+  "total_early_minutes": 0.0,
+  "total_late_minutes": 22291.91,
+  "total_penalty": 132211.91
 }
