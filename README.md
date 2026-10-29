@@ -43,6 +43,7 @@ python3 run_all.py solution.policies.nearby_first nearby_first
 python3 run_all.py solution.policies.window_aware window_aware
 python3 run_all.py solution.policies.nearby_local_search nearby_local_search
 python3 run_all.py solution.policies.nearby_two_opt nearby_two_opt
+python3 run_all.py solution.policies.deadline_two_opt deadline_two_opt
 ```
 
 To inspect existing runs without changing them:
@@ -65,6 +66,7 @@ It reports operational diagnostics; the chosen penalty is in `metrics.json`.
 | `window_aware` | Travel minutes plus predicted early/late minutes; ties use distance, window end, parcel ID |
 | `nearby_local_search` | Nearby-first followed by best-improvement parcel-pair swaps |
 | `nearby_two_opt` | Nearby-first followed by best-improvement segment reversals |
+| `deadline_two_opt` | Deadline-first followed by the same best-improvement segment reversals |
 
 All routes respect capacity, round-trip range and the 18:00 hub-return deadline.
 Policies use only the supplied snapshots, never read future demand, and do not
@@ -85,11 +87,19 @@ There are 15,867 parcels. Scores sum the reported daily penalties.
 | Window-aware | 15,237 | 96.03% | 525,915.02 |
 | Nearby + pair swaps | 15,175 | 95.64% | 328,603.53 |
 | Nearby + 2-opt | 15,174 | 95.63% | 319,101.86 |
+| Deadline + 2-opt | 15,177 | 95.65% | 255,466.93 |
 
-Nearby + 2-opt is the provisional recommendation: it has the lowest aggregate
-penalty and beats pair swaps on 19 of 20 days. It also ranks first at weights
-120 and 480. These are comparisons on the same historical days used during
+Deadline + 2-opt (`deadline_two_opt`) is the recommendation: it has the lowest
+aggregate penalty in this table and a lower daily penalty than nearby + 2-opt on
+all 20 days. These are comparisons on the same historical days used during
 development, not a guarantee of optimality or performance on unseen demand.
+
+The recommendation changed after the initial comparison. Nearby + 2-opt was the
+initial provisional recommendation: among the first six policies it had the
+lowest aggregate penalty and beats pair swaps on 19 of 20 days. It also ranks
+first among them at weights 120 and 480. Deadline + 2-opt was tested afterwards
+(see [Further hypotheses tested](#further-hypotheses-tested)) and had a lower
+penalty than nearby + 2-opt on every one of the 20 days, so it replaced it.
 
 See [experiment notes](docs/experiment_notes.md) for explanations, sensitivity
 results, complexity assumptions and remaining report work.
@@ -144,3 +154,52 @@ python3 sweep_weights.py
 
 `solution/performance_monitor.py` accepts `--early-weight` and `--late-weight`
 (both default 1.0); with the defaults its output is unchanged.
+
+## Further hypotheses tested
+
+After the initial comparison, four further hypotheses were tested against the
+same 20 days. Figures are 20-day total penalties from `results/`.
+
+| Hypothesis | Modules | 20-day total penalty | Outcome |
+|---|---|---:|---|
+| Urgency selection + 2-opt: fill by deadline up to U × capacity, then by distance, then 2-opt | `deadline_two_opt` (U = 1), `hybrid_u75_two_opt`, `hybrid_u50_two_opt`, `hybrid_u25_two_opt` | 255,467 (`deadline_two_opt`) | Adopted: `deadline_two_opt` |
+| Candidate selection: build several 2-opt routes per dispatch and keep the best-scoring one | `cand_p2_A`, `cand_p2_B`, `cand_p5_A`, `cand_p5_B` | 288,652 to 304,815 | Not adopted |
+| Hold-back: hold parcels whose window opens more than H minutes after the van could arrive | `holdback_h30`, `holdback_h60`, `holdback_h120` | 260,252 (H = 60) | Not adopted |
+| Wait-to-fill: keep an under-filled van at the hub for up to 30 minutes | `wait_f50`, `wait_f70`, `wait_f90` | 252,768 | Rejected under the pre-set rule |
+
+Wait-to-fill has the lowest 20-day total, but has a lower penalty than
+`deadline_two_opt` on only 12 of 20 days (sign test p = 0.50) and a higher total
+on days 001-010. Its three F values produce identical logs. Hold-back with
+H = 120 produces logs identical to `deadline_two_opt`. Details, sign tests and
+limitations are in the [experiment notes](docs/experiment_notes.md).
+
+Regenerate each set of results (each command runs all 20 days):
+
+```bash
+# Urgency selection + 2-opt
+python3 run_all.py solution.policies.deadline_two_opt deadline_two_opt
+python3 run_all.py solution.policies.hybrid_u75_two_opt hybrid_u75_two_opt
+python3 run_all.py solution.policies.hybrid_u50_two_opt hybrid_u50_two_opt
+python3 run_all.py solution.policies.hybrid_u25_two_opt hybrid_u25_two_opt
+# Candidate selection
+python3 run_all.py solution.policies.cand_p2_A cand_p2_A
+python3 run_all.py solution.policies.cand_p2_B cand_p2_B
+python3 run_all.py solution.policies.cand_p5_A cand_p5_A
+python3 run_all.py solution.policies.cand_p5_B cand_p5_B
+# Hold-back
+python3 run_all.py solution.policies.holdback_h30 holdback_h30
+python3 run_all.py solution.policies.holdback_h60 holdback_h60
+python3 run_all.py solution.policies.holdback_h120 holdback_h120
+# Wait-to-fill
+python3 run_all.py solution.policies.wait_f50 wait_f50
+python3 run_all.py solution.policies.wait_f70 wait_f70
+python3 run_all.py solution.policies.wait_f90 wait_f90
+```
+
+Compare and check saved results without re-running simulations:
+
+```bash
+python3 eval_split.py deadline_two_opt nearby_two_opt   # totals for days 001-010 and 011-020
+python3 compare_days.py deadline_two_opt nearby_two_opt # daily comparison and sign test
+python3 check_trips.py deadline_two_opt                 # capacity, range, cutoff and parcel checks
+```

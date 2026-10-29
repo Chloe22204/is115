@@ -163,3 +163,117 @@ Before submission:
 - Select a concise comparison table and suitable figures for the final report.
 - Write the report in the team's own voice, within eight pages excluding references.
 - Verify reproduction commands and the ZIP contents against the brief.
+
+## Further hypotheses and revised recommendation
+
+After the provisional recommendation above, four further hypotheses were
+tested on the same 20 days. The recommendation is now deadline-first + 2-opt
+(`deadline_two_opt`). Nearby + 2-opt and all earlier results are kept as
+comparisons.
+
+### Hypotheses and implementation
+
+1. **Urgency selection + 2-opt** (`hybrid_urgent_nearby.py`, wrappers
+   `hybrid_u*_two_opt`, and `deadline_two_opt.py`). Build one route by adding
+   parcels in deadline order while load < U × capacity, then in distance order,
+   then apply the same 2-opt as `nearby_two_opt`. U = 0 reproduces nearby-first
+   and U = 1 reproduces deadline-first. `deadline_two_opt` is the U = 1 case,
+   written directly as `deadline_first.dispatch` followed by `two_opt()` from
+   `two_opt_helper.py`.
+2. **Candidate selection** (`candidate_selection.py`, wrappers `cand_*`). For
+   each dispatch, build one 2-opt route per U in a pool ([1, 0] or
+   [1, 0.75, 0.5, 0.25, 0]) and return the lowest score. Scoring A is timing
+   penalty − 240 × parcels; scoring B divides that by round-trip km.
+3. **Hold-back** (`holdback_two_opt.py`, wrappers `holdback_h*`). Before
+   deadline-first + 2-opt, omit waiting parcels whose window opens more than H
+   minutes after a direct hub-to-parcel arrival, provided a later direct trip
+   could still return by 18:00 minus a 30-minute margin.
+4. **Wait-to-fill** (`wait_to_fill.py`, wrappers `wait_f*`). Build the
+   deadline-first + 2-opt route but return no route (wait 10 minutes) unless
+   load ≥ F × capacity, a parcel would arrive within 30 minutes of its window
+   end, the van has been ready for 30 minutes, or it is 15:00 or later.
+
+### Correctness checks
+
+- `two_opt_helper.two_opt()` applied to nearby-first routes reproduces
+  `results/nearby_two_opt` logs byte for byte (days 001-003).
+- `deadline_two_opt` and `hybrid_u100_two_opt` logs are byte-identical on all
+  20 days. U = 0 and U = 1 hybrids match nearby-first and deadline-first on all
+  20 days.
+- Candidate pools [1] and [0] reproduce `deadline_two_opt` and `nearby_two_opt`
+  (days 001-003). Hold-back with H = 100000 and wait-to-fill with F = 0
+  reproduce `deadline_two_opt` (days 001-003).
+- `check_trips.py` re-checks every logged trip against capacity, round-trip
+  range, the 18:00 return and single, post-arrival delivery of known parcels.
+  It reports no violations for any of the new policies, and it detected each
+  of six deliberately injected faults in a test copy of a log.
+- `deadline_two_opt` day 001 was re-run from scratch and its log is
+  byte-identical to the saved result.
+
+### Results (20-day totals)
+
+| Policy | Total penalty | Delivered | Undelivered | Early min | Late min | Trips |
+|---|---:|---:|---:|---:|---:|---:|
+| `nearby_two_opt` (previous recommendation) | 319,101.86 | 15,174 | 693 | 9,326.46 | 143,455.43 | 647 |
+| `deadline_two_opt` (recommended) | 255,466.93 | 15,177 | 690 | 12,258.57 | 77,608.36 | 635 |
+| `hybrid_u75_two_opt` | 268,031.47 | 15,156 | 711 | 12,031.51 | 85,359.97 | 641 |
+| `hybrid_u50_two_opt` | 286,071.79 | 15,170 | 697 | 11,133.94 | 107,657.82 | 644 |
+| `hybrid_u25_two_opt` | 296,843.07 | 15,166 | 701 | 10,180.95 | 118,422.09 | 643 |
+| `cand_p2_A` | 304,815.10 | 15,186 | 681 | 9,590.86 | 131,784.21 | 645 |
+| `cand_p2_B` | 292,548.30 | 15,187 | 680 | 10,768.46 | 118,579.85 | 653 |
+| `cand_p5_A` | 300,687.70 | 15,180 | 687 | 9,851.62 | 125,956.13 | 643 |
+| `cand_p5_B` | 288,651.61 | 15,183 | 684 | 10,322.52 | 114,169.10 | 655 |
+| `holdback_h30` | 292,565.53 | 15,202 | 665 | 5,198.92 | 127,766.65 | 667 |
+| `holdback_h60` | 260,252.25 | 15,179 | 688 | 10,039.66 | 85,092.58 | 642 |
+| `holdback_h120` | 255,466.93 | 15,177 | 690 | 12,258.57 | 77,608.36 | 635 |
+| `wait_f50` / `wait_f70` / `wait_f90` | 252,768.31 | 15,166 | 701 | 14,783.73 | 69,744.58 | 610 |
+
+`deadline_two_opt` is 19.94% below `nearby_two_opt`. `holdback_h120` logs are
+identical to `deadline_two_opt`. The three wait-to-fill variants produce
+identical logs: in every call where they waited, the route load was between 9%
+and 49% of capacity, so thresholds of 0.5, 0.7 and 0.9 never led to a different
+decision.
+
+### Daily comparisons against `deadline_two_opt`
+
+From `compare_days.py`, with two-sided exact sign tests on non-tied days:
+
+| Comparison | Days `deadline_two_opt` lower | Days other lower | Ties | Sign test p | Days 001-010 | Days 011-020 |
+|---|---:|---:|---:|---:|---|---|
+| vs `nearby_two_opt` | 20 | 0 | 0 | 1.9e-6 | 10-0 | 10-0 |
+| vs `wait_f70` | 8 | 12 | 0 | 0.50 | 6-4 | 2-8 |
+| vs `holdback_h60` | 9 | 8 | 3 | 1.00 | 3-5 (2 ties) | 6-3 (1 tie) |
+
+Against `nearby_two_opt`, `deadline_two_opt` is lower on every day, with daily
+differences from 452 to 5,611 points; it has fewer late minutes on all 20 days
+and more early minutes on 16. Wait-to-fill has the lowest 20-day total but is
+lower on only 12 of 20 days, has a higher total on days 001-010 (mean daily
+difference +858.50) and a lower total on days 011-020 (−1,128.36); it was
+rejected under the pre-set rule. Hold-back H = 60 is split almost evenly.
+
+### Runtime
+
+Measured with a copy of `benchmark_policies.py` (3 repetitions of all 20 days),
+always paired with `deadline_two_opt` in the same session because machine load
+varied between sessions by about a factor of two:
+
+| Session | `deadline_two_opt` median total s | Other policy median total s |
+|---|---:|---:|
+| with `cand_p5_A` | 14.80 | 48.59 |
+| with `holdback_h60` | 7.28 | 7.55 |
+| with `wait_f70` | 7.32 | 7.63 |
+
+`results/benchmark.json` was not regenerated, so its figures do not include
+`deadline_two_opt`.
+
+### Limitations
+
+- All 20 days were used for development and evaluation; there is no untouched
+  test set.
+- About eleven variants were tried and the best was kept, so the selected
+  policy's advantage may be mildly overstated by this selection effect.
+- The split into days 001-010 and 011-020 is a robustness check only. Days
+  011-020 were not strictly held out, because they informed the same
+  development.
+- Comparisons are on the chosen metric at weight 240 with equal early and late
+  weights; the new policies have not been re-checked at weights 120 and 480.
