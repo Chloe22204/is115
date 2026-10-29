@@ -120,3 +120,27 @@ is in `solution/performance_monitor.py`.
 and reconcile the record with actual tool use before preparing the references.
 The final report must also cite the brief and the course material used for
 greedy construction and local search.
+
+## Sensitivity analysis
+
+These scripts re-score the saved logs in `results/` without re-running any
+simulation, and never modify `results/`.
+
+```bash
+python3 rescore_experiment.py
+python3 analyze_late_parcels.py
+python3 sweep_weights.py
+```
+
+- `rescore_experiment.py` re-scores every policy with early deliveries
+  unpenalised (`--early-weight 0`), writes `results_experiment/`, and prints
+  each policy's 20-day total and rank next to the original metric.
+- `analyze_late_parcels.py` prints, per policy, how many delivered parcels were
+  late and by more than 60, 120 and 240 minutes, the late minutes involved and
+  their share of the main metric.
+- `sweep_weights.py` scores every policy under several early/late weight
+  scenarios into `results_sweep/` (with `results_sweep/summary.csv`), and finds
+  the early weight at which the best policy changes.
+
+`solution/performance_monitor.py` accepts `--early-weight` and `--late-weight`
+(both default 1.0); with the defaults its output is unchanged.

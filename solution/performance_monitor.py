@@ -22,8 +22,14 @@ def calculate_metrics(
     distances: List[Dict[str, str]],
     config: Dict[str, Any],
     events: List[Dict[str, Any]],
+    early_weight: float = 1.0,
+    late_weight: float = 1.0,
 ) -> Dict[str, Any]:
-    """Return performance metrics including trip capacity utilization and custom total penalty."""
+    """Return performance metrics including trip capacity utilization and custom total penalty.
+
+    early_weight and late_weight scale the early and late minutes in total_penalty.
+    The defaults (1.0) give the standard metric; other values are for sensitivity analysis.
+    """
     # 1. Map parcel sizes for trip capacity diagnostics
     parcel_sizes = {p["parcel_id"]: float(p["size"]) for p in parcels}
     capacity = float(config["capacity"])
@@ -78,7 +84,10 @@ def calculate_metrics(
             undelivered_parcels += 1
 
     delivery_rate_pct = round((delivered_parcels / total_parcels * 100.0), 2) if total_parcels > 0 else 0.0
-    total_penalty = (240.0 * undelivered_parcels) + total_early_minutes + total_late_minutes
+    # Weighted penalty; with the default weights of 1.0 this is the standard metric
+    total_penalty = ((240.0 * undelivered_parcels)
+                     + early_weight * total_early_minutes
+                     + late_weight * total_late_minutes)
 
     return {
         "number_of_trips": number_of_trips,
@@ -104,6 +113,11 @@ def main(argv: Optional[List[str]] = None) -> int:
                         help="event log from a simulator run")
     parser.add_argument("--output", type=Path,
                         help="JSON report (default: metrics.json beside the selected log)")
+    # Optional penalty weights for sensitivity analysis; leave at 1.0 for the standard metric
+    parser.add_argument("--early-weight", type=float, default=1.0,
+                        help="weight on early-delivery minutes in total_penalty (default: 1.0)")
+    parser.add_argument("--late-weight", type=float, default=1.0,
+                        help="weight on late-delivery minutes in total_penalty (default: 1.0)")
     args = parser.parse_args(argv)
     try:
         parcel_path, distance_path, config_path = day_input_paths(args.data, args.day)
@@ -120,7 +134,9 @@ def main(argv: Optional[List[str]] = None) -> int:
         config = json.loads(config_path.read_text(encoding="utf-8-sig"))
         with args.log.open(encoding="utf-8") as stream:
             events = [json.loads(line) for line in stream if line.strip()]
-        metrics = calculate_metrics(parcels, distances, config, events)
+        metrics = calculate_metrics(parcels, distances, config, events,
+                                    early_weight=args.early_weight,
+                                    late_weight=args.late_weight)
         report = json.dumps(metrics, indent=2, allow_nan=False) + "\n"
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(report, encoding="utf-8")
