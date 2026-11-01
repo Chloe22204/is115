@@ -1,0 +1,51 @@
+{
+  "intentional_defer_decisions": 352,
+  "waits_with_load_at_least_27": 352,
+  "examples": [
+    {
+      "day": "day_001",
+      "time": 730.0,
+      "vehicle": 6,
+      "parcels": 32,
+      "load": 29.9
+    },
+    {
+      "day": "day_001",
+      "time": 740.0,
+      "vehicle": 6,
+      "parcels": 36,
+      "load": 29.9
+    },
+    {
+      "day": "day_001",
+      "time": 750.0,
+      "vehicle": 6,
+      "parcels": 39,
+      "load": 29.9
+    },
+    {
+      "day": "day_001",
+      "time": 750.0,
+      "vehicle": 9,
+      "parcels": 39,
+      "load": 29.9
+    },
+    {
+      "day": "day_001",
+      "time": 760.0,
+      "vehicle": 6,
+      "parcels": 39,
+      "load": 29.9
+    }
+  ],
+  "road_distance": {
+    "deadline_two_opt": {
+      "km": 86847.264,
+      "trips": 635
+    },
+    "deadline_window_departure": {
+      "km": 81748.365,
+      "trips": 639
+    }
+  }
+}

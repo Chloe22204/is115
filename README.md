@@ -4,6 +4,36 @@ Compare dispatch policies on the supplied 20-day parcel dataset. Run commands
 from this directory (`Project/GitHub`), using Python 3.9 or later. All policies
 and helper scripts use the Python standard library.
 
+## Follow-up branch: candidate for team review (1 November 2026)
+
+This branch preserves Chloe's original policies and adds targeted follow-up
+experiments. The new provisional candidate is `deadline_window_departure`:
+build the deadline-first route; if every projected delivery is at least ten
+minutes early and a ten-minute delay still permits returning by 18:00, leave
+the van available until the next planning round. Otherwise run the unchanged
+2-opt and dispatch. This can defer a full van and is different from wait-to-fill.
+
+It scores **242,935.56** versus `deadline_two_opt`'s **255,466.93**, a 4.905%
+improvement across 20 days. Days 1–10 improve 4.057% and days 11–20 improve
+5.650%, meeting the existing adoption rule. It delivers 15,180 parcels versus
+15,177 and wins on 16 of 20 days. This is development-set evidence, not a
+global-optimality or generalisation guarantee. The historical recommendation
+and earlier experiments below are retained for context; the team should review
+and reproduce this candidate before merging or changing the final report.
+
+```bash
+python3 run_all.py solution.policies.deadline_window_departure deadline_window_departure
+python3 check_trips.py deadline_window_departure
+python3 benchmark_followups.py
+```
+
+Read [follow-up search results](docs/followup_search_results.md) for all four
+new comparisons, sensitivity results and validation. Supporting investigations
+are [return-time caps](docs/return_time_cap_experiment.md),
+[small-case exhaustive diagnosis](docs/small_case_diagnosis.md), and
+[insertion/backfill](docs/backfill_experiment.md). New policy results have
+separate folders; original policies and saved reference results are unchanged.
+
 ## Performance metric
 
 Lower is better:
