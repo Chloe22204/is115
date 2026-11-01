@@ -1,12 +1,15 @@
 # Follow-up: limiting 2-opt route extensions
 
+> Historical investigation using `deadline_two_opt` as the reference. The current
+> recommendation is `deadline_window_departure`; see [follow-up results](followup_search_results.md).
+
 Experiment date: 1 November 2026. Reference: `deadline_two_opt` at branch
-`hybrid-policy`, commit `8c77d42`. This experiment is isolated on local branch
+`hybrid-policy`, commit `8c77d42`. This experiment is isolated on branch
 `codex/return-time-caps`; no changes to the reference policy were made.
 
 ## Motivation and diagnosis
 
-A replay of the recommended policy matched its saved logs on all 20 days.
+A replay of the reference policy matched its saved logs on all 20 days.
 At each dispatch, compare its initial deadline-first route with the 2-opt
 route under that same snapshot, not with a separate deadline-first day's
 schedule. Of 635 trips, 120 were lengthened, 16 shortened and 499 had unchanged
@@ -59,8 +62,8 @@ untouched test data. The three caps and decision rule were fixed before runs.
 | Cap 15 | 133,641.74 | +11.89% | 151,128.81 | +11.11% | 1/20 |
 | Cap 30 | 126,807.54 | +6.16% | 144,857.99 | +6.50% | 4/20 |
 
-All variants fail the adoption rule. Keep `deadline_two_opt` as the recommendation
-under the agreed metric and current decision rule. The intervention increased
+All variants fail the adoption rule. At this experiment stage, `deadline_two_opt` remained the recommendation
+under the agreed metric and decision rule. The intervention increased
 completed deliveries and reduced late minutes, but the added early minutes
 outweighed these gains. Therefore route extensions have costs, but banning or
 limiting them at the tested levels does not improve the selected objective.

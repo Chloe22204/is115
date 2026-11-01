@@ -1,6 +1,11 @@
 # Experiment notes for team discussion
 
-These notes organise the current evidence. They are not the final report.
+These notes preserve the initial comparisons and Chloe's four hypotheses.
+They are not the final report. The current recommendation is
+`deadline_window_departure`; see [follow-up results](followup_search_results.md)
+for the latest evidence and [complexity analysis](complexity_analysis.md) for
+complete algorithm coverage. Recommendations in the dated stages below are
+historical conclusions, not competing current choices.
 
 ## Objective and assumptions
 
@@ -42,7 +47,7 @@ direction even though the supplied matrix is symmetric.
 - Pair swaps: improve the full-day score by 7.04% against nearby-first, although
   they deliver 57 fewer parcels. Early-minute reductions outweigh additional
   lateness and undelivered penalties at the chosen weight.
-- 2-opt: achieves the lowest total penalty, 319,101.86, with 15,174 deliveries.
+- Nearby + 2-opt: among the initial six methods, achieves the lowest total penalty, 319,101.86, with 15,174 deliveries.
   It improves on baseline by 88.19%, nearby-first by 9.72%, and pair swaps by
   2.89%. It wins against pair swaps on 19 of 20 days, not all days.
 
@@ -74,6 +79,10 @@ early/late timing penalty, with distance and return time enforced as hard
 constraints. Do not claim the implementation uses constant-time move scoring.
 
 ## Complexity of the actual implementation
+
+The [complete complexity analysis](complexity_analysis.md) extends this initial
+comparison to the hybrid, candidate-selection, waiting and follow-up policies.
+Use that document for the final report's current algorithm coverage.
 
 Per dispatch call, let n be all supplied parcel records, m the waiting records,
 k the selected route length, and R the number of neighbourhood scans including
@@ -144,9 +153,9 @@ These local timings are practical for the supplied data; they are not a
 scalability guarantee. Reproduce using `python3 benchmark_policies.py`.
 Raw repetition records are in `results/benchmark.json`.
 
-## Provisional recommendation and remaining work
+## Initial recommendation and submission work
 
-Recommend nearby-first + 2-opt among the tested methods at the chosen metric.
+At the initial six-policy stage, nearby-first + 2-opt was recommended at the chosen metric.
 Its measured objective improvement, sensitivity results and modest runtime
 support the trade-off. It delivers fewer parcels than the simpler greedy
 policies, has no global-optimality guarantee, and only changes within-trip order.
@@ -167,8 +176,8 @@ Before submission:
 ## Further hypotheses and revised recommendation
 
 After the provisional recommendation above, four further hypotheses were
-tested on the same 20 days. The recommendation is now deadline-first + 2-opt
-(`deadline_two_opt`). Nearby + 2-opt and all earlier results are kept as
+tested on the same 20 days. At that stage, the recommendation changed to
+deadline-first + 2-opt (`deadline_two_opt`). Nearby + 2-opt and all earlier results are kept as
 comparisons.
 
 ### Hypotheses and implementation
@@ -179,7 +188,7 @@ comparisons.
    then apply the same 2-opt as `nearby_two_opt`. U = 0 reproduces nearby-first
    and U = 1 reproduces deadline-first. `deadline_two_opt` is the U = 1 case,
    written directly as `deadline_first.dispatch` followed by `two_opt()` from
-   `two_opt_helper.py`.
+   `helpers.py`.
 2. **Candidate selection** (`candidate_selection.py`, wrappers `cand_*`). For
    each dispatch, build one 2-opt route per U in a pool ([1, 0] or
    [1, 0.75, 0.5, 0.25, 0]) and return the lowest score. Scoring A is timing
@@ -195,7 +204,7 @@ comparisons.
 
 ### Correctness checks
 
-- `two_opt_helper.two_opt()` applied to nearby-first routes reproduces
+- `helpers.two_opt()` applied to nearby-first routes reproduces
   `results/nearby_two_opt` logs byte for byte (days 001-003).
 - `deadline_two_opt` and `hybrid_u100_two_opt` logs are byte-identical on all
   20 days. U = 0 and U = 1 hybrids match nearby-first and deadline-first on all
@@ -215,7 +224,7 @@ comparisons.
 | Policy | Total penalty | Delivered | Undelivered | Early min | Late min | Trips |
 |---|---:|---:|---:|---:|---:|---:|
 | `nearby_two_opt` (previous recommendation) | 319,101.86 | 15,174 | 693 | 9,326.46 | 143,455.43 | 647 |
-| `deadline_two_opt` (recommended) | 255,466.93 | 15,177 | 690 | 12,258.57 | 77,608.36 | 635 |
+| `deadline_two_opt` (recommendation at this stage) | 255,466.93 | 15,177 | 690 | 12,258.57 | 77,608.36 | 635 |
 | `hybrid_u75_two_opt` | 268,031.47 | 15,156 | 711 | 12,031.51 | 85,359.97 | 641 |
 | `hybrid_u50_two_opt` | 286,071.79 | 15,170 | 697 | 11,133.94 | 107,657.82 | 644 |
 | `hybrid_u25_two_opt` | 296,843.07 | 15,166 | 701 | 10,180.95 | 118,422.09 | 643 |

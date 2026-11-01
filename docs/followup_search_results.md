@@ -1,9 +1,10 @@
 # Further targeted tests: selection, neighbourhood and departure timing
 
 Date: 1 November 2026. Reference: Chloe's `deadline_two_opt` from commit
-`8c77d42`. All work remains local on `codex/return-time-caps`; no original policy
-or saved reference result was changed, and nothing was sent to the groupmate
-or written to the shared document in this follow-up.
+`8c77d42`. Experiments are on `codex/return-time-caps` and were pushed in
+commit `c23011e`. No original policy or saved reference result was changed.
+The shared document was not updated during this follow-up. Later documentation
+and helper-layout edits should be checked separately in Git status.
 
 ## Rules fixed before each full experiment
 
@@ -70,7 +71,7 @@ van is full; it is not trying to accumulate more load.
 | Smaller-size tie-break | 123,209.68 | +3.152% | 133,865.72 | −1.586% | 13 / 7 / 0 | No |
 | Window-aligned departure | 114,598.45 | −4.057% | 128,337.11 | −5.650% | 16 / 4 / 0 | Yes |
 
-## Interpretation and provisional recommendation
+## Interpretation and current recommendation
 
 The exchange result demonstrates that solving reduced packing counterexamples
 does not imply a better full-day dispatcher. It completes 791 fewer parcels
@@ -79,7 +80,7 @@ but still slightly worsens the full-day score. The size tie-break fails the
 decision rule despite improving more individual days than it worsens: total
 magnitude and the split criterion matter, not only win counts.
 
-**Provisional new recommendation: `deadline_window_departure`.** It passes the
+**Current recommendation: `deadline_window_departure`.** It passes the
 existing adoption rule, has the lowest aggregate main-metric score among the
 saved policies, and improves on 16 of the 20 days. It also beats wait-to-fill's
 252,768.31 aggregate penalty, so the previous lowest-total/adoption-rule
@@ -151,6 +152,8 @@ The new decision adds O(k) work to inspect the constructed route, plus its
 original greedy construction and, on dispatched routes, its original 2-opt
 work. Across a full day it can cause more dispatch calls. Do not claim that
 waiting removes simulator work or guarantees a smaller asymptotic running time.
+See [complete complexity analysis](complexity_analysis.md) for the per-call
+and whole-day bounds across every policy family.
 
 The recommended change is supported by these experiments, not a proof of
 global optimality or a promised grade. Preserve unsuccessful variants as

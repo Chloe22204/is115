@@ -1,13 +1,16 @@
 # Bounded exhaustive-search diagnosis
 
-Date: 1 November 2026. Recommended policy inspected: `deadline_two_opt` from
+> Historical investigation using `deadline_two_opt` as the reference. The current
+> recommendation is `deadline_window_departure`; see [follow-up results](followup_search_results.md).
+
+Date: 1 November 2026. Reference policy inspected: `deadline_two_opt` from
 Chloe's branch, commit `8c77d42`. No production policy was changed for this
 diagnosis. Run `python3 -B diagnose_small_cases.py` from the repository root to
 reproduce `results/small_case_diagnosis.json`.
 
 ## Scope and objective
 
-The diagnostic replays days 1, 7 and 16 under the recommended policy. Replay
+The diagnostic replays days 1, 7 and 16 under the reference policy. Replay
 logs match the saved reference logs exactly. It captures the first non-empty
 dispatch snapshot at or after 08:00, 10:30, 12:00 and 15:00 on each day.
 
@@ -109,7 +112,9 @@ selection under the defined small-case objective. It does not prove that a
 particular replacement improves the full-day metric. Serving a different
 parcel now can affect which parcels another vehicle serves later.
 
-A targeted next hypothesis is insertion/backfill or an exchange between a
+The diagnosis motivated the subsequent insertion/backfill and exchange tests
+(see [backfill](backfill_experiment.md) and [follow-up results](followup_search_results.md)).
+The proposed hypothesis was to test insertion/backfill or an exchange between a
 selected parcel and waiting parcels, with full route feasibility checks. Any
 new policy should be evaluated over the unchanged 20 days and original metric,
 using the existing adoption rule. Do not infer a full-day improvement directly

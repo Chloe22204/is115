@@ -1,7 +1,10 @@
 # Follow-up: insertion/backfill after deadline-first + 2-opt
 
+> Historical investigation using `deadline_two_opt` as the reference. The current
+> recommendation is `deadline_window_departure`; see [follow-up results](followup_search_results.md).
+
 Date: 1 November 2026. Reference policy: Chloe's `deadline_two_opt`, commit
-`8c77d42`. This experiment is on local branch `codex/return-time-caps`. The
+`8c77d42`. This experiment is on branch `codex/return-time-caps`. The
 reference policy and its saved results were not changed.
 
 ## Hypothesis and fixed rule
@@ -53,8 +56,8 @@ worsens one, and leaves 18 unchanged. Day 11 gains one delivery and saves 240
 points; day 17 adds 13.95 late minutes. The second-half improvement is 0.1662%, below
 the pre-existing 2% adoption threshold, so it is not adopted under that rule.
 
-Keep `deadline_two_opt` as the recommendation under the stated adoption
-criterion. Do not claim backfill has a worse aggregate score: its improvement
+At this experiment stage, `deadline_two_opt` remained the recommendation
+under the stated adoption criterion. Do not claim backfill has a worse aggregate score: its improvement
 is real but small on this dataset. Nor does this establish that selection
 changes cannot help. Parcel replacement and reordering to enable insertion
 remain outside this neighbourhood, and all days have informed development.

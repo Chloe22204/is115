@@ -3,7 +3,7 @@ from typing import Callable, Dict, List
 
 from simulator.models import Parcel, SimulationContext
 from solution.policies.deadline_first import dispatch as deadline_dispatch
-from solution.policies.two_opt_helper import two_opt
+from solution.policies.helpers import two_opt
 
 
 def make_dispatch(max_extension_minutes: float) -> Callable:

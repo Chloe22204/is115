@@ -3,7 +3,7 @@ from typing import Callable, Dict, List, Sequence
 
 from simulator.models import Parcel, SimulationContext
 from solution.policies.hybrid_urgent_nearby import make_dispatch as make_hybrid
-from solution.policies.two_opt_helper import route_timing_penalty, two_opt
+from solution.policies.helpers import route_timing_penalty, two_opt
 
 UNDELIVERED_PENALTY = 240.0  # credit per parcel carried, matching the main metric
 
