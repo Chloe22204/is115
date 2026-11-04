@@ -5,6 +5,12 @@ assistance record still need completing. Page allocations below are a layout
 plan, not a verified page count. The main report must fit within eight pages
 excluding references after formatting and PDF export.
 
+> **Out of date:** this draft predates the 125-minute trip limit. The selected
+> policy is now `deadline_trip_limit` (179,088.70; see README and
+> `docs/trip_limit_experiment.md`). Figures for variants other than baseline,
+> `deadline_window_departure` and `deadline_trip_limit` come from results
+> removed in commit `92dee2d` and cannot be checked against current `results/`.
+
 | Section | Planned pages |
 |---|---:|
 | Problem and metric | 1 |
@@ -203,13 +209,17 @@ complexity and measured full-day runtime answer different questions.
 All policies use the same 20 supplied days, totalling 15,867 parcels, under
 identical operating constraints. Each successful run produces an event log and
 metrics report. The saved results contain 34 parameter/policy variants, not
-34 unrelated algorithm families. Daily penalties are summed for comparison.
+34 unrelated algorithm families. Only 28 produce distinct logs: four groups are
+byte-identical (`deadline_first` = `hybrid_u100`; `nearby_first` = `hybrid_u0`;
+`deadline_two_opt` = `holdback_h120` = `hybrid_u100_two_opt`; `wait_f50` =
+`wait_f70` = `wait_f90`). Daily penalties are summed for comparison.
 All days informed development; the two ten-day blocks are robustness checks,
 not training and untouched test sets.
 
 Baseline delivers 6,421 parcels (40.47%) and scores 2,702,047.24. Across its
-200 first trips, average load utilisation is 26.03% and average distance is
-285.51 km. This suggests that poor spatial ordering and long trips limit
+200 first trips (one per vehicle per day), average load utilisation is 26.03%
+and average distance is 285.51 km. Across all 413 trips, utilisation is 49.79%
+and average distance is 251.99 km (`analyze_baseline.py`). This suggests that poor spatial ordering and long trips limit
 performance even when substantial capacity is unused. It does not isolate
 capacity as the sole cause.
 
@@ -225,6 +235,7 @@ capacity as the sole cause.
 | Nearby + 2-opt | 15,174 | 319,101.86 |
 | Deadline + 2-opt | 15,177 | 255,466.93 |
 | Window-aligned departure + deadline + 2-opt | 15,180 | 242,935.56 |
+| + 125-minute trip limit (now selected; see README) | 15,222 | 179,088.70 |
 
 The most deliveries do not necessarily give the best chosen score. Window-aware
 has the highest completion count in this table but much higher lateness.
@@ -242,6 +253,11 @@ and no increase on days 1–10. The departure policy improves those blocks by
 5.650% and 4.057%, respectively. Wait-to-fill scores 252,768.31 overall but
 worsens the first block, so it failed that rule. The selected policy improves
 on both its aggregate score and the reference's.
+
+> **Note:** the repository defines this rule only in this draft. The experiment
+> notes call it "pre-set", but they never define it before the experiments. The
+> two blocks are a robustness check, not a tuning/test split: both informed
+> development.
 
 ### What the unsuccessful tests show
 
@@ -274,6 +290,20 @@ weights 0.75 or 0.5 and late weight 1, and with early weight 1 and late weight 2
 At early weight 0.25, the 30-minute return cap narrowly leads; when early
 penalties are removed, `hybrid_u50` leads. Thus the recommendation depends on
 valuing earliness. These are fixed-policy rescores, not retuned algorithms.
+
+> **Unverified against current `results/`:** this paragraph ranks variants
+> whose logs were removed in commit `92dee2d`. Recomputed from commit
+> `3812151`, the selected policy loses first place below an early weight of
+> about 0.258 (to `deadline_cap30`). No 0.689 crossover or lateness-cap test
+> appears in the repository or its history. Against `deadline_window_departure`,
+> `deadline_trip_limit` has fewer undelivered parcels, early minutes and late
+> minutes, so it scores lower under any non-negative weights.
+>
+> Undelivered weights 120 and 480, recomputed as w·U + E + L from commit `3812151`: across
+> all 34 variants `deadline_window_departure` is first at both (160,496 and
+> 407,816). `deadline_trip_limit` is lower still (101,689 and 333,889).
+> `deadline_two_opt` is first at neither: wait-to-fill beats it at both, and
+> `deadline_size_ties` and `deadline_backfill` also beat it at 120.
 
 Both the reference and selected policy were benchmarked with a warm-up and
 three repetitions of all 20 days, alternating order. Median total simulation
@@ -313,8 +343,9 @@ year and citation format from the supplied course material.
 year and citation format from the supplied course material.
 
 Reproducibility: see the repository README and `docs/reproduction.md`.
-Detailed experiment evidence is in `docs/experiment_notes.md` and
-`docs/followup_search_results.md`; full complexity derivations are in
+Trip-limit experiment evidence is in `docs/trip_limit_experiment.md`. The
+earlier `docs/experiment_notes.md` and `docs/followup_search_results.md` were
+removed in commit `92dee2d` and survive only in git history; full complexity derivations are in
 `docs/complexity_analysis.md`. Supporting files do not replace the required
 explanations in the submitted eight-page report.
 

@@ -9,7 +9,19 @@ analysis; select the relevant rows for the report's eight-page limit.
 For one dispatch call, `n` is the number of supplied parcel records, `m` is the
 number eligible for selection, and `k` is the number selected. Thus
 `0 <= k <= m <= n`. Already assigned or delivered records still count in `n`.
-Each call uses a fixed snapshot; future arrivals are not included.
+Each call uses a fixed snapshot; future arrivals are not included. The
+simulator passes every parcel that has arrived so far, so `n` grows during the
+day up to the day's total (763-811 on the supplied days).
+
+`k` is not capped at 30. Capacity is 30 size units and parcel sizes range from
+0.2 to 1.8 (median 0.9), so up to 150 of the smallest parcels could fit. Route
+lengths observed in the saved logs: `deadline_trip_limit` mean 18.6, max 41;
+`deadline_window_departure` mean 23.8, max 43; `baseline` mean 15.5, max 37.
+Removed `nearby_two_opt` and `deadline_two_opt` logs (commit `3812151`) reach
+46 and 43. R was not measured.
+
+`V = 10` vehicles and `T = 58` planning ticks (08:00 to 17:30 every ten
+minutes). The simulator calls dispatch once per idle vehicle per tick.
 
 Dictionary/set operations take average O(1), IDs have bounded length, and
 numeric operations and distance lookups take O(1). Python list copying,
@@ -36,6 +48,11 @@ calling the entire local search simply “O(k³)” would omit a necessary facto
 | Urgency/nearby hybrids without local search (`hybrid_u*`) | O(G(n,m,k)) | O(m+1) |
 | `nearby_local_search` (pair swaps) | O(G(n,m,k) + L(k,R)) | O(m+k+1) |
 | `nearby_two_opt`, `deadline_two_opt`, urgency hybrids with 2-opt | O(G(n,m,k) + L(k,R)) | O(m+k+1) |
+
+Of these, only `baseline` and `deadline_first` remain in `solution/policies/`;
+the others were removed in commit `92dee2d` and survive in git history. The
+2-opt bound now applies to `helpers.two_opt`, which `deadline_window_departure`
+and `deadline_trip_limit` call when they dispatch.
 
 Filtering scans all n records. Baseline sorts once, then scans candidates once.
 The other constructors sort remaining candidates after each accepted parcel,
@@ -64,6 +81,15 @@ subsequent delivery times, so that bound does not describe this implementation.
 | `deadline_return_cap` (`deadline_cap*`) | O(G(n,m,k) + k + L(k,R)) | O(m+k+1) |
 | `deadline_window_departure`: defer / empty route | O(G(n,m,k) + k) | O(m+k+1) |
 | `deadline_window_departure`: dispatch route | O(G(n,m,k) + k + L(k,R)) | O(m+k+1) |
+| `deadline_trip_limit` (selected) | Same as `deadline_window_departure`, plus O(1) | O(m+k+1) |
+
+`deadline_trip_limit` makes one shallow copy of the fixed-schema context to
+lower `return_cutoff`, then calls `deadline_window_departure`. That costs O(1),
+so its bounds are the same. A shorter limit can make k smaller per trip, and
+vans become idle more often, which increases the number of calls.
+
+Apart from the two `deadline_window_departure` rows and `deadline_trip_limit`,
+the policies in this section were removed in commit `92dee2d`.
 
 Candidate selection constructs and improves q routes sequentially. Scoring each
 route costs O(k_j+1), already included above. It keeps the best route and the
@@ -84,6 +110,9 @@ context copy before 2-opt. Window-aligned departure checks the greedy route in
 O(k); a deferral skips 2-opt in that call, but triggers fresh planning later.
 
 ## Additional improvement experiments
+
+> Historical: `deadline_backfill`, `deadline_exchange` and `deadline_relocate`
+> were removed in commit `92dee2d`.
 
 For these bounds, k₀ is the initial route length, K the largest route length
 reached, B the number of accepted insertions/exchanges, and R_total the total
@@ -122,7 +151,10 @@ evaluations and small/empty routes.
 ## Whole-day cost and the recommended policy
 
 If a day invokes dispatch Q times, total policy time is the **sum of the
-per-call bounds**, with the actual n_i, m_i, k_i and R_i for each call. Q includes
+per-call bounds**. Because each tick calls dispatch at most once per idle
+vehicle, Q <= V·T = 580 per day. Benchmarks recorded 614 to 1,902 calls over
+all 20 days (about 31 to 95 per day), so the bound is loose. Sum with the actual n_i, m_i, k_i and R_i for
+each call. Q includes
 calls that return no route. It is not the number of trips or deliveries.
 Waiting changes vehicle availability and can increase Q, so equal asymptotic
 per-call bounds do not imply equal daily runtime.
@@ -140,12 +172,13 @@ measurements describe the tested workload, while the bounds describe scaling.
 
 ## Supporting tools
 
-`performance_monitor.calculate_metrics`: with N input parcels, E events and T
-distinct trips, time is O(N+E+1+T log(T+1)) and extra space O(N+T+1). It builds
+`performance_monitor.calculate_metrics`: with N input parcels, E events and P
+distinct trips, time is O(N+E+1+P log(P+1)) and extra space O(N+P+1). It builds
 parcel/trip lookups, scans events, sorts trip summaries and scans parcels. Its
 distance-list argument is unused by the calculation. CLI input loading adds
 O(N+D+E) time and storage for D distance rows and the parsed inputs/log.
 
+Historical: `diagnose_small_cases.py` is no longer in the repository.
 The exact-search component of `diagnose_small_cases.py` enumerates ordered
 subsets of p waiting parcels.
 There are S(p) = Σ[i=0..p] p!/(p-i)! such subsets. Full route evaluation and
@@ -159,8 +192,8 @@ scalable dispatcher or proof of full-day optimality.
 ## Data structures and what the bounds do not claim
 
 Lists represent delivery order and support sorting, slicing and reversals.
-Dictionaries provide parcel and directed-distance lookups; sets support
-selected/held membership tests. Their average constant-time lookups explain
+Dictionaries provide parcel and directed-distance lookups. The current
+policies use no sets; the simulator uses sets to track parcel states. Their average constant-time lookups explain
 the assumptions above. The local searches evaluate feasible neighbours and
 strictly reduce a trip-level timing objective; they do not prove a globally
 optimal trip, packing, fleet schedule or daily score.

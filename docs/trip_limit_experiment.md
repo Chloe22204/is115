@@ -28,7 +28,12 @@ identical to `deadline_window_departure`.
 Days 1-10: 90,383.74 (-21.1%); days 11-20: 88,704.96 (-30.9%). No worse than
 the reference on any day; best single-day saving 7,750.
 
-## Choosing the limit (held-out check)
+## Choosing the limit (split-half check)
+
+> **Not reproducible from saved results:** only the 125-minute run is saved in
+> `results/`; the other limits' logs are not in the repository. The 125 row
+> matches `results/deadline_trip_limit`. Both halves informed the final choice
+> of 125, so neither half is an untouched test set.
 
 | Limit (min) | Days 1-10 | Days 11-20 | All 20 |
 |---:|---:|---:|---:|
@@ -48,6 +53,9 @@ Limits of 100 or less, or 135 or more, score much worse.
 
 ## Robustness (modified copies of the data)
 
+> **Not reproducible from saved results:** the modified data copies, their
+> logs and the script that produced them are not in the repository.
+
 Gap to the best of four candidates in each scenario (lower is better):
 
 | Scenario | window_departure | 10:00 morning cap | trip <= 120 | trip <= 125 |
@@ -61,7 +69,8 @@ Gap to the best of four candidates in each scenario (lower is better):
 | Morning rush 60 min later | +58% | best | +56% | +49% |
 | All times 60 min later | +68% | +72% | +2% | best |
 
-The 125-minute limit has the lowest worst-case (49%) and mean (7.9%) gap. It
+The 125-minute limit has the lowest worst-case (49%) and mean (about 8%; 8.0%
+from the rounded table above) gap. It
 loses when the morning rush moves an hour later, and results can change by up
 to 14% between 120 and 125 minutes on other fleet sizes.
 
