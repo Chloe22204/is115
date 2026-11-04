@@ -1,7 +1,7 @@
 """Estimate the unavoidable-undelivered floor and fleet usage for two policies.
 
 Reads data/demand/*.csv, data/dist.csv, data/config.json and
-results/<policy>/day_XXX/log.txt for nearby_two_opt and deadline_two_opt. Writes nothing.
+results/<policy>/day_XXX/log.txt for deadline_window_departure and deadline_trip_limit. Writes nothing.
 """
 
 import csv
@@ -12,7 +12,7 @@ from pathlib import Path
 
 DATA = Path("data")
 RESULTS = Path("results")
-POLICIES = ["nearby_two_opt", "deadline_two_opt"]
+POLICIES = ["deadline_window_departure", "deadline_trip_limit"]
 DAYS = [f"day_{i:03d}" for i in range(1, 21)]
 DAY_START = 8 * 60.0  # first planning tick, 08:00
 TICK = 10.0  # planning interval in minutes
@@ -135,8 +135,8 @@ def main():
         per_day.append(row)
 
     # Per-day table: parcels, undeliverable floor, and each policy's undelivered (in floor)
-    print(f"{'day':<9}{'parcels':>8}{'floor':>7}   {'nearby_two_opt undel (in floor)':>32}"
-          f"   {'deadline_two_opt undel (in floor)':>34}")
+    print(f"{'day':<9}{'parcels':>8}{'floor':>7}   {f'{POLICIES[0]} undel (in floor)':>32}"
+          f"   {f'{POLICIES[1]} undel (in floor)':>34}")
     for day, n, f, nu, nf, du, df in per_day:
         print(f"{day:<9}{n:>8}{f:>7}   {f'{nu} ({nf})':>32}   {f'{du} ({df})':>34}")
     print(f"{'total':<9}{sum(r[1] for r in per_day):>8}{total_floor:>7}   "

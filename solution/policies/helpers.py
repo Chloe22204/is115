@@ -38,7 +38,7 @@ def two_opt(route: List[str], parcel: Dict[str, Parcel],
             context: SimulationContext) -> List[str]:
     """Improve a starting route using the best feasible 2-opt reversal each round.
 
-    Same rule as nearby_two_opt.py, but the starting route is passed in, so any
+    The starting route is passed in, so any
     construction policy can reuse it.
     """
     def timing_penalty(candidate: List[str]) -> Optional[float]:
