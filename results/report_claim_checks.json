@@ -1,0 +1,180 @@
+{
+  "original_35_policy_pool": [
+    "baseline",
+    "cand_p2_A",
+    "cand_p2_B",
+    "cand_p5_A",
+    "cand_p5_B",
+    "deadline_backfill",
+    "deadline_cap0",
+    "deadline_cap15",
+    "deadline_cap30",
+    "deadline_exchange",
+    "deadline_first",
+    "deadline_relocate",
+    "deadline_size_ties",
+    "deadline_two_opt",
+    "deadline_window_departure",
+    "holdback_h120",
+    "holdback_h30",
+    "holdback_h60",
+    "hybrid_u0",
+    "hybrid_u100",
+    "hybrid_u100_two_opt",
+    "hybrid_u25",
+    "hybrid_u25_two_opt",
+    "hybrid_u50",
+    "hybrid_u50_two_opt",
+    "hybrid_u75",
+    "hybrid_u75_two_opt",
+    "nearby_first",
+    "nearby_local_search",
+    "nearby_two_opt",
+    "wait_f50",
+    "wait_f70",
+    "wait_f90",
+    "window_aware",
+    "deadline_trip_limit"
+  ],
+  "original_35_sensitivity": [
+    {
+      "undelivered_weight": 120,
+      "early_weight": "0",
+      "winner": "deadline_trip_limit",
+      "score": "101240.78",
+      "selected_score": "101240.78"
+    },
+    {
+      "undelivered_weight": 120,
+      "early_weight": "1",
+      "winner": "deadline_trip_limit",
+      "score": "101688.69",
+      "selected_score": "101688.69"
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": "0",
+      "winner": "deadline_trip_limit",
+      "score": "178640.78",
+      "selected_score": "178640.78"
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": "1",
+      "winner": "deadline_trip_limit",
+      "score": "179088.69",
+      "selected_score": "179088.69"
+    },
+    {
+      "undelivered_weight": 480,
+      "early_weight": "0",
+      "winner": "deadline_trip_limit",
+      "score": "333440.78",
+      "selected_score": "333440.78"
+    },
+    {
+      "undelivered_weight": 480,
+      "early_weight": "1",
+      "winner": "deadline_trip_limit",
+      "score": "333888.69",
+      "selected_score": "333888.69"
+    }
+  ],
+  "main_nine_sensitivity": [
+    {
+      "undelivered_weight": 120,
+      "early_weight": "0",
+      "winner": "deadline_trip_limit",
+      "score": "101240.78",
+      "selected_score": "101240.78"
+    },
+    {
+      "undelivered_weight": 120,
+      "early_weight": "1",
+      "winner": "deadline_trip_limit",
+      "score": "101688.69",
+      "selected_score": "101688.69"
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": "0",
+      "winner": "deadline_trip_limit",
+      "score": "178640.78",
+      "selected_score": "178640.78"
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": "1",
+      "winner": "deadline_trip_limit",
+      "score": "179088.69",
+      "selected_score": "179088.69"
+    },
+    {
+      "undelivered_weight": 480,
+      "early_weight": "0",
+      "winner": "deadline_trip_limit",
+      "score": "333440.78",
+      "selected_score": "333440.78"
+    },
+    {
+      "undelivered_weight": 480,
+      "early_weight": "1",
+      "winner": "deadline_trip_limit",
+      "score": "333888.69",
+      "selected_score": "333888.69"
+    }
+  ],
+  "expanded_pool_sensitivity": [
+    {
+      "undelivered_weight": 120,
+      "early_weight": "0",
+      "winner": "trip_limit_120",
+      "score": "100742.03",
+      "selected_score": "101240.78"
+    },
+    {
+      "undelivered_weight": 120,
+      "early_weight": "1",
+      "winner": "deadline_time_limit",
+      "score": "101604.32",
+      "selected_score": "101688.69"
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": "0",
+      "winner": "trip_limit_120",
+      "score": "177422.03",
+      "selected_score": "178640.78"
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": "1",
+      "winner": "deadline_time_limit",
+      "score": "179004.32",
+      "selected_score": "179088.69"
+    },
+    {
+      "undelivered_weight": 480,
+      "early_weight": "0",
+      "winner": "trip_limit_120",
+      "score": "330782.03",
+      "selected_score": "333440.78"
+    },
+    {
+      "undelivered_weight": 480,
+      "early_weight": "1",
+      "winner": "deadline_time_limit",
+      "score": "333804.32",
+      "selected_score": "333888.69"
+    }
+  ],
+  "expanded_policy_count": 57,
+  "selected_lower_on_all20": true,
+  "window_departure_daily_saving_min": "198.78",
+  "window_departure_daily_saving_max": "7750.05",
+  "deadline_two_opt_daily_saving_min": "87.58",
+  "deadline_two_opt_daily_saving_max": "8854.79",
+  "window_departure_better_than_deadline_two_opt": 16,
+  "selected_vs_baseline_reduction_pct": 93.37211069633261,
+  "selected_vs_window_reduction_pct": 26.28139742078105
+}

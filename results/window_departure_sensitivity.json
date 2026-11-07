@@ -1,0 +1,181 @@
+{
+  "note": "Rescored fixed saved policies using rounded component totals; not reoptimised for alternative weights; development data.",
+  "scenarios": [
+    {
+      "undelivered_weight": 120,
+      "early_weight": 1,
+      "late_weight": 1,
+      "winner": "deadline_window_departure",
+      "top3": [
+        [
+          "deadline_window_departure",
+          160495.54
+        ],
+        [
+          "wait_f50",
+          168648.31
+        ],
+        [
+          "wait_f70",
+          168648.31
+        ]
+      ],
+      "reference_score": 172666.93,
+      "new_score": 160495.54
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": 1,
+      "late_weight": 1,
+      "winner": "deadline_window_departure",
+      "top3": [
+        [
+          "deadline_window_departure",
+          242935.54
+        ],
+        [
+          "wait_f50",
+          252768.31
+        ],
+        [
+          "wait_f70",
+          252768.31
+        ]
+      ],
+      "reference_score": 255466.93,
+      "new_score": 242935.54
+    },
+    {
+      "undelivered_weight": 480,
+      "early_weight": 1,
+      "late_weight": 1,
+      "winner": "deadline_window_departure",
+      "top3": [
+        [
+          "deadline_window_departure",
+          407815.54
+        ],
+        [
+          "deadline_backfill",
+          420600.88
+        ],
+        [
+          "wait_f50",
+          421008.31
+        ]
+      ],
+      "reference_score": 421066.93,
+      "new_score": 407815.54
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": 0.75,
+      "late_weight": 1,
+      "winner": "deadline_window_departure",
+      "top3": [
+        [
+          "deadline_window_departure",
+          242467.56
+        ],
+        [
+          "wait_f50",
+          249072.38
+        ],
+        [
+          "wait_f70",
+          249072.38
+        ]
+      ],
+      "reference_score": 252402.29,
+      "new_score": 242467.56
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": 0.5,
+      "late_weight": 1,
+      "winner": "deadline_window_departure",
+      "top3": [
+        [
+          "deadline_window_departure",
+          241999.58
+        ],
+        [
+          "wait_f50",
+          245376.45
+        ],
+        [
+          "wait_f70",
+          245376.45
+        ]
+      ],
+      "reference_score": 249337.64,
+      "new_score": 241999.58
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": 0.25,
+      "late_weight": 1,
+      "winner": "deadline_cap30",
+      "top3": [
+        [
+          "deadline_cap30",
+          241233.55
+        ],
+        [
+          "deadline_window_departure",
+          241531.61
+        ],
+        [
+          "wait_f50",
+          241680.51
+        ]
+      ],
+      "reference_score": 246273.0,
+      "new_score": 241531.61
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": 0,
+      "late_weight": 1,
+      "winner": "hybrid_u50",
+      "top3": [
+        [
+          "hybrid_u50",
+          227162.77
+        ],
+        [
+          "deadline_first",
+          228790.36
+        ],
+        [
+          "hybrid_u100",
+          228790.36
+        ]
+      ],
+      "reference_score": 243208.36,
+      "new_score": 241063.63
+    },
+    {
+      "undelivered_weight": 240,
+      "early_weight": 1,
+      "late_weight": 2,
+      "winner": "deadline_window_departure",
+      "top3": [
+        [
+          "deadline_window_departure",
+          319119.17
+        ],
+        [
+          "wait_f50",
+          322512.89
+        ],
+        [
+          "wait_f70",
+          322512.89
+        ]
+      ],
+      "reference_score": 333075.29,
+      "new_score": 319119.17
+    }
+  ]
+}

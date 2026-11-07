@@ -1,0 +1,985 @@
+{
+  "plan": {
+    "scenarios": [
+      {
+        "name": "original",
+        "vehicles": 10,
+        "shift": "none",
+        "changed_parcel_records": 0
+      },
+      {
+        "name": "fleet_7",
+        "vehicles": 7,
+        "shift": "none",
+        "changed_parcel_records": 0
+      },
+      {
+        "name": "fleet_8",
+        "vehicles": 8,
+        "shift": "none",
+        "changed_parcel_records": 0
+      },
+      {
+        "name": "fleet_12",
+        "vehicles": 12,
+        "shift": "none",
+        "changed_parcel_records": 0
+      },
+      {
+        "name": "fleet_14",
+        "vehicles": 14,
+        "shift": "none",
+        "changed_parcel_records": 0
+      },
+      {
+        "name": "morning_arrivals_minus30",
+        "vehicles": 10,
+        "shift": "arrival_only",
+        "original_interval": [
+          480,
+          600
+        ],
+        "minutes": -30,
+        "changed_parcel_records": 5942
+      },
+      {
+        "name": "morning_arrivals_plus60",
+        "vehicles": 10,
+        "shift": "arrival_only",
+        "original_interval": [
+          480,
+          600
+        ],
+        "minutes": 60,
+        "changed_parcel_records": 5942
+      },
+      {
+        "name": "all_times_plus60",
+        "vehicles": 10,
+        "shift": "all_times",
+        "minutes": 60,
+        "changed_parcel_records": 15867
+      }
+    ],
+    "policies": [
+      "deadline_trip_limit",
+      "deadline_time_limit",
+      "deadline_return_ties",
+      "fixed_120",
+      "deadline_window_departure"
+    ],
+    "operating_hours": "Planning 08:00-17:30 and return by 18:00 unchanged in every scenario.",
+    "transformations": "Morning interval is based on ORIGINAL arrival, 08:00 inclusive to 10:00 exclusive; shift arrival only, keep windows unchanged. No clipping or wrapping. All-times shift moves arrival and both windows by 60 min.",
+    "comparison": "Use the same penalty in each scenario; report gaps to the best of these five candidates. Average/worst scenario gaps weight eight scenarios equally.",
+    "limitation": "Independent precisely defined scenarios, not claimed identical to Chloe's unspecified time shifts. Same underlying 20 development days; no new independent test set.",
+    "previous_gate": "This newly authorised robustness study includes marginal challengers that failed the previous adoption threshold. Their original-data results and that decision remain unchanged."
+  },
+  "scenarios": [
+    {
+      "scenario": "original",
+      "best_penalty": 179004.33,
+      "winners": [
+        "deadline_time_limit"
+      ],
+      "totals": {
+        "deadline_trip_limit": {
+          "total_penalty": 179088.7,
+          "undelivered_parcels": 645,
+          "delivered_parcels": 15222,
+          "total_early_minutes": 447.91,
+          "total_late_minutes": 23840.78,
+          "number_of_trips": 817,
+          "driving_km": 73341.609,
+          "dispatch_calls": 2257,
+          "first10": 90383.74,
+          "last10": 88704.96
+        },
+        "deadline_time_limit": {
+          "total_penalty": 179004.33,
+          "undelivered_parcels": 645,
+          "delivered_parcels": 15222,
+          "total_early_minutes": 447.91,
+          "total_late_minutes": 23756.41,
+          "number_of_trips": 817,
+          "driving_km": 73234.602,
+          "dispatch_calls": 2269,
+          "first10": 90383.74,
+          "last10": 88620.59
+        },
+        "deadline_return_ties": {
+          "total_penalty": 179078.7,
+          "undelivered_parcels": 645,
+          "delivered_parcels": 15222,
+          "total_early_minutes": 447.91,
+          "total_late_minutes": 23830.78,
+          "number_of_trips": 818,
+          "driving_km": 72601.98,
+          "dispatch_calls": 2298,
+          "first10": 90373.74,
+          "last10": 88704.96
+        },
+        "fixed_120": {
+          "total_penalty": 185365.94,
+          "undelivered_parcels": 639,
+          "delivered_parcels": 15228,
+          "total_early_minutes": 7943.88,
+          "total_late_minutes": 24062.03,
+          "number_of_trips": 822,
+          "driving_km": 73807.362,
+          "dispatch_calls": 2209,
+          "first10": 93123.63,
+          "last10": 92242.31
+        },
+        "deadline_window_departure": {
+          "total_penalty": 242935.56,
+          "undelivered_parcels": 687,
+          "delivered_parcels": 15180,
+          "total_early_minutes": 1871.91,
+          "total_late_minutes": 76183.63,
+          "number_of_trips": 639,
+          "driving_km": 81748.365,
+          "dispatch_calls": 1902,
+          "first10": 114598.45,
+          "last10": 128337.11
+        }
+      },
+      "gaps_pct": {
+        "deadline_trip_limit": 0.0471,
+        "deadline_time_limit": 0.0,
+        "deadline_return_ties": 0.0415,
+        "fixed_120": 3.5539,
+        "deadline_window_departure": 35.7149
+      },
+      "vs_125": {
+        "deadline_trip_limit": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "deadline_time_limit": {
+          "change_pct": -0.0471,
+          "wins": 2,
+          "losses": 0,
+          "ties": 18
+        },
+        "deadline_return_ties": {
+          "change_pct": -0.0056,
+          "wins": 1,
+          "losses": 0,
+          "ties": 19
+        },
+        "fixed_120": {
+          "change_pct": 3.5051,
+          "wins": 2,
+          "losses": 7,
+          "ties": 11
+        },
+        "deadline_window_departure": {
+          "change_pct": 35.651,
+          "wins": 0,
+          "losses": 20,
+          "ties": 0
+        }
+      }
+    },
+    {
+      "scenario": "fleet_7",
+      "best_penalty": 584123.75,
+      "winners": [
+        "fixed_120"
+      ],
+      "totals": {
+        "deadline_trip_limit": {
+          "total_penalty": 607959.97,
+          "undelivered_parcels": 1950,
+          "delivered_parcels": 13917,
+          "total_early_minutes": 2890.11,
+          "total_late_minutes": 137069.83,
+          "number_of_trips": 566,
+          "driving_km": 53497.506,
+          "dispatch_calls": 1313,
+          "first10": 312081.67,
+          "last10": 295878.3
+        },
+        "deadline_time_limit": {
+          "total_penalty": 612185.59,
+          "undelivered_parcels": 1968,
+          "delivered_parcels": 13899,
+          "total_early_minutes": 2890.11,
+          "total_late_minutes": 136975.46,
+          "number_of_trips": 566,
+          "driving_km": 53370.447,
+          "dispatch_calls": 1327,
+          "first10": 312801.67,
+          "last10": 299383.92
+        },
+        "deadline_return_ties": {
+          "total_penalty": 613273.79,
+          "undelivered_parcels": 1980,
+          "delivered_parcels": 13887,
+          "total_early_minutes": 2663.93,
+          "total_late_minutes": 135409.83,
+          "number_of_trips": 566,
+          "driving_km": 52956.09,
+          "dispatch_calls": 1343,
+          "first10": 314445.5,
+          "last10": 298828.29
+        },
+        "fixed_120": {
+          "total_penalty": 584123.75,
+          "undelivered_parcels": 1856,
+          "delivered_parcels": 14011,
+          "total_early_minutes": 11020.92,
+          "total_late_minutes": 127662.8,
+          "number_of_trips": 575,
+          "driving_km": 54071.19,
+          "dispatch_calls": 1263,
+          "first10": 296670.54,
+          "last10": 287453.21
+        },
+        "deadline_window_departure": {
+          "total_penalty": 912439.16,
+          "undelivered_parcels": 2899,
+          "delivered_parcels": 12968,
+          "total_early_minutes": 1667.59,
+          "total_late_minutes": 215011.6,
+          "number_of_trips": 457,
+          "driving_km": 58914.51,
+          "dispatch_calls": 1120,
+          "first10": 439225.4,
+          "last10": 473213.76
+        }
+      },
+      "gaps_pct": {
+        "deadline_trip_limit": 4.0807,
+        "deadline_time_limit": 4.8041,
+        "deadline_return_ties": 4.9904,
+        "fixed_120": 0.0,
+        "deadline_window_departure": 56.2065
+      },
+      "vs_125": {
+        "deadline_trip_limit": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "deadline_time_limit": {
+          "change_pct": 0.695,
+          "wins": 0,
+          "losses": 3,
+          "ties": 17
+        },
+        "deadline_return_ties": {
+          "change_pct": 0.874,
+          "wins": 9,
+          "losses": 5,
+          "ties": 6
+        },
+        "fixed_120": {
+          "change_pct": -3.9207,
+          "wins": 8,
+          "losses": 7,
+          "ties": 5
+        },
+        "deadline_window_departure": {
+          "change_pct": 50.0821,
+          "wins": 0,
+          "losses": 20,
+          "ties": 0
+        }
+      }
+    },
+    {
+      "scenario": "fleet_8",
+      "best_penalty": 364132.95,
+      "winners": [
+        "fixed_120"
+      ],
+      "totals": {
+        "deadline_trip_limit": {
+          "total_penalty": 386105.34,
+          "undelivered_parcels": 1208,
+          "delivered_parcels": 14659,
+          "total_early_minutes": 3089.32,
+          "total_late_minutes": 93096.03,
+          "number_of_trips": 647,
+          "driving_km": 60694.539,
+          "dispatch_calls": 1535,
+          "first10": 184070.49,
+          "last10": 202034.85
+        },
+        "deadline_time_limit": {
+          "total_penalty": 386020.96,
+          "undelivered_parcels": 1208,
+          "delivered_parcels": 14659,
+          "total_early_minutes": 3089.32,
+          "total_late_minutes": 93011.66,
+          "number_of_trips": 647,
+          "driving_km": 60619.038,
+          "dispatch_calls": 1545,
+          "first10": 184070.49,
+          "last10": 201950.47
+        },
+        "deadline_return_ties": {
+          "total_penalty": 390258.04,
+          "undelivered_parcels": 1236,
+          "delivered_parcels": 14631,
+          "total_early_minutes": 2876.02,
+          "total_late_minutes": 90742.03,
+          "number_of_trips": 646,
+          "driving_km": 59742.339,
+          "dispatch_calls": 1605,
+          "first10": 189283.19,
+          "last10": 200974.85
+        },
+        "fixed_120": {
+          "total_penalty": 364132.95,
+          "undelivered_parcels": 1121,
+          "delivered_parcels": 14746,
+          "total_early_minutes": 10767.05,
+          "total_late_minutes": 84325.92,
+          "number_of_trips": 655,
+          "driving_km": 61188.192,
+          "dispatch_calls": 1495,
+          "first10": 179977.42,
+          "last10": 184155.53
+        },
+        "deadline_window_departure": {
+          "total_penalty": 566285.25,
+          "undelivered_parcels": 1642,
+          "delivered_parcels": 14225,
+          "total_early_minutes": 1703.86,
+          "total_late_minutes": 170501.39,
+          "number_of_trips": 516,
+          "driving_km": 67985.394,
+          "dispatch_calls": 1258,
+          "first10": 281241.82,
+          "last10": 285043.43
+        }
+      },
+      "gaps_pct": {
+        "deadline_trip_limit": 6.0342,
+        "deadline_time_limit": 6.011,
+        "deadline_return_ties": 7.1746,
+        "fixed_120": 0.0,
+        "deadline_window_departure": 55.5161
+      },
+      "vs_125": {
+        "deadline_trip_limit": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "deadline_time_limit": {
+          "change_pct": -0.0219,
+          "wins": 2,
+          "losses": 0,
+          "ties": 18
+        },
+        "deadline_return_ties": {
+          "change_pct": 1.0755,
+          "wins": 8,
+          "losses": 1,
+          "ties": 11
+        },
+        "fixed_120": {
+          "change_pct": -5.6908,
+          "wins": 9,
+          "losses": 1,
+          "ties": 10
+        },
+        "deadline_window_departure": {
+          "change_pct": 46.666,
+          "wins": 1,
+          "losses": 19,
+          "ties": 0
+        }
+      }
+    },
+    {
+      "scenario": "fleet_12",
+      "best_penalty": 167901.45,
+      "winners": [
+        "deadline_time_limit"
+      ],
+      "totals": {
+        "deadline_trip_limit": {
+          "total_penalty": 167985.82,
+          "undelivered_parcels": 575,
+          "delivered_parcels": 15292,
+          "total_early_minutes": 11817.34,
+          "total_late_minutes": 18168.47,
+          "number_of_trips": 909,
+          "driving_km": 80646.552,
+          "dispatch_calls": 3677,
+          "first10": 82628.86,
+          "last10": 85356.96
+        },
+        "deadline_time_limit": {
+          "total_penalty": 167901.45,
+          "undelivered_parcels": 575,
+          "delivered_parcels": 15292,
+          "total_early_minutes": 11817.34,
+          "total_late_minutes": 18084.1,
+          "number_of_trips": 910,
+          "driving_km": 80633.763,
+          "dispatch_calls": 3677,
+          "first10": 82628.86,
+          "last10": 85272.59
+        },
+        "deadline_return_ties": {
+          "total_penalty": 167985.82,
+          "undelivered_parcels": 575,
+          "delivered_parcels": 15292,
+          "total_early_minutes": 11817.34,
+          "total_late_minutes": 18168.47,
+          "number_of_trips": 909,
+          "driving_km": 79625.532,
+          "dispatch_calls": 3725,
+          "first10": 82628.86,
+          "last10": 85356.96
+        },
+        "fixed_120": {
+          "total_penalty": 192260.28,
+          "undelivered_parcels": 575,
+          "delivered_parcels": 15292,
+          "total_early_minutes": 35353.77,
+          "total_late_minutes": 18906.5,
+          "number_of_trips": 929,
+          "driving_km": 83028.774,
+          "dispatch_calls": 3408,
+          "first10": 96160.43,
+          "last10": 96099.85
+        },
+        "deadline_window_departure": {
+          "total_penalty": 175856.96,
+          "undelivered_parcels": 596,
+          "delivered_parcels": 15271,
+          "total_early_minutes": 6375.39,
+          "total_late_minutes": 26441.55,
+          "number_of_trips": 738,
+          "driving_km": 93104.502,
+          "dispatch_calls": 2891,
+          "first10": 87026.63,
+          "last10": 88830.33
+        }
+      },
+      "gaps_pct": {
+        "deadline_trip_limit": 0.0502,
+        "deadline_time_limit": 0.0,
+        "deadline_return_ties": 0.0502,
+        "fixed_120": 14.5078,
+        "deadline_window_departure": 4.7382
+      },
+      "vs_125": {
+        "deadline_trip_limit": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "deadline_time_limit": {
+          "change_pct": -0.0502,
+          "wins": 2,
+          "losses": 0,
+          "ties": 18
+        },
+        "deadline_return_ties": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "fixed_120": {
+          "change_pct": 14.4503,
+          "wins": 4,
+          "losses": 9,
+          "ties": 7
+        },
+        "deadline_window_departure": {
+          "change_pct": 4.6856,
+          "wins": 9,
+          "losses": 11,
+          "ties": 0
+        }
+      }
+    },
+    {
+      "scenario": "fleet_14",
+      "best_penalty": 163398.79,
+      "winners": [
+        "deadline_window_departure"
+      ],
+      "totals": {
+        "deadline_trip_limit": {
+          "total_penalty": 170903.72,
+          "undelivered_parcels": 563,
+          "delivered_parcels": 15304,
+          "total_early_minutes": 17734.07,
+          "total_late_minutes": 18049.66,
+          "number_of_trips": 952,
+          "driving_km": 85190.247,
+          "dispatch_calls": 5437,
+          "first10": 83171.96,
+          "last10": 87731.76
+        },
+        "deadline_time_limit": {
+          "total_penalty": 170819.35,
+          "undelivered_parcels": 563,
+          "delivered_parcels": 15304,
+          "total_early_minutes": 17734.07,
+          "total_late_minutes": 17965.29,
+          "number_of_trips": 953,
+          "driving_km": 85164.57,
+          "dispatch_calls": 5438,
+          "first10": 83171.96,
+          "last10": 87647.39
+        },
+        "deadline_return_ties": {
+          "total_penalty": 170903.72,
+          "undelivered_parcels": 563,
+          "delivered_parcels": 15304,
+          "total_early_minutes": 17734.07,
+          "total_late_minutes": 18049.66,
+          "number_of_trips": 952,
+          "driving_km": 84063.363,
+          "dispatch_calls": 5494,
+          "first10": 83171.96,
+          "last10": 87731.76
+        },
+        "fixed_120": {
+          "total_penalty": 201376.51,
+          "undelivered_parcels": 563,
+          "delivered_parcels": 15304,
+          "total_early_minutes": 48209.23,
+          "total_late_minutes": 18047.28,
+          "number_of_trips": 987,
+          "driving_km": 89428.476,
+          "dispatch_calls": 4956,
+          "first10": 100668.15,
+          "last10": 100708.36
+        },
+        "deadline_window_departure": {
+          "total_penalty": 163398.79,
+          "undelivered_parcels": 570,
+          "delivered_parcels": 15297,
+          "total_early_minutes": 14920.27,
+          "total_late_minutes": 11678.52,
+          "number_of_trips": 783,
+          "driving_km": 101804.319,
+          "dispatch_calls": 4257,
+          "first10": 83120.25,
+          "last10": 80278.54
+        }
+      },
+      "gaps_pct": {
+        "deadline_trip_limit": 4.593,
+        "deadline_time_limit": 4.5414,
+        "deadline_return_ties": 4.593,
+        "fixed_120": 23.2424,
+        "deadline_window_departure": 0.0
+      },
+      "vs_125": {
+        "deadline_trip_limit": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "deadline_time_limit": {
+          "change_pct": -0.0494,
+          "wins": 2,
+          "losses": 0,
+          "ties": 18
+        },
+        "deadline_return_ties": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "fixed_120": {
+          "change_pct": 17.8304,
+          "wins": 4,
+          "losses": 10,
+          "ties": 6
+        },
+        "deadline_window_departure": {
+          "change_pct": -4.3913,
+          "wins": 8,
+          "losses": 12,
+          "ties": 0
+        }
+      }
+    },
+    {
+      "scenario": "morning_arrivals_minus30",
+      "best_penalty": 189699.62,
+      "winners": [
+        "deadline_return_ties"
+      ],
+      "totals": {
+        "deadline_trip_limit": {
+          "total_penalty": 190009.15,
+          "undelivered_parcels": 631,
+          "delivered_parcels": 15236,
+          "total_early_minutes": 11305.93,
+          "total_late_minutes": 27263.25,
+          "number_of_trips": 791,
+          "driving_km": 70896.615,
+          "dispatch_calls": 2578,
+          "first10": 93327.22,
+          "last10": 96681.93
+        },
+        "deadline_time_limit": {
+          "total_penalty": 189709.15,
+          "undelivered_parcels": 631,
+          "delivered_parcels": 15236,
+          "total_early_minutes": 11305.93,
+          "total_late_minutes": 26963.25,
+          "number_of_trips": 791,
+          "driving_km": 70871.109,
+          "dispatch_calls": 2581,
+          "first10": 93327.22,
+          "last10": 96381.93
+        },
+        "deadline_return_ties": {
+          "total_penalty": 189699.62,
+          "undelivered_parcels": 631,
+          "delivered_parcels": 15236,
+          "total_early_minutes": 11316.4,
+          "total_late_minutes": 26943.25,
+          "number_of_trips": 791,
+          "driving_km": 69813.453,
+          "dispatch_calls": 2637,
+          "first10": 93009.04,
+          "last10": 96690.58
+        },
+        "fixed_120": {
+          "total_penalty": 216418.32,
+          "undelivered_parcels": 621,
+          "delivered_parcels": 15246,
+          "total_early_minutes": 33104.75,
+          "total_late_minutes": 34273.61,
+          "number_of_trips": 812,
+          "driving_km": 73090.32,
+          "dispatch_calls": 2323,
+          "first10": 107640.29,
+          "last10": 108778.03
+        },
+        "deadline_window_departure": {
+          "total_penalty": 249024.62,
+          "undelivered_parcels": 648,
+          "delivered_parcels": 15219,
+          "total_early_minutes": 20950.59,
+          "total_late_minutes": 72554.04,
+          "number_of_trips": 656,
+          "driving_km": 83780.133,
+          "dispatch_calls": 1687,
+          "first10": 122986.61,
+          "last10": 126038.01
+        }
+      },
+      "gaps_pct": {
+        "deadline_trip_limit": 0.1632,
+        "deadline_time_limit": 0.005,
+        "deadline_return_ties": 0.0,
+        "fixed_120": 14.0847,
+        "deadline_window_departure": 31.2731
+      },
+      "vs_125": {
+        "deadline_trip_limit": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "deadline_time_limit": {
+          "change_pct": -0.1579,
+          "wins": 1,
+          "losses": 0,
+          "ties": 19
+        },
+        "deadline_return_ties": {
+          "change_pct": -0.1629,
+          "wins": 2,
+          "losses": 3,
+          "ties": 15
+        },
+        "fixed_120": {
+          "change_pct": 13.8989,
+          "wins": 2,
+          "losses": 9,
+          "ties": 9
+        },
+        "deadline_window_departure": {
+          "change_pct": 31.0593,
+          "wins": 4,
+          "losses": 16,
+          "ties": 0
+        }
+      }
+    },
+    {
+      "scenario": "morning_arrivals_plus60",
+      "best_penalty": 365544.79,
+      "winners": [
+        "deadline_return_ties"
+      ],
+      "totals": {
+        "deadline_trip_limit": {
+          "total_penalty": 370591.54,
+          "undelivered_parcels": 740,
+          "delivered_parcels": 15127,
+          "total_early_minutes": 84505.13,
+          "total_late_minutes": 108486.44,
+          "number_of_trips": 722,
+          "driving_km": 68635.683,
+          "dispatch_calls": 2935,
+          "first10": 178471.77,
+          "last10": 192119.77
+        },
+        "deadline_time_limit": {
+          "total_penalty": 377056.13,
+          "undelivered_parcels": 719,
+          "delivered_parcels": 15148,
+          "total_early_minutes": 91760.62,
+          "total_late_minutes": 112735.52,
+          "number_of_trips": 730,
+          "driving_km": 69183.321,
+          "dispatch_calls": 2861,
+          "first10": 179007.75,
+          "last10": 198048.38
+        },
+        "deadline_return_ties": {
+          "total_penalty": 365544.79,
+          "undelivered_parcels": 726,
+          "delivered_parcels": 15141,
+          "total_early_minutes": 83839.45,
+          "total_late_minutes": 107465.37,
+          "number_of_trips": 724,
+          "driving_km": 68084.61,
+          "dispatch_calls": 2969,
+          "first10": 173812.06,
+          "last10": 191732.73
+        },
+        "fixed_120": {
+          "total_penalty": 389930.25,
+          "undelivered_parcels": 785,
+          "delivered_parcels": 15082,
+          "total_early_minutes": 96109.98,
+          "total_late_minutes": 105420.26,
+          "number_of_trips": 744,
+          "driving_km": 69954.357,
+          "dispatch_calls": 2828,
+          "first10": 192361.72,
+          "last10": 197568.53
+        },
+        "deadline_window_departure": {
+          "total_penalty": 398888.06,
+          "undelivered_parcels": 815,
+          "delivered_parcels": 15052,
+          "total_early_minutes": 1008.88,
+          "total_late_minutes": 202279.11,
+          "number_of_trips": 608,
+          "driving_km": 76738.887,
+          "dispatch_calls": 2511,
+          "first10": 194592.44,
+          "last10": 204295.62
+        }
+      },
+      "gaps_pct": {
+        "deadline_trip_limit": 1.3806,
+        "deadline_time_limit": 3.1491,
+        "deadline_return_ties": 0.0,
+        "fixed_120": 6.671,
+        "deadline_window_departure": 9.1215
+      },
+      "vs_125": {
+        "deadline_trip_limit": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "deadline_time_limit": {
+          "change_pct": 1.7444,
+          "wins": 0,
+          "losses": 3,
+          "ties": 17
+        },
+        "deadline_return_ties": {
+          "change_pct": -1.3618,
+          "wins": 12,
+          "losses": 1,
+          "ties": 7
+        },
+        "fixed_120": {
+          "change_pct": 5.2183,
+          "wins": 11,
+          "losses": 9,
+          "ties": 0
+        },
+        "deadline_window_departure": {
+          "change_pct": 7.6355,
+          "wins": 8,
+          "losses": 12,
+          "ties": 0
+        }
+      }
+    },
+    {
+      "scenario": "all_times_plus60",
+      "best_penalty": 295173.72,
+      "winners": [
+        "deadline_return_ties"
+      ],
+      "totals": {
+        "deadline_trip_limit": {
+          "total_penalty": 297103.72,
+          "undelivered_parcels": 1141,
+          "delivered_parcels": 14726,
+          "total_early_minutes": 447.91,
+          "total_late_minutes": 22815.81,
+          "number_of_trips": 751,
+          "driving_km": 66731.841,
+          "dispatch_calls": 3197,
+          "first10": 150385.51,
+          "last10": 146718.21
+        },
+        "deadline_time_limit": {
+          "total_penalty": 297019.35,
+          "undelivered_parcels": 1141,
+          "delivered_parcels": 14726,
+          "total_early_minutes": 447.91,
+          "total_late_minutes": 22731.44,
+          "number_of_trips": 751,
+          "driving_km": 66624.834,
+          "dispatch_calls": 3209,
+          "first10": 150385.51,
+          "last10": 146633.84
+        },
+        "deadline_return_ties": {
+          "total_penalty": 295173.72,
+          "undelivered_parcels": 1133,
+          "delivered_parcels": 14734,
+          "total_early_minutes": 447.91,
+          "total_late_minutes": 22805.81,
+          "number_of_trips": 752,
+          "driving_km": 66066.876,
+          "dispatch_calls": 3227,
+          "first10": 148455.51,
+          "last10": 146718.21
+        },
+        "fixed_120": {
+          "total_penalty": 301412.3,
+          "undelivered_parcels": 1126,
+          "delivered_parcels": 14741,
+          "total_early_minutes": 7943.88,
+          "total_late_minutes": 23228.39,
+          "number_of_trips": 757,
+          "driving_km": 67414.302,
+          "dispatch_calls": 3121,
+          "first10": 152222.42,
+          "last10": 149189.88
+        },
+        "deadline_window_departure": {
+          "total_penalty": 475335.94,
+          "undelivered_parcels": 1665,
+          "delivered_parcels": 14202,
+          "total_early_minutes": 1871.91,
+          "total_late_minutes": 73863.98,
+          "number_of_trips": 602,
+          "driving_km": 75817.635,
+          "dispatch_calls": 2752,
+          "first10": 221461.95,
+          "last10": 253873.99
+        }
+      },
+      "gaps_pct": {
+        "deadline_trip_limit": 0.6539,
+        "deadline_time_limit": 0.6253,
+        "deadline_return_ties": 0.0,
+        "fixed_120": 2.1135,
+        "deadline_window_departure": 61.036
+      },
+      "vs_125": {
+        "deadline_trip_limit": {
+          "change_pct": 0.0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 20
+        },
+        "deadline_time_limit": {
+          "change_pct": -0.0284,
+          "wins": 2,
+          "losses": 0,
+          "ties": 18
+        },
+        "deadline_return_ties": {
+          "change_pct": -0.6496,
+          "wins": 2,
+          "losses": 0,
+          "ties": 18
+        },
+        "fixed_120": {
+          "change_pct": 1.4502,
+          "wins": 3,
+          "losses": 6,
+          "ties": 11
+        },
+        "deadline_window_departure": {
+          "change_pct": 59.9899,
+          "wins": 0,
+          "losses": 20,
+          "ties": 0
+        }
+      }
+    }
+  ],
+  "rankings": {
+    "deadline_trip_limit": {
+      "mean_gap_pct": 2.1254,
+      "worst_gap_pct": 6.0342,
+      "scenario_wins": 0,
+      "mean_change_vs_125_pct": 0.0,
+      "worst_change_vs_125_pct": 0.0
+    },
+    "deadline_time_limit": {
+      "mean_gap_pct": 2.392,
+      "worst_gap_pct": 6.011,
+      "scenario_wins": 2,
+      "mean_change_vs_125_pct": 0.2606,
+      "worst_change_vs_125_pct": 1.7444
+    },
+    "deadline_return_ties": {
+      "mean_gap_pct": 2.1062,
+      "worst_gap_pct": 7.1746,
+      "scenario_wins": 3,
+      "mean_change_vs_125_pct": -0.0288,
+      "worst_change_vs_125_pct": 1.0755
+    },
+    "fixed_120": {
+      "mean_gap_pct": 8.0217,
+      "worst_gap_pct": 23.2424,
+      "scenario_wins": 2,
+      "mean_change_vs_125_pct": 5.8427,
+      "worst_change_vs_125_pct": 17.8304
+    },
+    "deadline_window_departure": {
+      "mean_gap_pct": 31.7008,
+      "worst_gap_pct": 61.036,
+      "scenario_wins": 1,
+      "mean_change_vs_125_pct": 28.9223,
+      "worst_change_vs_125_pct": 59.9899
+    }
+  },
+  "runs": 800,
+  "trips_checked": 29758,
+  "violations": 0,
+  "original_replay": "All 100 original-scenario logs match earlier saved logs for their respective policies exactly.",
+  "limitations": "Equal scenario weighting is a modelling choice, not a real demand distribution. Eight scenarios reuse the same 20 days. These are not proven identical to Chloe's shifts; the competitor pool differs (no morning-cap candidate). Original-data adoption threshold remains unchanged."
+}

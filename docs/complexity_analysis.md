@@ -1,3 +1,5 @@
+> Submission note, 5 November 2026: historical policies and their results have now been recovered. References below to their earlier deletion describe the working repository before recovery. The current report and benchmark are `../report.pdf` and `../experiments/runtime/benchmark_results.json`.
+
 # Complexity of the implemented policies
 
 These are upper bounds for the current Python implementations, rather than
@@ -17,7 +19,7 @@ day up to the day's total (763-811 on the supplied days).
 0.2 to 1.8 (median 0.9), so up to 150 of the smallest parcels could fit. Route
 lengths observed in the saved logs: `deadline_trip_limit` mean 18.6, max 41;
 `deadline_window_departure` mean 23.8, max 43; `baseline` mean 15.5, max 37.
-Removed `nearby_two_opt` and `deadline_two_opt` logs (commit `3812151`) reach
+Recovered `nearby_two_opt` and `deadline_two_opt` logs (commit `3812151`) reach
 46 and 43. R was not measured.
 
 `V = 10` vehicles and `T = 58` planning ticks (08:00 to 17:30 every ten
@@ -49,9 +51,8 @@ calling the entire local search simply “O(k³)” would omit a necessary facto
 | `nearby_local_search` (pair swaps) | O(G(n,m,k) + L(k,R)) | O(m+k+1) |
 | `nearby_two_opt`, `deadline_two_opt`, urgency hybrids with 2-opt | O(G(n,m,k) + L(k,R)) | O(m+k+1) |
 
-Of these, only `baseline` and `deadline_first` remain in `solution/policies/`;
-the others were removed in commit `92dee2d` and survive in git history. The
-2-opt bound now applies to `helpers.two_opt`, which `deadline_window_departure`
+These policies and results have been recovered into this submission. The
+2-opt bound applies to `helpers.two_opt`, which `deadline_window_departure`
 and `deadline_trip_limit` call when they dispatch.
 
 Filtering scans all n records. Baseline sorts once, then scans candidates once.

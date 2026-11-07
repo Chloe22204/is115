@@ -1,0 +1,69 @@
+{
+  "environment": {
+    "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "platform": "macOS-15.7.4-arm64-arm-64bit-Mach-O"
+  },
+  "method": "Day-1 warm-up; three 20-day repetitions; alternate policy order. Times exclude metric calculation, interpreter startup and replay-file comparison.",
+  "records": [
+    {
+      "policy": "deadline_two_opt",
+      "repetition": 1,
+      "total_seconds": 5.40558270906331,
+      "policy_seconds": 2.714781810878776,
+      "dispatch_calls": 1418,
+      "delivered": 15177
+    },
+    {
+      "policy": "deadline_window_departure",
+      "repetition": 1,
+      "total_seconds": 6.267488958023023,
+      "policy_seconds": 2.495253210538067,
+      "dispatch_calls": 1902,
+      "delivered": 15180
+    },
+    {
+      "policy": "deadline_window_departure",
+      "repetition": 2,
+      "total_seconds": 5.983985329978168,
+      "policy_seconds": 2.3885753101785667,
+      "dispatch_calls": 1902,
+      "delivered": 15180
+    },
+    {
+      "policy": "deadline_two_opt",
+      "repetition": 2,
+      "total_seconds": 5.39609333203407,
+      "policy_seconds": 2.697832287172787,
+      "dispatch_calls": 1418,
+      "delivered": 15177
+    },
+    {
+      "policy": "deadline_two_opt",
+      "repetition": 3,
+      "total_seconds": 5.203439502045512,
+      "policy_seconds": 2.618205548613332,
+      "dispatch_calls": 1418,
+      "delivered": 15177
+    },
+    {
+      "policy": "deadline_window_departure",
+      "repetition": 3,
+      "total_seconds": 5.961972791934386,
+      "policy_seconds": 2.3770884533878416,
+      "dispatch_calls": 1902,
+      "delivered": 15180
+    }
+  ],
+  "summary": [
+    {
+      "policy": "deadline_two_opt",
+      "median_total_seconds": 5.39609333203407,
+      "median_policy_seconds": 2.697832287172787
+    },
+    {
+      "policy": "deadline_window_departure",
+      "median_total_seconds": 5.983985329978168,
+      "median_policy_seconds": 2.3885753101785667
+    }
+  ]
+}

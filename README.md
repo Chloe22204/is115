@@ -17,8 +17,8 @@ a departure timing rule and 2-opt route improvement:
 3. Otherwise, use 2-opt to improve the delivery order and dispatch the van.
 
 Short trips bring vans back to the hub often, so parcels that arrive while the
-fleet is out wait less. This matters most for the 08:00-10:00 rush, whose
-windows close at 10:00-11:00. It uses no knowledge of future arrivals.
+fleet is out wait less. This helps serve parcels that arrive during the 08:00-10:00 rush.
+It uses no knowledge of future arrivals.
 
 ## Results
 
@@ -60,21 +60,21 @@ from the repository folder containing `run_all.py`, `data/` and `solution/`.
 To run the selected policy for all 20 days and check its trips:
 
 ```bash
-python3 run_all.py solution.policies.deadline_trip_limit deadline_trip_limit
-python3 check_trips.py deadline_trip_limit
+python3 run_all.py solution.policies.deadline_trip_limit replay_deadline_trip_limit
+python3 check_trips.py replay_deadline_trip_limit
 ```
 
 To run just one day:
 
 ```bash
-python3 -m simulator --policy solution.policies.deadline_trip_limit --data data --day day_001 --output results/deadline_trip_limit/day_001
-python3 -m solution.performance_monitor --data data --day day_001 --log results/deadline_trip_limit/day_001/log.txt
+python3 -m simulator --policy solution.policies.deadline_trip_limit --data data --day day_001 --output results/replay_deadline_trip_limit/day_001
+python3 -m solution.performance_monitor --data data --day day_001 --log results/replay_deadline_trip_limit/day_001/log.txt
 ```
 
-Each run saves an event log (`log.txt`) and a metrics report (`metrics.json`)
+The `replay_` folder names above preserve the submitted results. Each run saves an event log (`log.txt`) and a metrics report (`metrics.json`)
 in its policy and day folder. Repeating a run replaces those files.
 
-See [reproduction commands](docs/reproduction.md) to run the baseline, the reference policy and the analysis scripts.
+See [reproduction commands](docs/reproduction.md) for all recovered experiments and [the policy inventory](docs/policy_inventory.md) for every saved original-data variant. Run `python3 verify_results.py` to independently check saved scores, trips and protected files.
 
 ## Files
 
@@ -87,10 +87,12 @@ See [reproduction commands](docs/reproduction.md) to run the baseline, the refer
 | `solution/performance_monitor.py` | Penalty calculation and trip diagnostics |
 | `results/` | Saved logs, daily metrics and experiment summaries |
 | `docs/` | Experiment details, complexity analysis and run instructions |
-| `ai_log.md` | AI assistance record |
+| `experiments/` | Recovered sweep, stress-study and runtime evidence |
+
+The [final report](report.pdf) contains the findings, references and Gemini exchanges supplied during the final review. See [supporting experiments](experiments/README.md) for the saved experiment records and how they were recovered.
 
 ## Further reading
 
-- [Report draft for team review](docs/report_draft.md)
+- [Final report](report.pdf)
 - [Trip limit experiment](docs/trip_limit_experiment.md)
 - [Time and space complexity](docs/complexity_analysis.md)

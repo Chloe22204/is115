@@ -1,0 +1,75 @@
+{
+  "scenarios": [
+    {
+      "name": "original",
+      "vehicles": 10,
+      "shift": "none",
+      "changed_parcel_records": 0
+    },
+    {
+      "name": "fleet_7",
+      "vehicles": 7,
+      "shift": "none",
+      "changed_parcel_records": 0
+    },
+    {
+      "name": "fleet_8",
+      "vehicles": 8,
+      "shift": "none",
+      "changed_parcel_records": 0
+    },
+    {
+      "name": "fleet_12",
+      "vehicles": 12,
+      "shift": "none",
+      "changed_parcel_records": 0
+    },
+    {
+      "name": "fleet_14",
+      "vehicles": 14,
+      "shift": "none",
+      "changed_parcel_records": 0
+    },
+    {
+      "name": "morning_arrivals_minus30",
+      "vehicles": 10,
+      "shift": "arrival_only",
+      "original_interval": [
+        480,
+        600
+      ],
+      "minutes": -30,
+      "changed_parcel_records": 5942
+    },
+    {
+      "name": "morning_arrivals_plus60",
+      "vehicles": 10,
+      "shift": "arrival_only",
+      "original_interval": [
+        480,
+        600
+      ],
+      "minutes": 60,
+      "changed_parcel_records": 5942
+    },
+    {
+      "name": "all_times_plus60",
+      "vehicles": 10,
+      "shift": "all_times",
+      "minutes": 60,
+      "changed_parcel_records": 15867
+    }
+  ],
+  "policies": [
+    "deadline_trip_limit",
+    "deadline_time_limit",
+    "deadline_return_ties",
+    "fixed_120",
+    "deadline_window_departure"
+  ],
+  "operating_hours": "Planning 08:00-17:30 and return by 18:00 unchanged in every scenario.",
+  "transformations": "Morning interval is based on ORIGINAL arrival, 08:00 inclusive to 10:00 exclusive; shift arrival only, keep windows unchanged. No clipping or wrapping. All-times shift moves arrival and both windows by 60 min.",
+  "comparison": "Use the same penalty in each scenario; report gaps to the best of these five candidates. Average/worst scenario gaps weight eight scenarios equally.",
+  "limitation": "Independent precisely defined scenarios, not claimed identical to Chloe's unspecified time shifts. Same underlying 20 development days; no new independent test set.",
+  "previous_gate": "This newly authorised robustness study includes marginal challengers that failed the previous adoption threshold. Their original-data results and that decision remain unchanged."
+}

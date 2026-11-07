@@ -1,0 +1,53 @@
+{
+  "recovery_date": "2026-11-05",
+  "base_commit": "7e8364f1e5e42a18145ae13ace844b77983240ec",
+  "historical_commit_for_additional_policies": "3078c33",
+  "new_report_limit_modules": [
+    "solution/policies/trip_limit_100.py",
+    "solution/policies/trip_limit_105.py",
+    "solution/policies/trip_limit_110.py",
+    "solution/policies/trip_limit_115.py",
+    "solution/policies/trip_limit_120.py",
+    "solution/policies/trip_limit_125.py",
+    "solution/policies/trip_limit_130.py",
+    "solution/policies/trip_limit_135.py",
+    "solution/policies/trip_limit_140.py"
+  ],
+  "newly_regenerated_report_settings": [
+    100,
+    140
+  ],
+  "worked_example_original_script_sha256": "634f62178deb305b8a0549db75898b0273c051d0c74dfd8264d43a6c15810225",
+  "worked_example_script_adjustment": "Resolve REPO against this submission root instead of an external GitHub folder; dispatch logic unchanged",
+  "files": [
+    {
+      "path": "report.pdf",
+      "sha256": "c2965692739631789720701f5f4822298b390bc6f80c0c9cfe353e97318d611d"
+    },
+    {
+      "path": "verify_results.py",
+      "sha256": "d12d5246deec3298bf774b14830445477812b02fc3ea4a2ea042e0d451f23bed"
+    },
+    {
+      "path": "docs/reproduction.md",
+      "sha256": "c0494323183702bbde0b9efbe1cd164383228b3344ace79138c85037b7bfd262"
+    },
+    {
+      "path": "docs/policy_inventory.md",
+      "sha256": "91a3a83bc45de08e21de6f89355ed4f36b1331edf2908dca98f3659bff66ea08"
+    },
+    {
+      "path": "experiments/worked-example/capture_example.py",
+      "sha256": "fe487756fbf170726aae3f0f50188b420daf3bc7a5df4a8df121ef8a8ddbfee3"
+    },
+    {
+      "path": "experiments/worked-example/selected_example.json",
+      "sha256": "c60db3a57c688064b928154fe32a328bb5f7dbe659f16658c12f3bb2fee12504"
+    },
+    {
+      "path": "check_report_sensitivity.py",
+      "sha256": "c84f157c40c2041e5ecb020ca6c38757c39b32a8016c25d51c8b0854ff7ae95e"
+    }
+  ],
+  "assistance_record_recovery_manifest": "Original recovery records retained in the private audit backup; supplied Gemini review exchanges appear in report.pdf references."
+}

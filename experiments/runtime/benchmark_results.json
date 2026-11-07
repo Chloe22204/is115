@@ -1,0 +1,161 @@
+{
+  "method": "One full-20-day warm-up per policy, then three serial full-20-day repetitions; reverse policy order in repetition 2. Total includes input loading, simulator and log writing, plus equality-check overhead; excludes process startup and metric calculation. Dispatch time uses a perf_counter wrapper. No claim of an otherwise idle host.",
+  "machine": {
+    "platform": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "processor": "arm",
+    "logical_cpu_count": 10,
+    "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]"
+  },
+  "sources_sha256": {
+    "solution/policies/deadline_trip_limit.py": "0be9284efa2755641e33a7e7d9f9acfd67968ba4289909c21c0bf7536656b972",
+    "solution/policies/deadline_slack_limit.py": "f6933c7ab92ac0b7c8a84a08de875a485a5d5226122bd0e6ff74985c5bcb4abb",
+    "solution/policies/baseline.py": "4df03c9828d9eb42140417752308ba7a8026219aa4c6c584483f8d18c6a33985",
+    "solution/policies/deadline_return_ties.py": "1fcc7ac7c5c2cbffb603f561de969f4a058975f4ef4fcb3e74b139a52e9d1a6f",
+    "solution/policies/deadline_trip_wait_guard.py": "58c94a8e5b2d661011b36cd3894539ef12bfb728c48d1392fddbfd1f774b4d26",
+    "solution/policies/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "solution/policies/deadline_fleet_wait_guard.py": "e9996abe70407f1fefc0e9a71f7c1d45b8ce136d8bc56eca2bc327efcb6917fe",
+    "solution/policies/deadline_window_departure.py": "623af51e2d53c0a73b2148d81e09ba60d1456ea171f572b1268543966815fa5c",
+    "solution/policies/deadline_time_limit.py": "36a16ee880174440512bd6b3351eafe95bdf3e5d76796d8f4578eae5ed150223",
+    "solution/policies/helpers.py": "94779ea23c4f1d9deb08cb819b1a97c2a8d0d9611b19995df2f1b624bdf89978",
+    "solution/policies/deadline_first.py": "d72d44a32a44f8a1bf34d591534facea1a305f538ea7d299703333c9db6dadd0",
+    "solution/policies/deadline_fleet_limit.py": "9b17b74929216c9b9f1d98290d44d7ac6774af8c0149826009df9d8ff5956383",
+    "simulator/models.py": "8989d3d64a183389c911cd257603e5e07dc846f5dbbe0f02700f4620fd9dfc52",
+    "simulator/loaders.py": "35ae560a399a21ddb160db5a53771a0141336e42030f53d3c37fa9fc912f5891",
+    "simulator/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "simulator/simulator.py": "c8c7f874371665e34141a4f40b69127ef5d60e17126cade42ce4bad0f2a8f469",
+    "simulator/__main__.py": "ce83b6b69c3e295bb142cbb07993f695b111da057444889620ef15acc1b33265"
+  },
+  "warmup": [
+    {
+      "policy": "baseline",
+      "repetition": "warmup",
+      "total_seconds": 0.9644162079785019,
+      "policy_seconds": 0.03999170765746385,
+      "dispatch_calls": 614,
+      "milliseconds_per_call": 0.06513307436069031,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "deadline_window_departure",
+      "repetition": "warmup",
+      "total_seconds": 6.200143874972127,
+      "policy_seconds": 2.421425985172391,
+      "dispatch_calls": 1902,
+      "milliseconds_per_call": 1.2730946294281762,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "deadline_trip_limit",
+      "repetition": "warmup",
+      "total_seconds": 8.973923708079383,
+      "policy_seconds": 2.478186055785045,
+      "dispatch_calls": 2257,
+      "milliseconds_per_call": 1.0980000247164576,
+      "exact_log_matches": 20
+    }
+  ],
+  "samples": [
+    {
+      "policy": "baseline",
+      "repetition": 1,
+      "total_seconds": 1.009789792005904,
+      "policy_seconds": 0.042298551416024566,
+      "dispatch_calls": 614,
+      "milliseconds_per_call": 0.0688901488860335,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "deadline_window_departure",
+      "repetition": 1,
+      "total_seconds": 6.976687666960061,
+      "policy_seconds": 2.8337302119471133,
+      "dispatch_calls": 1902,
+      "milliseconds_per_call": 1.4898686708449596,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "deadline_trip_limit",
+      "repetition": 1,
+      "total_seconds": 6.998207916971296,
+      "policy_seconds": 2.0940714789321646,
+      "dispatch_calls": 2257,
+      "milliseconds_per_call": 0.927811909141411,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "deadline_trip_limit",
+      "repetition": 2,
+      "total_seconds": 6.831482707988471,
+      "policy_seconds": 2.083377062692307,
+      "dispatch_calls": 2257,
+      "milliseconds_per_call": 0.9230735767356256,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "deadline_window_departure",
+      "repetition": 2,
+      "total_seconds": 6.4256402920000255,
+      "policy_seconds": 2.5340095368446782,
+      "dispatch_calls": 1902,
+      "milliseconds_per_call": 1.332286822736424,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "baseline",
+      "repetition": 2,
+      "total_seconds": 1.0192770840367302,
+      "policy_seconds": 0.04298556165304035,
+      "dispatch_calls": 614,
+      "milliseconds_per_call": 0.07000905806684096,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "baseline",
+      "repetition": 3,
+      "total_seconds": 1.0904756670352072,
+      "policy_seconds": 0.04798289609607309,
+      "dispatch_calls": 614,
+      "milliseconds_per_call": 0.07814803924441871,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "deadline_window_departure",
+      "repetition": 3,
+      "total_seconds": 6.340423041954637,
+      "policy_seconds": 2.4819222033256665,
+      "dispatch_calls": 1902,
+      "milliseconds_per_call": 1.3049012635781632,
+      "exact_log_matches": 20
+    },
+    {
+      "policy": "deadline_trip_limit",
+      "repetition": 3,
+      "total_seconds": 6.9252254160819575,
+      "policy_seconds": 2.104648683220148,
+      "dispatch_calls": 2257,
+      "milliseconds_per_call": 0.9324983089145539,
+      "exact_log_matches": 20
+    }
+  ],
+  "medians": {
+    "baseline": {
+      "total_seconds": 1.0192770840367302,
+      "policy_seconds": 0.04298556165304035,
+      "dispatch_calls": 614,
+      "milliseconds_per_call": 0.07000905806684096
+    },
+    "deadline_window_departure": {
+      "total_seconds": 6.4256402920000255,
+      "policy_seconds": 2.5340095368446782,
+      "dispatch_calls": 1902,
+      "milliseconds_per_call": 1.332286822736424
+    },
+    "deadline_trip_limit": {
+      "total_seconds": 6.9252254160819575,
+      "policy_seconds": 2.0940714789321646,
+      "dispatch_calls": 2257,
+      "milliseconds_per_call": 0.927811909141411
+    }
+  }
+}

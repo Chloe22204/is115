@@ -1,0 +1,589 @@
+{
+  "day": "day_001",
+  "vehicle_id": 9,
+  "planning_time": 780.0,
+  "before": {
+    "order": [
+      "P000704",
+      "P000743",
+      "P000772",
+      "P000780",
+      "P000781",
+      "P000045",
+      "P000083",
+      "P000151",
+      "P000184",
+      "P000281",
+      "P000375",
+      "P000387",
+      "P000393",
+      "P000432",
+      "P000541",
+      "P000563",
+      "P000595",
+      "P000623",
+      "P000665",
+      "P000669",
+      "P000671",
+      "P000692",
+      "P000695",
+      "P000718",
+      "P000257"
+    ],
+    "stops": [
+      {
+        "parcel_id": "P000704",
+        "destination": "L036",
+        "size": 1.7,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 835.5,
+        "early": 4.5,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000743",
+        "destination": "L036",
+        "size": 1.7,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 835.5,
+        "early": 4.5,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000772",
+        "destination": "L036",
+        "size": 1.7,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 835.5,
+        "early": 4.5,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000780",
+        "destination": "L007",
+        "size": 1.3,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 838.788,
+        "early": 1.211999999999989,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000781",
+        "destination": "L007",
+        "size": 1.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 838.788,
+        "early": 1.211999999999989,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000045",
+        "destination": "L033",
+        "size": 1.1,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000083",
+        "destination": "L033",
+        "size": 0.8,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000151",
+        "destination": "L033",
+        "size": 1.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000184",
+        "destination": "L033",
+        "size": 1.2,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000281",
+        "destination": "L033",
+        "size": 1.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000375",
+        "destination": "L033",
+        "size": 0.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000387",
+        "destination": "L033",
+        "size": 1.5,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000393",
+        "destination": "L033",
+        "size": 0.5,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000432",
+        "destination": "L033",
+        "size": 1.3,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000541",
+        "destination": "L033",
+        "size": 1.2,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000563",
+        "destination": "L033",
+        "size": 1.8,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000595",
+        "destination": "L033",
+        "size": 0.4,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000623",
+        "destination": "L033",
+        "size": 1.5,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000665",
+        "destination": "L033",
+        "size": 1.1,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000669",
+        "destination": "L033",
+        "size": 1.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000671",
+        "destination": "L033",
+        "size": 1.3,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000692",
+        "destination": "L033",
+        "size": 0.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000695",
+        "destination": "L033",
+        "size": 1.1,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000718",
+        "destination": "L033",
+        "size": 0.5,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 848.142,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000257",
+        "destination": "L026",
+        "size": 0.7,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 864.114,
+        "early": 0.0,
+        "late": 0.0
+      }
+    ],
+    "departure": 810.0,
+    "returned": 904.8810000000001,
+    "duration": 94.88100000000009,
+    "load": 30.0,
+    "early": 15.923999999999978,
+    "late": 0.0,
+    "penalty": 15.923999999999978
+  },
+  "after": {
+    "order": [
+      "P000257",
+      "P000718",
+      "P000695",
+      "P000692",
+      "P000671",
+      "P000669",
+      "P000665",
+      "P000623",
+      "P000595",
+      "P000563",
+      "P000541",
+      "P000432",
+      "P000393",
+      "P000387",
+      "P000375",
+      "P000281",
+      "P000184",
+      "P000151",
+      "P000083",
+      "P000045",
+      "P000781",
+      "P000780",
+      "P000772",
+      "P000743",
+      "P000704"
+    ],
+    "stops": [
+      {
+        "parcel_id": "P000257",
+        "destination": "L026",
+        "size": 0.7,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 850.767,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000718",
+        "destination": "L033",
+        "size": 0.5,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000695",
+        "destination": "L033",
+        "size": 1.1,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000692",
+        "destination": "L033",
+        "size": 0.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000671",
+        "destination": "L033",
+        "size": 1.3,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000669",
+        "destination": "L033",
+        "size": 1.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000665",
+        "destination": "L033",
+        "size": 1.1,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000623",
+        "destination": "L033",
+        "size": 1.5,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000595",
+        "destination": "L033",
+        "size": 0.4,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000563",
+        "destination": "L033",
+        "size": 1.8,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000541",
+        "destination": "L033",
+        "size": 1.2,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000432",
+        "destination": "L033",
+        "size": 1.3,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000393",
+        "destination": "L033",
+        "size": 0.5,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000387",
+        "destination": "L033",
+        "size": 1.5,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000375",
+        "destination": "L033",
+        "size": 0.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000281",
+        "destination": "L033",
+        "size": 1.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000184",
+        "destination": "L033",
+        "size": 1.2,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000151",
+        "destination": "L033",
+        "size": 1.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000083",
+        "destination": "L033",
+        "size": 0.8,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000045",
+        "destination": "L033",
+        "size": 1.1,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 866.739,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000781",
+        "destination": "L007",
+        "size": 1.6,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 876.0930000000001,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000780",
+        "destination": "L007",
+        "size": 1.3,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 876.0930000000001,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000772",
+        "destination": "L036",
+        "size": 1.7,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 879.3810000000001,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000743",
+        "destination": "L036",
+        "size": 1.7,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 879.3810000000001,
+        "early": 0.0,
+        "late": 0.0
+      },
+      {
+        "parcel_id": "P000704",
+        "destination": "L036",
+        "size": 1.7,
+        "window_start": 840.0,
+        "window_end": 900.0,
+        "arrival": 879.3810000000001,
+        "early": 0.0,
+        "late": 0.0
+      }
+    ],
+    "departure": 810.0,
+    "returned": 904.8810000000001,
+    "duration": 94.88100000000009,
+    "load": 30.0,
+    "early": 0.0,
+    "late": 0.0,
+    "penalty": 0.0
+  },
+  "trip_id": 3,
+  "verification": {
+    "exact_replay_days": 20,
+    "candidates_found": 95,
+    "delivered_order_and_times_match_log": true,
+    "same_selected_parcels": true,
+    "input_sha256": "a73f06a9faf4c11f45a2b373f50fe2379c4dd23f0b733c8b0bdc36bfaa8226e7"
+  }
+}

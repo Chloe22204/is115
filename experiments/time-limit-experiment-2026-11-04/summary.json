@@ -1,0 +1,515 @@
+{
+  "rule": "110 min for planning current_time <600 (10:00), otherwise 125 min. Original parcel priority, waiting guard and 2-opt unchanged.",
+  "adoption_rule": "Days 11-20 at least 2% lower penalty; days 1-10 no higher. All days are development data.",
+  "totals": {
+    "deadline_trip_limit": {
+      "total_penalty": 179088.7,
+      "undelivered_parcels": 645,
+      "delivered_parcels": 15222,
+      "total_early_minutes": 447.91,
+      "total_late_minutes": 23840.78,
+      "number_of_trips": 817,
+      "first10": 90383.74,
+      "last10": 88704.96
+    },
+    "deadline_time_limit": {
+      "total_penalty": 179004.33,
+      "undelivered_parcels": 645,
+      "delivered_parcels": 15222,
+      "total_early_minutes": 447.91,
+      "total_late_minutes": 23756.41,
+      "number_of_trips": 817,
+      "first10": 90383.74,
+      "last10": 88620.59
+    }
+  },
+  "comparison": {
+    "wins": 2,
+    "losses": 0,
+    "ties": 18,
+    "total_penalty_change_pct": -0.0471,
+    "first10_change_pct": 0.0,
+    "last10_change_pct": -0.0951,
+    "passes_adoption_rule": false
+  },
+  "calls": {
+    "deadline_trip_limit": {
+      "calls": 2257,
+      "calls_cap_125": 2257,
+      "trips_cap_125": 817
+    },
+    "deadline_time_limit": {
+      "calls": 2269,
+      "calls_cap_110": 346,
+      "trips_cap_110": 206,
+      "calls_cap_125": 1923,
+      "trips_cap_125": 611
+    }
+  },
+  "daily": {
+    "deadline_trip_limit": [
+      {
+        "number_of_trips": 40,
+        "total_parcels": 799,
+        "delivered_parcels": 762,
+        "undelivered_parcels": 37,
+        "delivery_rate_pct": 95.37,
+        "total_early_minutes": 3.05,
+        "total_late_minutes": 201.02,
+        "total_penalty": 9084.07,
+        "day": "day_001"
+      },
+      {
+        "number_of_trips": 40,
+        "total_parcels": 772,
+        "delivered_parcels": 736,
+        "undelivered_parcels": 36,
+        "delivery_rate_pct": 95.34,
+        "total_early_minutes": 23.03,
+        "total_late_minutes": 201.49,
+        "total_penalty": 8864.52,
+        "day": "day_002"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 794,
+        "delivered_parcels": 760,
+        "undelivered_parcels": 34,
+        "delivery_rate_pct": 95.72,
+        "total_early_minutes": 24.71,
+        "total_late_minutes": 1145.05,
+        "total_penalty": 9329.76,
+        "day": "day_003"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 808,
+        "delivered_parcels": 778,
+        "undelivered_parcels": 30,
+        "delivery_rate_pct": 96.29,
+        "total_early_minutes": 37.61,
+        "total_late_minutes": 154.05,
+        "total_penalty": 7391.66,
+        "day": "day_004"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 806,
+        "delivered_parcels": 781,
+        "undelivered_parcels": 25,
+        "delivery_rate_pct": 96.9,
+        "total_early_minutes": 14.84,
+        "total_late_minutes": 2377.51,
+        "total_penalty": 8392.35,
+        "day": "day_005"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 784,
+        "delivered_parcels": 747,
+        "undelivered_parcels": 37,
+        "delivery_rate_pct": 95.28,
+        "total_early_minutes": 1.58,
+        "total_late_minutes": 2846.8,
+        "total_penalty": 11728.38,
+        "day": "day_006"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 805,
+        "delivered_parcels": 774,
+        "undelivered_parcels": 31,
+        "delivery_rate_pct": 96.15,
+        "total_early_minutes": 13.47,
+        "total_late_minutes": 238.65,
+        "total_penalty": 7692.11,
+        "day": "day_007"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 808,
+        "delivered_parcels": 777,
+        "undelivered_parcels": 31,
+        "delivery_rate_pct": 96.16,
+        "total_early_minutes": 50.37,
+        "total_late_minutes": 152.7,
+        "total_penalty": 7643.07,
+        "day": "day_008"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 798,
+        "delivered_parcels": 763,
+        "undelivered_parcels": 35,
+        "delivery_rate_pct": 95.61,
+        "total_early_minutes": 8.92,
+        "total_late_minutes": 2966.78,
+        "total_penalty": 11375.71,
+        "day": "day_009"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 811,
+        "delivered_parcels": 780,
+        "undelivered_parcels": 31,
+        "delivery_rate_pct": 96.18,
+        "total_early_minutes": 14.8,
+        "total_late_minutes": 1427.3,
+        "total_penalty": 8882.11,
+        "day": "day_010"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 808,
+        "delivered_parcels": 776,
+        "undelivered_parcels": 32,
+        "delivery_rate_pct": 96.04,
+        "total_early_minutes": 3.06,
+        "total_late_minutes": 657.07,
+        "total_penalty": 8340.12,
+        "day": "day_011"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 783,
+        "delivered_parcels": 747,
+        "undelivered_parcels": 36,
+        "delivery_rate_pct": 95.4,
+        "total_early_minutes": 56.59,
+        "total_late_minutes": 1770.79,
+        "total_penalty": 10467.38,
+        "day": "day_012"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 789,
+        "delivered_parcels": 759,
+        "undelivered_parcels": 30,
+        "delivery_rate_pct": 96.2,
+        "total_early_minutes": 38.26,
+        "total_late_minutes": 212.39,
+        "total_penalty": 7450.66,
+        "day": "day_013"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 778,
+        "delivered_parcels": 745,
+        "undelivered_parcels": 33,
+        "delivery_rate_pct": 95.76,
+        "total_early_minutes": 3.05,
+        "total_late_minutes": 415.37,
+        "total_penalty": 8338.42,
+        "day": "day_014"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 796,
+        "delivered_parcels": 768,
+        "undelivered_parcels": 28,
+        "delivery_rate_pct": 96.48,
+        "total_early_minutes": 1.58,
+        "total_late_minutes": 1911.75,
+        "total_penalty": 8633.33,
+        "day": "day_015"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 797,
+        "delivered_parcels": 763,
+        "undelivered_parcels": 34,
+        "delivery_rate_pct": 95.73,
+        "total_early_minutes": 23.4,
+        "total_late_minutes": 2272.49,
+        "total_penalty": 10455.89,
+        "day": "day_016"
+      },
+      {
+        "number_of_trips": 40,
+        "total_parcels": 789,
+        "delivered_parcels": 752,
+        "undelivered_parcels": 37,
+        "delivery_rate_pct": 95.31,
+        "total_early_minutes": 12.71,
+        "total_late_minutes": 2840.47,
+        "total_penalty": 11733.18,
+        "day": "day_017"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 763,
+        "delivered_parcels": 732,
+        "undelivered_parcels": 31,
+        "delivery_rate_pct": 95.94,
+        "total_early_minutes": 44.07,
+        "total_late_minutes": 780.31,
+        "total_penalty": 8264.38,
+        "day": "day_018"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 797,
+        "delivered_parcels": 769,
+        "undelivered_parcels": 28,
+        "delivery_rate_pct": 96.49,
+        "total_early_minutes": 30.15,
+        "total_late_minutes": 49.52,
+        "total_penalty": 6799.67,
+        "day": "day_019"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 782,
+        "delivered_parcels": 753,
+        "undelivered_parcels": 29,
+        "delivery_rate_pct": 96.29,
+        "total_early_minutes": 42.66,
+        "total_late_minutes": 1219.27,
+        "total_penalty": 8221.93,
+        "day": "day_020"
+      }
+    ],
+    "deadline_time_limit": [
+      {
+        "number_of_trips": 40,
+        "total_parcels": 799,
+        "delivered_parcels": 762,
+        "undelivered_parcels": 37,
+        "delivery_rate_pct": 95.37,
+        "total_early_minutes": 3.05,
+        "total_late_minutes": 201.02,
+        "total_penalty": 9084.07,
+        "day": "day_001"
+      },
+      {
+        "number_of_trips": 40,
+        "total_parcels": 772,
+        "delivered_parcels": 736,
+        "undelivered_parcels": 36,
+        "delivery_rate_pct": 95.34,
+        "total_early_minutes": 23.03,
+        "total_late_minutes": 201.49,
+        "total_penalty": 8864.52,
+        "day": "day_002"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 794,
+        "delivered_parcels": 760,
+        "undelivered_parcels": 34,
+        "delivery_rate_pct": 95.72,
+        "total_early_minutes": 24.71,
+        "total_late_minutes": 1145.05,
+        "total_penalty": 9329.76,
+        "day": "day_003"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 808,
+        "delivered_parcels": 778,
+        "undelivered_parcels": 30,
+        "delivery_rate_pct": 96.29,
+        "total_early_minutes": 37.61,
+        "total_late_minutes": 154.05,
+        "total_penalty": 7391.66,
+        "day": "day_004"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 806,
+        "delivered_parcels": 781,
+        "undelivered_parcels": 25,
+        "delivery_rate_pct": 96.9,
+        "total_early_minutes": 14.84,
+        "total_late_minutes": 2377.51,
+        "total_penalty": 8392.35,
+        "day": "day_005"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 784,
+        "delivered_parcels": 747,
+        "undelivered_parcels": 37,
+        "delivery_rate_pct": 95.28,
+        "total_early_minutes": 1.58,
+        "total_late_minutes": 2846.8,
+        "total_penalty": 11728.38,
+        "day": "day_006"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 805,
+        "delivered_parcels": 774,
+        "undelivered_parcels": 31,
+        "delivery_rate_pct": 96.15,
+        "total_early_minutes": 13.47,
+        "total_late_minutes": 238.65,
+        "total_penalty": 7692.11,
+        "day": "day_007"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 808,
+        "delivered_parcels": 777,
+        "undelivered_parcels": 31,
+        "delivery_rate_pct": 96.16,
+        "total_early_minutes": 50.37,
+        "total_late_minutes": 152.7,
+        "total_penalty": 7643.07,
+        "day": "day_008"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 798,
+        "delivered_parcels": 763,
+        "undelivered_parcels": 35,
+        "delivery_rate_pct": 95.61,
+        "total_early_minutes": 8.92,
+        "total_late_minutes": 2966.78,
+        "total_penalty": 11375.71,
+        "day": "day_009"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 811,
+        "delivered_parcels": 780,
+        "undelivered_parcels": 31,
+        "delivery_rate_pct": 96.18,
+        "total_early_minutes": 14.8,
+        "total_late_minutes": 1427.3,
+        "total_penalty": 8882.11,
+        "day": "day_010"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 808,
+        "delivered_parcels": 776,
+        "undelivered_parcels": 32,
+        "delivery_rate_pct": 96.04,
+        "total_early_minutes": 3.06,
+        "total_late_minutes": 657.07,
+        "total_penalty": 8340.12,
+        "day": "day_011"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 783,
+        "delivered_parcels": 747,
+        "undelivered_parcels": 36,
+        "delivery_rate_pct": 95.4,
+        "total_early_minutes": 56.59,
+        "total_late_minutes": 1770.79,
+        "total_penalty": 10467.38,
+        "day": "day_012"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 789,
+        "delivered_parcels": 759,
+        "undelivered_parcels": 30,
+        "delivery_rate_pct": 96.2,
+        "total_early_minutes": 38.26,
+        "total_late_minutes": 202.12,
+        "total_penalty": 7440.39,
+        "day": "day_013"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 778,
+        "delivered_parcels": 745,
+        "undelivered_parcels": 33,
+        "delivery_rate_pct": 95.76,
+        "total_early_minutes": 3.05,
+        "total_late_minutes": 415.37,
+        "total_penalty": 8338.42,
+        "day": "day_014"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 796,
+        "delivered_parcels": 768,
+        "undelivered_parcels": 28,
+        "delivery_rate_pct": 96.48,
+        "total_early_minutes": 1.58,
+        "total_late_minutes": 1911.75,
+        "total_penalty": 8633.33,
+        "day": "day_015"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 797,
+        "delivered_parcels": 763,
+        "undelivered_parcels": 34,
+        "delivery_rate_pct": 95.73,
+        "total_early_minutes": 23.4,
+        "total_late_minutes": 2272.49,
+        "total_penalty": 10455.89,
+        "day": "day_016"
+      },
+      {
+        "number_of_trips": 40,
+        "total_parcels": 789,
+        "delivered_parcels": 752,
+        "undelivered_parcels": 37,
+        "delivery_rate_pct": 95.31,
+        "total_early_minutes": 12.71,
+        "total_late_minutes": 2840.47,
+        "total_penalty": 11733.18,
+        "day": "day_017"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 763,
+        "delivered_parcels": 732,
+        "undelivered_parcels": 31,
+        "delivery_rate_pct": 95.94,
+        "total_early_minutes": 44.07,
+        "total_late_minutes": 780.31,
+        "total_penalty": 8264.38,
+        "day": "day_018"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 797,
+        "delivered_parcels": 769,
+        "undelivered_parcels": 28,
+        "delivery_rate_pct": 96.49,
+        "total_early_minutes": 30.15,
+        "total_late_minutes": 49.52,
+        "total_penalty": 6799.67,
+        "day": "day_019"
+      },
+      {
+        "number_of_trips": 41,
+        "total_parcels": 782,
+        "delivered_parcels": 753,
+        "undelivered_parcels": 29,
+        "delivery_rate_pct": 96.29,
+        "total_early_minutes": 42.66,
+        "total_late_minutes": 1145.17,
+        "total_penalty": 8147.83,
+        "day": "day_020"
+      }
+    ]
+  },
+  "validation": "Both policies: 20 days, zero independent trip-check violations; all 20 reference logs match saved logs; active caps, timing, availability and no duplicate selection checked; protected inputs/code unchanged.",
+  "identical_logs_vs_reference": [
+    "day_002",
+    "day_003",
+    "day_004",
+    "day_005",
+    "day_006",
+    "day_007",
+    "day_008",
+    "day_009",
+    "day_010",
+    "day_011",
+    "day_012",
+    "day_014",
+    "day_015",
+    "day_016",
+    "day_017",
+    "day_018",
+    "day_019"
+  ]
+}

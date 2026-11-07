@@ -1,0 +1,4187 @@
+[
+  {
+    "path": "benchmark_followups.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b0cbfe2c030d69db05e5f825327a782bc2fbb8c9c772a647c97e707b9ee1350b"
+  },
+  {
+    "path": "benchmark_policies.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d3f5edbba0c5982630221291fccf6639cd41a4f9569ad2d71a0a127a5561f749"
+  },
+  {
+    "path": "diagnose_small_cases.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f3de9a1f9f6ed0e001a9db1a7ba115c2bfea8a1ccf7088c421e7f5928c90fa04"
+  },
+  {
+    "path": "results/backfill_summary.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d3df9db798fa6e2161f8437e87a4d01024789be4b011a4a4bb473ceaf5bc2512"
+  },
+  {
+    "path": "results/benchmark.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d08d98926e7eb66b1dec2cd78b16bb2a6558bc3c1a7cf98e8957406dcacfc194"
+  },
+  {
+    "path": "results/deadline_backfill/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d33896a76b5c11a3c01e69bda9b2b56ef4063e95549f6de15d687da2f858161b"
+  },
+  {
+    "path": "results/deadline_backfill/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f78784d05169f3f046df621822442eff02a10bf98a58ed4bb4e5818b23f0ffb1"
+  },
+  {
+    "path": "results/deadline_backfill/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ab2130fdadc4e4ad096628fbfdf1cf77447e4f692256ea74d13b4fda6123964a"
+  },
+  {
+    "path": "results/deadline_backfill/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0ee6ddb1afb33f9b3a34158bae0985bc5670c5d846bee7d3b06a45afd58569c7"
+  },
+  {
+    "path": "results/deadline_backfill/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7b5f5b623120c0548f1aef23147dc5cf21f527f42947968fa463556f54394a77"
+  },
+  {
+    "path": "results/deadline_backfill/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fb7f004e92dae27c2ef5fcf3ca1acc35f753fb37d146db682a8eec8ae1b4f87d"
+  },
+  {
+    "path": "results/deadline_backfill/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "769aa4bc59f5d8dee0888ff55f75f132647f3db2842e4869007748d14d51d76c"
+  },
+  {
+    "path": "results/deadline_backfill/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "89f35ff5a8c82afd4bbaf583bb8159505c525fff1d9d839bf00f6fccceb22612"
+  },
+  {
+    "path": "results/deadline_backfill/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8b6c1aa17f979a45aa1225d54b90bd7a3dc6da12d6f2a11b590edf4008bd38ac"
+  },
+  {
+    "path": "results/deadline_backfill/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b216c47a097530183d36c06489cc1fadd3d1a4cdb3022601a5971a06df1480ad"
+  },
+  {
+    "path": "results/deadline_backfill/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f0ef99b2e8903690c0398d5052e3d62ad69bac055ee2f8b5bb6505b2e43a7e36"
+  },
+  {
+    "path": "results/deadline_backfill/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "046aab90db755805e819a0cee1cc0a2a494e05946144fba8d90493afb8b42eb0"
+  },
+  {
+    "path": "results/deadline_backfill/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "181cfe9483bb08797a42e4796288953cd317837b555a136a88d4aad863c1618e"
+  },
+  {
+    "path": "results/deadline_backfill/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e1a10768d3fdac9dc950fd6ec56895058b9ccf08ec72bb80215cc7718170e4cf"
+  },
+  {
+    "path": "results/deadline_backfill/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6315cca25a67da1736f977bc989f1b6568ca07a14cdca7664d5f513cc1f2010e"
+  },
+  {
+    "path": "results/deadline_backfill/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "21e242dbb5639827717b3fc529ea55a22fa2fba59548e5a67ba33673c9a0be00"
+  },
+  {
+    "path": "results/deadline_backfill/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f9407ec93bbc6277f82fbe51fe360b7268d4972bdc51bf97a3b4372aad99fc40"
+  },
+  {
+    "path": "results/deadline_backfill/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "364f20502798d8235d152aea1cf5e2da570a50001ab28ed1666c956d506458f0"
+  },
+  {
+    "path": "results/deadline_backfill/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e542991e51fccfef6d0d01b20540e85821fe47395f8618af521328176f772af7"
+  },
+  {
+    "path": "results/deadline_backfill/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e949079a8cd3c0fb68ce1f0b68b7bc3e61641e6f14da8c1f5d9025f4720c498c"
+  },
+  {
+    "path": "results/deadline_backfill/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ff18434da8d94ba80f5f86c3cc9bea3d4d67a8eddf5e9152bed0555566a66099"
+  },
+  {
+    "path": "results/deadline_backfill/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "32a0a9074a5fb32dfa5f86ee549d23036dc18ee27a44df6caddb308d35ac3033"
+  },
+  {
+    "path": "results/deadline_backfill/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "63e25c2b3dd4833dc00e5e30e94f28443bb8ca67c9b7899ff97ae0d635da7a6d"
+  },
+  {
+    "path": "results/deadline_backfill/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8d18623fcc674c31eced68201dad111181dd023bbdb286e4b9a31ea185c6b800"
+  },
+  {
+    "path": "results/deadline_backfill/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e9e5ea07e1aafaf56df31992cdc21d5b358d57ae7996d06d81ad7782784f6d7a"
+  },
+  {
+    "path": "results/deadline_backfill/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3d769672c441eeb6f55541ffaa31e5bdb039ec94bfa05c6caea41c998760ffd4"
+  },
+  {
+    "path": "results/deadline_backfill/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a4ca3e7ef6d81fddb25bd886d582e474e1e9f00268cf3516a6e239fda16f702e"
+  },
+  {
+    "path": "results/deadline_backfill/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f5e63e4d3d11d28458d814347787498616ab4d5f3a90c570e4cdbc4d9e155617"
+  },
+  {
+    "path": "results/deadline_backfill/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4bfd7bc690e52e2863fb3f537ae0d355ab983bdad6c5ee284d5b4a93702b623b"
+  },
+  {
+    "path": "results/deadline_backfill/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fa327e934dda0737f39c3ca65b9adb7d9988b3fb4a1ed23831da09029bf3f1f6"
+  },
+  {
+    "path": "results/deadline_backfill/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1ab4c500d59f441c2a06ae36cf50560d4747ad7b8c0d6bf5f53a098142d3a356"
+  },
+  {
+    "path": "results/deadline_backfill/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3612f7dc3ffd6d6a39bfb64a07a8181ef9473277e127187e9a73f65938657fcc"
+  },
+  {
+    "path": "results/deadline_backfill/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3c9dedb4a6bfb7f2b3aae6a243f729c121fd1446437ce179bdde487c3bd5aad4"
+  },
+  {
+    "path": "results/deadline_backfill/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d0c457bacb20f44024966ec13953f703569e6b58ded93f74ec3c7a08a2100939"
+  },
+  {
+    "path": "results/deadline_backfill/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2f3b26a5e6aae16c9ff5d3057afdce09d9e124784922c6d615e9fed1ae744da5"
+  },
+  {
+    "path": "results/deadline_backfill/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "55223b9174f078c8c72b940677bffaf770d24cc3b9306ad46230ee7fa7dfb722"
+  },
+  {
+    "path": "results/deadline_backfill/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e0802abd81d89a45b002b5bb1c7e11da2416ea46e22d8292bd26766227289dc1"
+  },
+  {
+    "path": "results/deadline_backfill/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "960ac1896ea468e570a7ff15194ee89cd5ef36f278ea83c863459e03b7038c28"
+  },
+  {
+    "path": "results/deadline_backfill/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4a58d2f09f33cfbc2cc52c2dc2c86d8a98199c4045abe16d6044a04e4596380f"
+  },
+  {
+    "path": "results/deadline_backfill/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "aa163701a80dd2c05b3817bdbd34f551fd6581877d271eb1a8ce0c0a9cd5209c"
+  },
+  {
+    "path": "results/deadline_cap0/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "99e9537e15d584a1e57f0c915c27d01e8dd493b1a569193d1a89ef3ca5520a8b"
+  },
+  {
+    "path": "results/deadline_cap0/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "57364ea4d59e423f8db3b68e062764d53979902b96da7a88e7f558a2c2dc8000"
+  },
+  {
+    "path": "results/deadline_cap0/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9deae62eacd7193b5287da2ec0b5f5046909cc64674b3d55dd07cd6a18c9f1e1"
+  },
+  {
+    "path": "results/deadline_cap0/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3230307f3276992667bde73958171e0ddd1bb55bb3beece459916fda9da90f74"
+  },
+  {
+    "path": "results/deadline_cap0/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "927a2ab72eae321f8c12c647df885b383ff9f60099faac56ff0c6f43276d5933"
+  },
+  {
+    "path": "results/deadline_cap0/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1decf1881daeeb96c730532bc5c5b5b55500369de12ba8827b2238b3f91f32fa"
+  },
+  {
+    "path": "results/deadline_cap0/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9369e7f78e8141209ee61dba5d52b07b65da0bafdb6fd9223e6c93f7f4f0291c"
+  },
+  {
+    "path": "results/deadline_cap0/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d0e1de4f27bfe0fcdc4643e684c0df01892ca6ccf3dbb6a669998484e877c0dd"
+  },
+  {
+    "path": "results/deadline_cap0/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c70b01ebee21df77d9104364280d9e173192178feb3b702cc0162c991ab67287"
+  },
+  {
+    "path": "results/deadline_cap0/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1bc6bb0fafabadf019f39c731c9c1f74923aec300cca315aa3ff5bd984c8c9f1"
+  },
+  {
+    "path": "results/deadline_cap0/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "dc0e014802fc0962964bc293889f06c2ded4ab174048f9a7a9bff2e66dacaab8"
+  },
+  {
+    "path": "results/deadline_cap0/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "79341840ef992ef3b12b4f412e321036d61d1d413f77f80ca7bd36dab8cba771"
+  },
+  {
+    "path": "results/deadline_cap0/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "51d76463ced341bb54e51df63b69ad73e845faaab93d39a083d527f43116d4f9"
+  },
+  {
+    "path": "results/deadline_cap0/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "67dc50deb7e5c63db3854f6102c79c3528acec8abb86edbb03407c318e2798d4"
+  },
+  {
+    "path": "results/deadline_cap0/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f33d5554ba95e15493165620b889ce7473091d5b10ac7a8d2e2fe80adb78183b"
+  },
+  {
+    "path": "results/deadline_cap0/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8800e5795a4fbb8c7cd56a91ecd65b5303ec0f514166f965507b7ff2e1aeabf5"
+  },
+  {
+    "path": "results/deadline_cap0/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e873fdfd665c880dd4824429a4545bc4f99507ee7a02a0007c3087af2695d2a2"
+  },
+  {
+    "path": "results/deadline_cap0/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1180ddfcb04dbf65e138438bb8a62fd0f801bb78b9c481abc856726098021fdc"
+  },
+  {
+    "path": "results/deadline_cap0/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "51c93dab3094afc022b68f9076006566a39e20d2e942111feb8f7f1db20e0642"
+  },
+  {
+    "path": "results/deadline_cap0/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1d6df8958328165fb2663ea872bf468ed398605429841687ac2b038d9bb854a8"
+  },
+  {
+    "path": "results/deadline_cap0/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fbeed291d0f8522d86ba947905b02af69e417a1cfae0a9fac1b9d39398988d37"
+  },
+  {
+    "path": "results/deadline_cap0/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "63e9987abff91367663a781ff4cf39bb2aff7d9011c590e5fcd41070eccbf0cf"
+  },
+  {
+    "path": "results/deadline_cap0/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "dcedc269bcb3d228311bf320b4f6006354be3b4f20bdcbfbbf398a6b1c72855c"
+  },
+  {
+    "path": "results/deadline_cap0/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b15862a462223b9b9b1e5ae3da5939c1f74af3bdf07ba5e4f79ac172eab9f1ae"
+  },
+  {
+    "path": "results/deadline_cap0/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "78b2e0e51bdacdf13d0f8236780eb5838a78f53d27de5ae983de850268de2d91"
+  },
+  {
+    "path": "results/deadline_cap0/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ea8302ddbd2d102977c5ed3b8b4c62fd70d19f636939bbb88c56ac952c5dfac5"
+  },
+  {
+    "path": "results/deadline_cap0/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "199e31fa10dbbd7c1e7a9ed2a2b2ea42061eff956ca7365863314059d918591a"
+  },
+  {
+    "path": "results/deadline_cap0/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c4fdbd169266a68191c653a09f8ed71afbd73efba11f4ef08ec92fc6f65b3536"
+  },
+  {
+    "path": "results/deadline_cap0/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "139b4f0164735afa99bec97fa13478c20858c5c5cb66952f844b45ca41edf24b"
+  },
+  {
+    "path": "results/deadline_cap0/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "68866ef9cbb13e2020247ee9b6de0db73cde90173caf0ef55602b8f3ad2343c5"
+  },
+  {
+    "path": "results/deadline_cap0/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ad57ef6d8162f02aed91a38abb2b91db2ef345c375b1a0f0fae481a2ead2a64a"
+  },
+  {
+    "path": "results/deadline_cap0/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1bb762e8df047fea1044a9f158862785a309a78f17d5f110a941d7bf5d98b540"
+  },
+  {
+    "path": "results/deadline_cap0/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "26f43634498d3527aa587a31ae87925f05da9ab15f60f9944b5cfa1ae52d596c"
+  },
+  {
+    "path": "results/deadline_cap0/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ed516cffdfe58f446e42000e8c9eb4348b78f7fc2801f2827417a0017044d709"
+  },
+  {
+    "path": "results/deadline_cap0/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "092ccad944ebddc75c1a29a98c5410db7a375f050288d6a762a37c9ae49e99ab"
+  },
+  {
+    "path": "results/deadline_cap0/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c2d579d80af734a679969add2c5078dca089aab2ce716686fc3d4f4bbd166c89"
+  },
+  {
+    "path": "results/deadline_cap0/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e0e6358a7a2c633d4f3f60843858cd2f13770f3f8533dbc7e6084b10e43021d2"
+  },
+  {
+    "path": "results/deadline_cap0/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ac4e7ee2640bb7dbb94baaf13fe5c86dac7abac2bf17d221bab6aaf5ca444a28"
+  },
+  {
+    "path": "results/deadline_cap0/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "635318cabe621130f063ecc7eee025a060201d6d434d39cc0ae7edb034b851f9"
+  },
+  {
+    "path": "results/deadline_cap0/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6deb4751977ef74201fd4616a3a3f92e29d4c7ca761bcc4a5a3da15ed5397361"
+  },
+  {
+    "path": "results/deadline_cap15/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b6198f24b6768d494abfd3ac4d57bc3a66eb31b11543a35e0a24358a2563479b"
+  },
+  {
+    "path": "results/deadline_cap15/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d11a42c22fea15970b6e1c748f83cc76d2e508e961172373272ca1fa1b003584"
+  },
+  {
+    "path": "results/deadline_cap15/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ad5b0bf938b8bd0447833320f0dd5abeec19b74b6817337b0287571199a86fcc"
+  },
+  {
+    "path": "results/deadline_cap15/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ff7408490b4a4d55d880c325dfe73deb9e404bb464535948037e3dbab8a8735e"
+  },
+  {
+    "path": "results/deadline_cap15/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5bf53b66df7a87e8b9292e23402ab9aa86f76144f72257c4e8b1f1152d48f8e9"
+  },
+  {
+    "path": "results/deadline_cap15/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "01a347a6c491f3985dc68b21b79a7fa38a762ea329f1742f673fa6d410f970c0"
+  },
+  {
+    "path": "results/deadline_cap15/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9474b8acf7c4c9fac817fee87df0f78bc6479aa94f76beb8d574ca1da29db403"
+  },
+  {
+    "path": "results/deadline_cap15/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "429354282ea98abfaf27d9b4fee10dd247f280596ec7df44c6f45d5318c5cada"
+  },
+  {
+    "path": "results/deadline_cap15/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e4decea207779fbf041541c358793760671bb7b058bbe5b699d6e783e451779d"
+  },
+  {
+    "path": "results/deadline_cap15/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f16b0a869e63c40e5a1ecdbbf166816aa3cbc451354f393c7bc077abfc14b7b5"
+  },
+  {
+    "path": "results/deadline_cap15/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "44209f47145e95d4951c0301d0daf348499aab00543ab8a81e330ae88d4417d8"
+  },
+  {
+    "path": "results/deadline_cap15/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f9f6872f8c645df0b980577ae271d8e93f261af25f618bc6cdc80bb7517548ed"
+  },
+  {
+    "path": "results/deadline_cap15/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "84a6a68ccc4804672b45e32212fd75d7b2ba2476b8ae61bc7ee6c0f4c1ee34aa"
+  },
+  {
+    "path": "results/deadline_cap15/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "36fe3d765bfdfb32881b2fabe24b8d145c4c3670906e53536a76c4cf5da24ab8"
+  },
+  {
+    "path": "results/deadline_cap15/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bb275bd37e26ae9a63bb55b5bdec73bc023d21dcc3351f8636d6d3d7c20e1727"
+  },
+  {
+    "path": "results/deadline_cap15/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3bcd6757fe54225033acffe4f56c7369e578c4fde0ed424a5c0302a6159c1951"
+  },
+  {
+    "path": "results/deadline_cap15/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8505d716db7ab905b27fd21b98ac985e2a2646093729d4577ed3b4a1d3d88a3a"
+  },
+  {
+    "path": "results/deadline_cap15/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c4c7988c22fda8b549eee8d4ba8b9f3ba48320e0ff8cd15794556abdc2e54066"
+  },
+  {
+    "path": "results/deadline_cap15/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c447ef492afeeb3aeef5d1e34bf73d906e0b1bccda060e8e4af58de0fd72345a"
+  },
+  {
+    "path": "results/deadline_cap15/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "08b080e83be55876335254203621b77a4996db15edf0c18066afc605aba1af1d"
+  },
+  {
+    "path": "results/deadline_cap15/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5d4216807254144bec35d946832a1544fbdea62bf7a84466301c519530396e53"
+  },
+  {
+    "path": "results/deadline_cap15/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d4991c64cf745aa1590f42caaabab0a0b4d9b537db9cac3ca52ee69a61b63506"
+  },
+  {
+    "path": "results/deadline_cap15/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "84efa31dba8f6c09c9d25346a1d9fe6ed0361d95e307bcbbce0080e4ca9ddd97"
+  },
+  {
+    "path": "results/deadline_cap15/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "501ff61cf098a63a5d5ab9ab4b9fe85a04077406a3ab77b5860f1b8175623b0d"
+  },
+  {
+    "path": "results/deadline_cap15/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "025e24e7df1b9b34a8061bb3bfc130902ffdbd83c2c23a5f0d93ad7336bdb1de"
+  },
+  {
+    "path": "results/deadline_cap15/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9d37dd5ce8bb5ee4f708003095655ee35d28823e8023397bcc16ef8bc69b64af"
+  },
+  {
+    "path": "results/deadline_cap15/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "50fee1b625ee7de4c5971718e8bd6b6eb50b3f61b8084d973dadebebddec0b89"
+  },
+  {
+    "path": "results/deadline_cap15/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b69deda3262dc18cc9113255e189008eacc9b7310f14aebfbb06fd8d9732bc89"
+  },
+  {
+    "path": "results/deadline_cap15/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "09d288b48d5a9db52803f00deb772f66470120d5f90842db6a492e61fd28c19f"
+  },
+  {
+    "path": "results/deadline_cap15/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f40f1a926b066014de78df161be360354570e62c41e59ed924284fa228dc0e9f"
+  },
+  {
+    "path": "results/deadline_cap15/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "caefeb83a8bb6a74845d812e5ad0bf9ef095c84f8801ccacb9a9f57d635ffca2"
+  },
+  {
+    "path": "results/deadline_cap15/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7287bed6dd8f662999a414369d526f57bb56f1019c9461842eec3a1ce7db655d"
+  },
+  {
+    "path": "results/deadline_cap15/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7e14bfd8a6b17b559d60918995455ea936abb6c337429a96a73562181c137829"
+  },
+  {
+    "path": "results/deadline_cap15/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "353137dca7ef5218391ff9ea9b10be155c345129ed2b44d151bafa1fd44de431"
+  },
+  {
+    "path": "results/deadline_cap15/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c3119d3f69e383f4d46e7fa7cd075949cc1a8a4c1aa41bb89030fe3ce8a0f238"
+  },
+  {
+    "path": "results/deadline_cap15/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5ca90b361209cb7fef08ce03be12639e00ae4e7b9d06455dbddcf52741a66eac"
+  },
+  {
+    "path": "results/deadline_cap15/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ec71d1b9adff6fb9904a6f6bd357e0e845b25d142991301eae7c70fc6135f38c"
+  },
+  {
+    "path": "results/deadline_cap15/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0c9907b70fa1dcca85ca17d2cc4725e925feb1920d8c8af93b053c301b45ae75"
+  },
+  {
+    "path": "results/deadline_cap15/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8ea443a82ea1048af266c6f8a1dd6b9a2c88b77a2ce8caea5872f54c05bc56c3"
+  },
+  {
+    "path": "results/deadline_cap15/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ea51f06ae2fb37c48a3b38b4ccda0a3a4cec370eaee6fb578b33f7564363957b"
+  },
+  {
+    "path": "results/deadline_cap30/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d3aa902c109d24cc4ef49f855403312fa4be88c484417acb87f48260297870c0"
+  },
+  {
+    "path": "results/deadline_cap30/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b0e6d8468f37707dd3638cac2b3050c82a354bb36ab2c99e5c4aa6972b3482b5"
+  },
+  {
+    "path": "results/deadline_cap30/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6da1fdafe02a9f899c996452aaafcf7b1e2096d65185f90887a9dffe91cbe0de"
+  },
+  {
+    "path": "results/deadline_cap30/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "33bbc3c23b0c8e95eb4cfb6046c776a0470b0f06a7ac7f0c559a54be66206abd"
+  },
+  {
+    "path": "results/deadline_cap30/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "87978cebd21ef7c8b882041dfae3898ec9eac5c9df3a5608b1f25d70353f8c2f"
+  },
+  {
+    "path": "results/deadline_cap30/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3bd00c5d4bee78ed618118b60b0d03a63686c7780d19e1d9723b44784b202835"
+  },
+  {
+    "path": "results/deadline_cap30/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "178a51277812eb9355c1ed56a1be2d63d8e9799fa332b8e583b5b543833d2076"
+  },
+  {
+    "path": "results/deadline_cap30/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ce647590b30578b1139aabb8a8bc4f779e9fc6d697d2131a9c25daf60b6c7a04"
+  },
+  {
+    "path": "results/deadline_cap30/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6bbcb346f5b15facf69c17a33172b19d415d75f73f773ad109ad6b1750e71786"
+  },
+  {
+    "path": "results/deadline_cap30/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "afe7680e03b6cf024a6f670d9378539213a4f78e8c164f0bcc43195fa3fad5d3"
+  },
+  {
+    "path": "results/deadline_cap30/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "049a94f6a2493409c9d38f6903c179a0fbc6975d2ec62d8c2fa1f7eec260d6b3"
+  },
+  {
+    "path": "results/deadline_cap30/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b2604de6c7ab4afdb812e45f4be408be1319124c392d0b07d0ba3dd47d750e1b"
+  },
+  {
+    "path": "results/deadline_cap30/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "22509c29aadd0703397d56e9628cf63088959be7b0c175cc605fa767a367d82b"
+  },
+  {
+    "path": "results/deadline_cap30/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4e54f0002e10fb8c677a75bc7cd1455e9c65ac606505ce27265e4628c1e74a91"
+  },
+  {
+    "path": "results/deadline_cap30/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "407f5e19a138896b546a3687ded6d96c102af576663a4de19cd6ca5dc32811e5"
+  },
+  {
+    "path": "results/deadline_cap30/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bf99d5cb35be8be1fbcc72b16fd3fd7978568a3a90ea61157fb1168bd2fb70a3"
+  },
+  {
+    "path": "results/deadline_cap30/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a5475bebc4ac872828d88e9811d31e891dcc32ee88aa9346811f5f9419ed63f2"
+  },
+  {
+    "path": "results/deadline_cap30/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c9a32d5d139e81252b77140e30a23a0dcc67894510eb4ee6699e78e5e62ae4e1"
+  },
+  {
+    "path": "results/deadline_cap30/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b4bccf7c5e4b2783ffea4232eebfd9fe50ae279e473e90a1cfad6678cf4b8103"
+  },
+  {
+    "path": "results/deadline_cap30/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d4c4dd1d90b180638936e16c0c653610e0ff8f0402431758b5ddcd72a033cfbf"
+  },
+  {
+    "path": "results/deadline_cap30/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "05de7e63b01c6f9fbfa9e91027c530db0cc9cecf7d75c8bb24b827eeb0cde6c6"
+  },
+  {
+    "path": "results/deadline_cap30/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0c2e7aa27c2fea49b0ce03825dc73088e2daf36f38be6e5b4d82d091277dc4d7"
+  },
+  {
+    "path": "results/deadline_cap30/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "284758618005843f01b5be70dd6069e3a6cb61ed144d22d2d8ae5715dd116ad7"
+  },
+  {
+    "path": "results/deadline_cap30/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1a146452871c7cf5e409bd10b0c8d04a6d25dc6d90150c88d95d6be7f03fd592"
+  },
+  {
+    "path": "results/deadline_cap30/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4a24c6d481eb7fb86afbe71b73855b268f95193541d5fcd6cc177f342ff46f40"
+  },
+  {
+    "path": "results/deadline_cap30/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8eebe306dd69520fecdbc666caabf859e8a3ea8bcec9e68a60ba3218a7c7153c"
+  },
+  {
+    "path": "results/deadline_cap30/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "084b2072684415a175d8eed5794965aa33389576358808269b110bef2da83b12"
+  },
+  {
+    "path": "results/deadline_cap30/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f96327dbaa066c5152537009aecbaa1976b4c562654c2f01ad05a29fa76961df"
+  },
+  {
+    "path": "results/deadline_cap30/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "96af5797d6803645a900179bdf15a806a9475418b02b1f2ee07f9ebb69c4c2c2"
+  },
+  {
+    "path": "results/deadline_cap30/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "37812e70e6b72c788c723c9345fd9dde4a57f9c2740a7807b173bd03eb6d7dcc"
+  },
+  {
+    "path": "results/deadline_cap30/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b9c5ba61e65ff6473502a5667dd3af72a2aafa12a74a3f688a8f56887f325394"
+  },
+  {
+    "path": "results/deadline_cap30/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e7567211125a87771588efb2e8cbad7ce4414e97e19af66f53d4d54e4498b8c3"
+  },
+  {
+    "path": "results/deadline_cap30/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b207e1f8b7d9f5d60bcd038554ac940557a3e2e518ad8eb6b3f7f4b089d6f0d7"
+  },
+  {
+    "path": "results/deadline_cap30/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "900f89b7a24db7e6801990e737ea25eb2ac4b19021a8988cdfafd53f9b941756"
+  },
+  {
+    "path": "results/deadline_cap30/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ec7db90c32a35fc81db8b782db37a097e071df2289f83acf602a7d388822fe33"
+  },
+  {
+    "path": "results/deadline_cap30/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4ad995e750ff9baf1c21d5112f953cb6f3f64c1c2be8ee317adb8605bfc8ecb7"
+  },
+  {
+    "path": "results/deadline_cap30/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "442f1f8fd24ac35459a05820831e0394e343d0252210d8df651cdd534226a8b2"
+  },
+  {
+    "path": "results/deadline_cap30/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5c886d7061a60c7256f5505aafbf8d5e482191e4bd020ed25f66019229bc5f45"
+  },
+  {
+    "path": "results/deadline_cap30/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d8e37d32708a3b2931d081a7f32dc614fbba48f12e015be91917bc4b8e03914f"
+  },
+  {
+    "path": "results/deadline_cap30/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "822e500ee56739eaa9085ad0a6ba57760fdf0837f58879c3b4c48d3f8a747b35"
+  },
+  {
+    "path": "results/deadline_exchange/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f36f89893d4373c9cc3208f945fc5c2f53b63b6b271dcac1084157eaa3af57bd"
+  },
+  {
+    "path": "results/deadline_exchange/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5c4b533131f19698ad956e2418099f0e3508386861b7331ea5f2fed2bd52dc2d"
+  },
+  {
+    "path": "results/deadline_exchange/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6455da27e0478a9b349f0d4adf43decd639e73973e5c5fe09a72fb4004d8caef"
+  },
+  {
+    "path": "results/deadline_exchange/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f834b91db659a1c4bd202c88f208863b1c33c88aad22e1c9a65c420aea7a50db"
+  },
+  {
+    "path": "results/deadline_exchange/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "13f77f95d548f892e9b7f361988378d4bff2ca08a3837f02816aa2828522ac88"
+  },
+  {
+    "path": "results/deadline_exchange/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d563291eb6640a06ae81f4ad5f69763bebcecd7ce673e87d26b5a04f839948b2"
+  },
+  {
+    "path": "results/deadline_exchange/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "95571866ee6bb98d7e3a50e68b139c9d184fe3b025f8d51b70964ffbc29d2c72"
+  },
+  {
+    "path": "results/deadline_exchange/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6ca50cf35f549b4dacdbaa920053d914081fb96e468f8900e38e516c8b05090e"
+  },
+  {
+    "path": "results/deadline_exchange/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c897886066ff4a83b6be244fa7ad4356601760aeec2974391733d170e9d14e41"
+  },
+  {
+    "path": "results/deadline_exchange/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e89c8c15146b70bf9b71009e2f423c9cab82851518873edc6dbc0abc4c06ad2b"
+  },
+  {
+    "path": "results/deadline_exchange/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d9cdfb073f361283cf690d4025d15ab97fd924c812157ea2cadbbc8108b86f2e"
+  },
+  {
+    "path": "results/deadline_exchange/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4b3a7e17470b0285f59d2b9e4df55864a201e6b2cc94dd45bc95ccf532372ec9"
+  },
+  {
+    "path": "results/deadline_exchange/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fefd131b2517d50785a1eef7d16e28c4f0e50fea014a982782e38bb139dc45d1"
+  },
+  {
+    "path": "results/deadline_exchange/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4207be42a09feb18c69fbe8b86a404baaa0e5e2e06012563b1d6158af9b93c24"
+  },
+  {
+    "path": "results/deadline_exchange/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c878250b6ba862de91c459ba95928cdf551910a41ef1e850bfd3c3a6f84ff4ab"
+  },
+  {
+    "path": "results/deadline_exchange/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "db4eb390f5ba3a23f55377c17964babaebea2e3560ba602d85886cd5966bc0e6"
+  },
+  {
+    "path": "results/deadline_exchange/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fec0e6b0c6a4e5e57bff235819819190e30a48f66f9e621496ac6b70ea0ad176"
+  },
+  {
+    "path": "results/deadline_exchange/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "38d8a13876c4e3ea3ee57320063d606ba8601ba104bf13efb1d758b233676712"
+  },
+  {
+    "path": "results/deadline_exchange/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "51d6e6fffdb79fbc3da36ce256416f6d653c7f18c039a96b886d38f098351dba"
+  },
+  {
+    "path": "results/deadline_exchange/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "07437e3572a01b763637b745b515dc08dc1ba5e76e8cf872c91f42624a529e72"
+  },
+  {
+    "path": "results/deadline_exchange/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "76b2006ed8c29f65d5f614c7af8075903ba1246180f7ce8d0a6214f3f42ea6eb"
+  },
+  {
+    "path": "results/deadline_exchange/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e2ce94e4fcc8b6bd72c476461a7be189919053ee41faf4b62a93449bc41524f4"
+  },
+  {
+    "path": "results/deadline_exchange/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2509e6736cbab77fe66cad79bac8a459468d3f13835ea0a4f127fce691b2d106"
+  },
+  {
+    "path": "results/deadline_exchange/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3326a91222adea97cc39fbd8fa3bcf26df88abed518c7ece75d9d0ce58509300"
+  },
+  {
+    "path": "results/deadline_exchange/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f1bf98dc241ef3e4276207fdc2b38c3081a8d50d270cb5f8b3079dc6f9d54bc0"
+  },
+  {
+    "path": "results/deadline_exchange/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2821eaa202b26da937c164a65edabff143a1e8fb91b21e1ea49b5882c187826e"
+  },
+  {
+    "path": "results/deadline_exchange/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "50bffbac3909e6ea93a35178f724f6c9e84a599ea162d4ff553571b8b5d24907"
+  },
+  {
+    "path": "results/deadline_exchange/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "de7086450b7ed16a562d7e9cd30330d9eaed30120a33cd536d1afd2b5f96269c"
+  },
+  {
+    "path": "results/deadline_exchange/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c0f4493551c219a86dc9741f2a2bf77a4c0b091535aba8efb491f27e687e2d9f"
+  },
+  {
+    "path": "results/deadline_exchange/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "987d7da04519bf468a273e27eb6ffea4f5f0a5a0f2b1697175da95ea129c0f98"
+  },
+  {
+    "path": "results/deadline_exchange/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "60eb8f29273d36f5eb9468fd09ad32f799d2b7d258c7b79aca473a4e6e554c84"
+  },
+  {
+    "path": "results/deadline_exchange/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "cf353a5d660cdf1defa14055595ab5c28095436b45c7291c2075d51f1d57ad82"
+  },
+  {
+    "path": "results/deadline_exchange/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9d6d82e5e77ff7da78b4bdd4cd0739c977e6da357c61edcec669e1ade71b503e"
+  },
+  {
+    "path": "results/deadline_exchange/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ce349f08b1c2779387fc01970a7d156bee1abb6ee4d1ec8c92c8329732b35f42"
+  },
+  {
+    "path": "results/deadline_exchange/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "afb24620903c6fedb4ef45bc746b5e864f2ecc04f5afcab7ca1625a02fd77bd4"
+  },
+  {
+    "path": "results/deadline_exchange/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "76417f5a606c113aed444cd53918ada1f60f5a70cc70e23f2dff76751188e426"
+  },
+  {
+    "path": "results/deadline_exchange/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d7017882ca1c9e6e8238506955362e7ae0963177006e0f1241e5723646ad4121"
+  },
+  {
+    "path": "results/deadline_exchange/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2acfb84f0132b94ba028126d6d98f8fb5cdce5db4507ca98d2e67a7979282c8b"
+  },
+  {
+    "path": "results/deadline_exchange/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7032fab09e069acd591e9d12eb78ce3af7e15c0badb27a2ac4f3fc5359a2ad05"
+  },
+  {
+    "path": "results/deadline_exchange/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "879b954c850edf034212b74d59604f7f37a2162a75eba8534b042ba1d852bbc7"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f13c4ff108e66c8e27dfeaf3637a6c0bfcc1478b22d715f0a9724713c69e6e6f"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f327b76f5e9a2ee076956cacac705f53d25a8c2f10bd9221428e72a4a82dcdc9"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "66824e59bdb42c6193677d9503f1e7d7d2d1cef65400256c05888bad8fba1cf9"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fcf1234e8faff12613725a548fe4afef8f1004d75fc02f45a06abe2b53355a36"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0621df6eeaadbcd4480bca4ca2df51b318fc2099cd6dc6e738a3f41dbe2d263f"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d6f41f0bb154fde124b1ee962fa806371335136fe15ca88174f8043b898f5030"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6916900a386ba7cdf9c8c3ad6321768ff287688212f18c1893f86a4b44c92fed"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7ac4becd7266ca596230dab144bdd682fe5c26a91b632513c0a6af4a60842f08"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "318653e84d4d418171f7008b384536bdaa5d63d8ce53e77d381b25cbbfcdae1f"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "125bcbed6f8f6677f96a2c798ec03f80b9f523dd536056e470943a68fd22fed9"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5e1eebb4dd8d1a0ea77687b8480d19cd95058614b659a88f155b692c6d387916"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d43ce387626bb9665e1fd099097c013d345d1391daf572deaebef9b5f60329df"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "27880d174316e6287f2cc79aec35dbc9c2c46cf75418334fe1753619594e6071"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "572cda83320e2e9e35f014b252b7a598d831d03940503f9403f273fe108f27d8"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1f4e5843c5f8e9da49ea3c8c8d8128bf3585575a3ba87dd9af23c0dda6209ef1"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6f820acbd73399f90169db232a9fe3b267d6fa403d8f267f640c679059121e1a"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e4700ba8212d210d579dbf05a6a019509e4e4bcc5c24345f35f5dbb1dddcd9b1"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9a439f0cd70a6cfaf9d200d2fb7930af0e656c34317a950a8ec73a3d3725e16a"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f2723735fbd09481765d6d2991a8fe0b55a6cc1eaeb70de5303c99a7b6fd8c49"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7529669d1f2182c1b6cfa4e00df0a3440f5376612951782ae7344b399807046c"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "87d8a5f250b182ec1a692ba550f741c5dc4cc37014d0e0b84b5d97598cf0c8aa"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "138a84f44364540041b45f343b275d2c8c0b2a0cbf32c5435e00fb311f207fb8"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e770e665fe41067c9d4cc1fa3c7fd85773f4ec136d852ec5571b282935ab10c3"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1d70f5a624d99350ab0aa34810c60c418fb29b22bf07447b5f6ace5d2b076e49"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e6f3890e66b8f0c9f49c00ca66339e80163b7e715f895e1f81f78b4e2dd26469"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1e9a0b776733d6df08f15222936df2358a60415b56357f8b6b52638157280519"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b3d8a143692b6a83ecd580b54871b7c30f2dff715093b61a8ad84a82d30e14f7"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "dd8cf72dd3bd522d1265b7086d4a15be3a5d7c256c69117951a332f38b5c6bc7"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "34ea6aea45046432f27cac10e42232b5e6ad608a6714156bb111f75b604722ba"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bbc30bee6600303be86d67cf8f09bea99f5fece0ac3fe6871bf5bbd163db6221"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5e378bb717abe690a33c9f3163a83b0530115fd9cc3d1263f39e5c7e4d0f52c1"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e1295d8c930ba662a57f9e8f40a6cb20e6862178ca372be356e570d2ff08e554"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4eb33050688a3c7509a53ae50448d8a71a2177f2758534f0f25fb3527471366f"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6087879977634e5c40b6a0ce83fbaee65617767b22fff43233f3bdf62b77eb93"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b16c089efafcc9d10769917b02f3672d938ec97cf7a79a7e3d46a0c446b1c624"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9a2485a04ada14029f79ffeac16e2d6a7dc1c737c5b3a6776e93f1d8c7ba456c"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "374cbb81ff239c1ae99e4493e0c3189d5120f2ee7c95f10e5382c0f034629cd3"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "981958c488b3a08b73104fb08ef9b8fd63324fee41e3a8252c38f8323412697f"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3ad28d3c842ba5f299ae5b408ff69c02142d885b0ca1dfc5b4bdc1bdca7e5919"
+  },
+  {
+    "path": "results/deadline_morning_cap/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "504bfd8622017708dc14820fb1fef6746de64164146ff811f0135693bdeb1722"
+  },
+  {
+    "path": "results/deadline_relocate/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "67319ba48e34e587a3f775998dc27f1fa4ac639f2ff64bb8a0b042e4ede36a70"
+  },
+  {
+    "path": "results/deadline_relocate/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "359ecc9f0efdf11b8a5668edaaf529494a82f40510e24d215adab2482d750d49"
+  },
+  {
+    "path": "results/deadline_relocate/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "39bf9c49d3be7efd13cf2e68aec392f34098e60355ea6842392ff6e06c2a2eff"
+  },
+  {
+    "path": "results/deadline_relocate/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8b23d839cc170b123552126fc15a20838b0f22bf67c6246a421b881c4427e856"
+  },
+  {
+    "path": "results/deadline_relocate/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7b5f5b623120c0548f1aef23147dc5cf21f527f42947968fa463556f54394a77"
+  },
+  {
+    "path": "results/deadline_relocate/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fb7f004e92dae27c2ef5fcf3ca1acc35f753fb37d146db682a8eec8ae1b4f87d"
+  },
+  {
+    "path": "results/deadline_relocate/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3023213ad01af5d6b10689cebbeb526e9e5a5569f0107856d0ee46afacffcf19"
+  },
+  {
+    "path": "results/deadline_relocate/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a9311bab2c035d042c803c80e897d0f21ba24765d678f9ded6c53b5278d0ea94"
+  },
+  {
+    "path": "results/deadline_relocate/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "59a3993e75b49627e1864bf6bda95ea535c88d1283dc60f329eaccd97ed9371c"
+  },
+  {
+    "path": "results/deadline_relocate/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "19421d9ea14b77e70f125d57a1c9144387f98c374e9983f02c4141734489ad7d"
+  },
+  {
+    "path": "results/deadline_relocate/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e939d77e18a05f9cef9a25e4ccac6ac46c9a538514b414f4b51fc664bb26939f"
+  },
+  {
+    "path": "results/deadline_relocate/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "22abdfdc88d240e13db83a732e52d055b083950aadfdf32c7c0b0e03f81daef3"
+  },
+  {
+    "path": "results/deadline_relocate/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7cd00484578e3d224ffd2975e3b9ff9afa386daf2bc95067ebe0c62263a6eb8d"
+  },
+  {
+    "path": "results/deadline_relocate/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6e87b49624747c5722abf09c07d1231985a4782a49f786bec4adac2c0944bf26"
+  },
+  {
+    "path": "results/deadline_relocate/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6315cca25a67da1736f977bc989f1b6568ca07a14cdca7664d5f513cc1f2010e"
+  },
+  {
+    "path": "results/deadline_relocate/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "21e242dbb5639827717b3fc529ea55a22fa2fba59548e5a67ba33673c9a0be00"
+  },
+  {
+    "path": "results/deadline_relocate/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f9407ec93bbc6277f82fbe51fe360b7268d4972bdc51bf97a3b4372aad99fc40"
+  },
+  {
+    "path": "results/deadline_relocate/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "364f20502798d8235d152aea1cf5e2da570a50001ab28ed1666c956d506458f0"
+  },
+  {
+    "path": "results/deadline_relocate/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f0934f8f01c5837af43f26970bb4fa3ad908f90e2d31fffa01b836fb02a9b879"
+  },
+  {
+    "path": "results/deadline_relocate/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "aa087a2a703284209c7ffe4fab067264a8640aedd3f4bb82bb497bba1b2990ed"
+  },
+  {
+    "path": "results/deadline_relocate/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3da0cb00d667d4c85595cec0ed3f00c42cacd76d0bc987ca505ce75b62c1ac65"
+  },
+  {
+    "path": "results/deadline_relocate/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6aa5f1bf8fef24bc0dcd798465bfe57c7fa2c9ce235a8f85b448517f26a4620f"
+  },
+  {
+    "path": "results/deadline_relocate/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "63e25c2b3dd4833dc00e5e30e94f28443bb8ca67c9b7899ff97ae0d635da7a6d"
+  },
+  {
+    "path": "results/deadline_relocate/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8d18623fcc674c31eced68201dad111181dd023bbdb286e4b9a31ea185c6b800"
+  },
+  {
+    "path": "results/deadline_relocate/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e9e5ea07e1aafaf56df31992cdc21d5b358d57ae7996d06d81ad7782784f6d7a"
+  },
+  {
+    "path": "results/deadline_relocate/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3d769672c441eeb6f55541ffaa31e5bdb039ec94bfa05c6caea41c998760ffd4"
+  },
+  {
+    "path": "results/deadline_relocate/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "df685620f08ec37c03bb0b35eac810d377ec34579f450b2aff46eefcc3911860"
+  },
+  {
+    "path": "results/deadline_relocate/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e4928bfd1f73e5d7c7d32a77913c79ad86a61a7aa399d88da2872bc69ca0ae1d"
+  },
+  {
+    "path": "results/deadline_relocate/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d3f8ece40511689b0ad95919aea364c8ca85f26a2360513eff87c6d920c13879"
+  },
+  {
+    "path": "results/deadline_relocate/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f85d6d9c4d3f49793061c695201d96b63e62492ba1fc75e41370d3e8b60118f8"
+  },
+  {
+    "path": "results/deadline_relocate/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "dc517dc1a838e8d332f17ef8b7d7e31f43453be32c6eb0f9294ce5b73318d7e4"
+  },
+  {
+    "path": "results/deadline_relocate/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f75ecbaf7ce7bf7188d60137f44078b34401c32aee784d7a486a3792bf571b5a"
+  },
+  {
+    "path": "results/deadline_relocate/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b05730dfffae0067635c4804753403542840d1f87e2a3528829a0c0041eced3f"
+  },
+  {
+    "path": "results/deadline_relocate/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "97ced28252faac06ea89cdabadb0b651d73ca411f5da5047bed238d905af5b38"
+  },
+  {
+    "path": "results/deadline_relocate/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "583b3753b24d9bd65478d7f9728603843e64e77aa6dabbc1e66fb1bf3ec8763c"
+  },
+  {
+    "path": "results/deadline_relocate/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a047aad75f7183479e1a570a45995b759b1fa7bd7f2aefdaa7b2f883451fbabc"
+  },
+  {
+    "path": "results/deadline_relocate/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e0802abd81d89a45b002b5bb1c7e11da2416ea46e22d8292bd26766227289dc1"
+  },
+  {
+    "path": "results/deadline_relocate/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "960ac1896ea468e570a7ff15194ee89cd5ef36f278ea83c863459e03b7038c28"
+  },
+  {
+    "path": "results/deadline_relocate/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e454b1d747998b7680a832c965f2ae394a9cb25d3268a8289d9f305631be9bf2"
+  },
+  {
+    "path": "results/deadline_relocate/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f74470cde2a8b3628be421b7bfae0fa74860b4ba99c4357e1cc58aa920413d20"
+  },
+  {
+    "path": "results/deadline_size_ties/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8c6e06baa12be5d94fb8c1584589e6c523f9fd3cfdcf72e519afe76ec4d31207"
+  },
+  {
+    "path": "results/deadline_size_ties/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "774f487d8de9cf54c9183c848006d943df9cf2ee5c97708b7e043e20a8dc2dbd"
+  },
+  {
+    "path": "results/deadline_size_ties/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0ccbadae82c44ae9d42b51c4d4c037446cc8bf1e100319e782e987eabf3e3b61"
+  },
+  {
+    "path": "results/deadline_size_ties/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9834e86cf4c6254710c20a9295e2994e8f51dc8118ebb9084d35bc3650bf0bc9"
+  },
+  {
+    "path": "results/deadline_size_ties/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bd940d1fc57d5e46c1bf03511fbf4044812d96cefbdeafc5c24f8d226e4bda93"
+  },
+  {
+    "path": "results/deadline_size_ties/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d5b196ea49fa4d1d936211a1b35559ade9f47c01fb65006de97e5c8d3a6fe716"
+  },
+  {
+    "path": "results/deadline_size_ties/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6cc64196c8aa8f4a162b249f980692fc2d528ab0c9aad9b229a8fe3e4130483b"
+  },
+  {
+    "path": "results/deadline_size_ties/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6496373626f74e740da09c27bd9f9ae2e7fc7a935acd60615ecfd47f2c13addb"
+  },
+  {
+    "path": "results/deadline_size_ties/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b1cb1f5edca508252c450e038589675b85a692ae860bb54393a73587a8edd030"
+  },
+  {
+    "path": "results/deadline_size_ties/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5fc7e99b9a59c3c34135fb3bce275a774e5402fc7753455327a385debe368d6a"
+  },
+  {
+    "path": "results/deadline_size_ties/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bc12ae5b05608bbc517d1ecf80f181cc7435ac87e57f63574ea3e4548efc2a9f"
+  },
+  {
+    "path": "results/deadline_size_ties/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4c6155833270415137abcf33bad773b461aaa0e10b38c77503741024aff801d3"
+  },
+  {
+    "path": "results/deadline_size_ties/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b3ff4384e393640962f76e85a37ed0dc1f80c3430365ffff6153c59e11109916"
+  },
+  {
+    "path": "results/deadline_size_ties/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "188a47d058d285217cfde26fa954000a212dbb254105abbdf26c0a0e76a4f09a"
+  },
+  {
+    "path": "results/deadline_size_ties/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "cd90d6d21e13beea70eb25113fdb8b40b03d16360adeef454aec218126331f05"
+  },
+  {
+    "path": "results/deadline_size_ties/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "71047558f78cd1d13b8d052f5aa4dc5dc06359419e17c274b85eebc26239558c"
+  },
+  {
+    "path": "results/deadline_size_ties/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1260524ec036ca190d3b671ab6225a64a735c0e11902381d3c21cbab030577f2"
+  },
+  {
+    "path": "results/deadline_size_ties/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f0f1b0507cf815da0ee7c05f0855ad025191d643e814bc02e032be5ab943457f"
+  },
+  {
+    "path": "results/deadline_size_ties/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "415d569a0f5c7de4a90ece783080c98337b92520bc5fe48162259df65e817fda"
+  },
+  {
+    "path": "results/deadline_size_ties/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f91108ddba479d1884cf0dc1c00107c6934314e57f8f580421dc7b9f4178aca8"
+  },
+  {
+    "path": "results/deadline_size_ties/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fb69554c74122d9547d1884234ea318f77c2255170dd2b05fc3f2040ffce36bf"
+  },
+  {
+    "path": "results/deadline_size_ties/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b8107aca24baa7f5495d2dca7e16b6828eefe5b8d9c4c82d6093fa7e1d1cd8b3"
+  },
+  {
+    "path": "results/deadline_size_ties/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "115813b3cd5b9e38ed208d7bea5817655dc81440bdd34c9ef57f30c44d3a69aa"
+  },
+  {
+    "path": "results/deadline_size_ties/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e061cbcfaa5aec025d00d9595ae075ed7bb331927b675c66145a04c6417c8d3b"
+  },
+  {
+    "path": "results/deadline_size_ties/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8f524aed7295bac2047244feff31ef5bd9e3f55378cc2d5c477f5d0368acb816"
+  },
+  {
+    "path": "results/deadline_size_ties/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "13e2993592a6d8b46e6e308a792673aee1dc1afcab809275bafd02e7979cfd10"
+  },
+  {
+    "path": "results/deadline_size_ties/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f291bd0e2ce72c7d55a3e9d4f6d1d1a0fd7ed47a45e816694a0c82bf64a979f7"
+  },
+  {
+    "path": "results/deadline_size_ties/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6e6db8e1f1d1ade6149a2020f47e049d7e2eab320537ca47ac9e9e64c8993c92"
+  },
+  {
+    "path": "results/deadline_size_ties/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4aa6d0d068ad933a6f9eb431bd2c6639c5ae6fa04a7f34db352c595d6ce685db"
+  },
+  {
+    "path": "results/deadline_size_ties/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "10ee81ce9b9b2e6b92db5e0d566117411966b32163fce300bfe75712eb2ad7f1"
+  },
+  {
+    "path": "results/deadline_size_ties/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bfd351e8bdea3178374ca601f858726bea24a0c9e83a7aa2c74b5b9c47c1945a"
+  },
+  {
+    "path": "results/deadline_size_ties/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "eec92eb7195e23b54076d9d3afd20afc516375e9b1778e82bee5e3c41eb19cf6"
+  },
+  {
+    "path": "results/deadline_size_ties/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7cc07ac579f4a5e58a8312832cd4d4bd5f4900b318e5d4e99a5cf3e4d32c83af"
+  },
+  {
+    "path": "results/deadline_size_ties/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3e1ac4329d2f54825b2fdec9900043235df0d086a5c0b17d445072f7e026780e"
+  },
+  {
+    "path": "results/deadline_size_ties/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7763a0d2b83528e7dd5b2dc447ac07bd8070d7107c1e80aec411d5b12c85a09c"
+  },
+  {
+    "path": "results/deadline_size_ties/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "24e5970f047bb3f7d32b08848e56d83bdd820b82606f44f3f6ca2f6e0bea3742"
+  },
+  {
+    "path": "results/deadline_size_ties/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1ce26d0c739017da0102f09771369974b91d66781aa388b1b51a1e285627413c"
+  },
+  {
+    "path": "results/deadline_size_ties/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5cb2825d26a4348071457f328d80201ebd6038559c47fae6183d0eeb0aca0a58"
+  },
+  {
+    "path": "results/deadline_size_ties/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1ab0eb760c46866ebf2f89c43677f9af992b27ef042b9ba4728c79cad467a3c6"
+  },
+  {
+    "path": "results/deadline_size_ties/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "878270a8f2be63528fbf3b297b8b2de423c723e16a777472526b4b57c16d7390"
+  },
+  {
+    "path": "results/exchange_relocate_summary.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2dc77f482c61b95fe1f35b3ab92f7e5674b54723aa3d13b65cd4d2de5cc8a6ec"
+  },
+  {
+    "path": "results/followup_benchmark.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9f25ae03aed4d9f8c547b251f8ab8813ee689ad2e58d33088ded04d0f45b388e"
+  },
+  {
+    "path": "results/followup_policy_summary.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ae229f1cc6f763ecbd4ced55e8ee70a9557573bf714c7f955b26c5db4f0583d3"
+  },
+  {
+    "path": "results/reserve_k1/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e3c16bf3af944d1ca59ab09664dfd1e961740c9f4e5e0f51c2fccc7b4aca08ea"
+  },
+  {
+    "path": "results/reserve_k1/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3b46a615212039db79c39a43205a9caacf25e29e6df12456e7230b4ef2b0d919"
+  },
+  {
+    "path": "results/reserve_k1/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f16b66e4a9e0469f22a9f7497d382e4d5b0f094890091b031c0a0c9750a54623"
+  },
+  {
+    "path": "results/reserve_k1/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "81d5d70b2bee4976508d44042b3db9636e144790738c4d86c2c6e855fd6ec47e"
+  },
+  {
+    "path": "results/reserve_k1/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ea72463bd8eefe5206756b2f0851cc833b0afc21f14b596c3e37b8b85959862a"
+  },
+  {
+    "path": "results/reserve_k1/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0b9073f933ec908c5eca091b3c4df358fe7a835765c9f207492c473f3a3e9154"
+  },
+  {
+    "path": "results/reserve_k1/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8578cc8222179fcc790797c67bff76c9d57268131746d79284089843abdb4389"
+  },
+  {
+    "path": "results/reserve_k1/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "16017cefda1a1ee89f89b86dd029d277320b0bfc811034d1d17ec8601d1712e1"
+  },
+  {
+    "path": "results/reserve_k1/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "048f16f53b0e962992287830b1b03d9160acaabc788821855b186f8cf377a5dc"
+  },
+  {
+    "path": "results/reserve_k1/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "68d38a113550d2f508230b05c726406a5775c691c1e4633e422b280ad3732744"
+  },
+  {
+    "path": "results/reserve_k1/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4652994d8a4c8d697d33e1e5ca67511a21bcf9ce97ad75c0f6708cf34e46b8c8"
+  },
+  {
+    "path": "results/reserve_k1/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c767458ba557edf2281c2077b3c37e2cafc2dd2776cf6f20e5b5aee912dd2ebc"
+  },
+  {
+    "path": "results/reserve_k1/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ac3198e01b0293e9249f8fc489116433c4849382b358c312fe96ea472305df64"
+  },
+  {
+    "path": "results/reserve_k1/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9d0638c1d2eec11d141efb736a1c7876b74b39a45858cc6f2602ea192d7bba9a"
+  },
+  {
+    "path": "results/reserve_k1/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0b8c461bb5b65235d5651509ba7210989dfc85574cfc759a09fe826b005373ea"
+  },
+  {
+    "path": "results/reserve_k1/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "32b56f687bbdde51c105a17578e9aaa199f1ed2359a5f925304e004aa1caef6e"
+  },
+  {
+    "path": "results/reserve_k1/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e07622cea0b97ca87d4b4623d22b6d69e0a3209a715ab1c9ed2f1c71b664c387"
+  },
+  {
+    "path": "results/reserve_k1/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "85e76319ed239f0fadc2fab034077b2d3548bdd627df3505ec6583f5ee565597"
+  },
+  {
+    "path": "results/reserve_k1/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5fadcf03853c5c6f33e346df13b63e7939e11a06a8d03d8d49c4137dcf420ec9"
+  },
+  {
+    "path": "results/reserve_k1/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2031ede28251ae9e6e11ed526233c85bd815f2a74caa00f19914f9068f318e09"
+  },
+  {
+    "path": "results/reserve_k1/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fb717017c18e6f399ffba2175a6096943db7961013719c28352155fd3ad88198"
+  },
+  {
+    "path": "results/reserve_k1/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2ee7752d33ff635585beadae20ad3cc31d7c6ed429e2323f62c086e10d30be10"
+  },
+  {
+    "path": "results/reserve_k1/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "647e80a03dbc6348f9844d8ba47da21e6be44390456e0e34edf16b68bd9dc0ec"
+  },
+  {
+    "path": "results/reserve_k1/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "480be828438b597a71938e0f1a6b03b794d62f98ee7c1b78b7d583d6bb57faf6"
+  },
+  {
+    "path": "results/reserve_k1/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "dc9c54f8169a32d7581d492a4494e5fc8492daa472a873d039848e956ae82148"
+  },
+  {
+    "path": "results/reserve_k1/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5c7225fc1744aa12fa84475cec87a76cda12d833d493fbeae8c47aebd893548e"
+  },
+  {
+    "path": "results/reserve_k1/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c10aa24c8df3ab78211b35905b2c58d684f3031e8164d117722614b0b72a99e1"
+  },
+  {
+    "path": "results/reserve_k1/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "eec245481a8df8591636bb56086e16e345a29817316d5db242d2b89fb3440427"
+  },
+  {
+    "path": "results/reserve_k1/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5924fa7c0425002554b7ffc5430c05e70d7f92dcb80c4a4e0555fa339cbdff45"
+  },
+  {
+    "path": "results/reserve_k1/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e4ad9d7013daace4b86ca8a3e70a2ce56e519886d59a460feef956318210e3eb"
+  },
+  {
+    "path": "results/reserve_k1/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e174b04d01ece74544b4d3d8cbf734e84e4ee08ef2c37f0fd188d6d8dbb78577"
+  },
+  {
+    "path": "results/reserve_k1/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c9d08b4d664df7f1eefd0787ab9afe81522a79a5759461984ffedf110b58a1f9"
+  },
+  {
+    "path": "results/reserve_k1/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "253659bdef3a391ebd1d6f3a7d1dd9f8e105693559bcce2d9fd8f4676bc72ae8"
+  },
+  {
+    "path": "results/reserve_k1/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ec1ed2128a809035cb0c3e88df564cc0cc3d13304b1df0ed15364e20f25ee3ae"
+  },
+  {
+    "path": "results/reserve_k1/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e32fc5bed2f86af088758356fcf8be1f206bf09c56686343d0e8aeb5356a24f9"
+  },
+  {
+    "path": "results/reserve_k1/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "44b335be90372a62c6a6e365491469a7fbca686afc13b09a2856cb31b319f97e"
+  },
+  {
+    "path": "results/reserve_k1/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ae7fbbc878636962a617d440ab7b6c0fcedfbbc9ba4fa72708fb61c29fbdcd6a"
+  },
+  {
+    "path": "results/reserve_k1/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "39899155e14156e827510cf2100eb6211044c7165a239897138b1366605bbc12"
+  },
+  {
+    "path": "results/reserve_k1/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3f4109e863764dc2cca4ac9a74175487f3e0b3a1fdf66b569e1533ae2f9f12c7"
+  },
+  {
+    "path": "results/reserve_k1/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b2be88f29143b75adc32b626f6e36f6426c0804b0b9bfc57c133b267c7b858c4"
+  },
+  {
+    "path": "results/reserve_k2/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2400d9f5a185a24ca1c0cb5d5f2b7208f47673831b739c88244284ec4bd23fc4"
+  },
+  {
+    "path": "results/reserve_k2/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d7a76fc0c9bebcc27c78253790bf2fe7ee3a1c688eaa0066d1cc2bc783bbff1d"
+  },
+  {
+    "path": "results/reserve_k2/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1ed80735405632fc1016de50598aec9ff06e7571527802a857d92a38145f3a96"
+  },
+  {
+    "path": "results/reserve_k2/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8550a10c4098ba61155ac515346578f82756003a2993933cd582496bd4d9d10f"
+  },
+  {
+    "path": "results/reserve_k2/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e666901042ccf2b60a520c6fccbdd60a6bea9633dc5463fdd8147b6f1de1b4df"
+  },
+  {
+    "path": "results/reserve_k2/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8e84ff76ebfff0d0d7f8fb34a8606ac042c7dad5dccbb3f0b059eea71a3bbd6b"
+  },
+  {
+    "path": "results/reserve_k2/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1a8b11fd38519dfc7588e3711dc96e61fb26b58576469c35f9019f304386864f"
+  },
+  {
+    "path": "results/reserve_k2/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d9dd1df83ca6369676267bf913d58e8ed057bad4c955c238199d9d9cd70e0bb8"
+  },
+  {
+    "path": "results/reserve_k2/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "36edd4e9dd1c9e072dd15a27461e023074feaf11765431a1ef94dd29a05ad37b"
+  },
+  {
+    "path": "results/reserve_k2/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c0389cb881cc0844d5e60b09f3a1969da431e259859336d2dfa7ca6f65940983"
+  },
+  {
+    "path": "results/reserve_k2/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c3559a50aaf261ee5bdde5cc26a8dd832131394caf59e83ee1ffa0dd44166c18"
+  },
+  {
+    "path": "results/reserve_k2/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b656bd93e7ed79ddb1ed4760bbcd651fb1a7b3d7b1cf784743af1e0be0229588"
+  },
+  {
+    "path": "results/reserve_k2/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "94b2079bf8f9aeccd1a534795fde9eb065973d22327f8f70e85b98e472257b30"
+  },
+  {
+    "path": "results/reserve_k2/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "85e58621fa667c90ec95cdcb67f31834e9e1f5ac6bb881430de21e9325a4ae29"
+  },
+  {
+    "path": "results/reserve_k2/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "68846ecf204bbef3d655dcce075fc82c52038e361613d8c9ca5c663483744307"
+  },
+  {
+    "path": "results/reserve_k2/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9d7415679b12a0c8461bcf9485eb2fb4b7a11e134aacaad74ec67dd96922d3a5"
+  },
+  {
+    "path": "results/reserve_k2/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "434d7a35af4f9426c6761ddf8cb1a642b8a85ec68fc23d21e9cfbd22d2301f6e"
+  },
+  {
+    "path": "results/reserve_k2/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4380ff39a7f5fb9e964fb78fa60ae0f33cae85f53353f31eda0162328e616e57"
+  },
+  {
+    "path": "results/reserve_k2/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "de9d43303534230c20eda6d403fd0e49ac7eab5b87d6ec26696e8c8936a95f04"
+  },
+  {
+    "path": "results/reserve_k2/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7e89a4acb3c2d7a0c3fa8baba2b8250a3978052237e46fe4f7387973f1785bf9"
+  },
+  {
+    "path": "results/reserve_k2/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ca6c35b7f26009cdf8dec30bc7ea66922943941914841db6d7d6f8cc9a52bbf8"
+  },
+  {
+    "path": "results/reserve_k2/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6765ccd40eb18b7f7effb7b073d41e62b25b5fa41b47c4ccb69107554e6b304d"
+  },
+  {
+    "path": "results/reserve_k2/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4a2b66e36b3703673c406655218c3105fbc113cd76e005443cc2a45f7d92e5dc"
+  },
+  {
+    "path": "results/reserve_k2/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "910b28aee51dc36bd5c54d3554f53b76da62de5e1e6da436292cee730a561527"
+  },
+  {
+    "path": "results/reserve_k2/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "75e3be5e73c4303293748c901f4d0f063e6680bcb4ff0dfe6897c515ebc28199"
+  },
+  {
+    "path": "results/reserve_k2/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f08be520137a262bdc228d331711e9e58516aeb01e57d183273f025726f2302a"
+  },
+  {
+    "path": "results/reserve_k2/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "31443d253c8c1ba2c63fbf391c588d26a80f12cefbe40136c73d06d67a451886"
+  },
+  {
+    "path": "results/reserve_k2/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "60fc010075a997afecfb05f7892d83b4faf4ca7da2bbea2dbb23dd8c3cba3a8f"
+  },
+  {
+    "path": "results/reserve_k2/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "dfbc35588063a807d2024077e67634c0796f04012ae29d68793a3a7d2be6f9c7"
+  },
+  {
+    "path": "results/reserve_k2/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e0213ee63b5a827b7b9aa8350d712292737e9f6951842e7cde51bf0a8de29026"
+  },
+  {
+    "path": "results/reserve_k2/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c931e4549a0c4b7183b73de85c0997725179390d5110594d7ff6d7f051102019"
+  },
+  {
+    "path": "results/reserve_k2/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "004161c8f95c193e99eee26bef5159f969e801fb66d5a7a953f2adb60680d030"
+  },
+  {
+    "path": "results/reserve_k2/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3c2ffe7281fef8259e5b11cd729cb0f5dee3ab86fd02dbb665230c32da45c269"
+  },
+  {
+    "path": "results/reserve_k2/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5b7eb253b406131b3d2b50a7a3dba9f7f239c01133c0b2ed5f547079a6fa99ec"
+  },
+  {
+    "path": "results/reserve_k2/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e449d78e4f7b8c7ae9b6149560e8e7836537bbb643c82498418a4d8e73afb3ca"
+  },
+  {
+    "path": "results/reserve_k2/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "069b3ea86b5e2bb1cea861501518176d00476665e6c61570793a6c277126a029"
+  },
+  {
+    "path": "results/reserve_k2/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "75b47e088b36aee97f7b9b5c589d147ac26b936e5c064ee9701dde6fe30e1c55"
+  },
+  {
+    "path": "results/reserve_k2/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9eba6997659c0f1fe3ac46771f43b0002f4a1baf10f3da9d41baabebf9e6ff78"
+  },
+  {
+    "path": "results/reserve_k2/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "36730588878d42639c4fc9e2a53dcc617a2cf155e20a0c56f4709cf0970db4af"
+  },
+  {
+    "path": "results/reserve_k2/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f70487e9826ca235076f12a41bd2440ce82cffd71a1d1d243015c1b44e3846d4"
+  },
+  {
+    "path": "results/reserve_k3/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ca0ae70575980f99a7029bcfabcdf984fbe5422c586c59cf44282c5b8136f173"
+  },
+  {
+    "path": "results/reserve_k3/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a72302bd6cbaea3f1a17d7ec096638b407954a1afec9cbafa1a33118a62c5a7e"
+  },
+  {
+    "path": "results/reserve_k3/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d24c22724876838bf3a4b46709fa8f0a323fb83ed04d2366077a3c02822c77f6"
+  },
+  {
+    "path": "results/reserve_k3/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d85302e9183f62583e5977f8475a220e109e2f0c01f16ed13a1a7418ef724b43"
+  },
+  {
+    "path": "results/reserve_k3/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "eb694b13c18583b2765e04bedb2eaca65ab2e6251e5b9c2db735048466dfa786"
+  },
+  {
+    "path": "results/reserve_k3/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9af994fa68f8c8f608e381bc46bf2417d5df1a420155ade49616965a2a3be467"
+  },
+  {
+    "path": "results/reserve_k3/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5ab07aacde8a231939c9afa97023cdd2b8c9b0a681619600d307336bdbb3d547"
+  },
+  {
+    "path": "results/reserve_k3/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0282aff4994e38cdfec863ee559a619c14c245c77585b00b3ecc4ce34cb5920d"
+  },
+  {
+    "path": "results/reserve_k3/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "68bbe2a2938cca5d8bc2ce35c505eac9f75248027748b6c1e40d95526f7854e5"
+  },
+  {
+    "path": "results/reserve_k3/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "64918551abad7a3a6c34fac39998a323128eb32bd04c88d0442551e01dec4767"
+  },
+  {
+    "path": "results/reserve_k3/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "731602042b48b3a61e15b65e6a944093e2bd591c41155bafff1c7b8078231b61"
+  },
+  {
+    "path": "results/reserve_k3/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "37acc4b534eb94aef0f4d2336fba994603185948e75e0efd68637a0f43107548"
+  },
+  {
+    "path": "results/reserve_k3/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "098d9e45b88e2b0ea96d8ad23c10ccf6ce1c269e29a4738567992efe667f9473"
+  },
+  {
+    "path": "results/reserve_k3/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "19d7e3a97cb654d5c277fbce8d536c2bd09bd9a8773c16bd85460060423ade66"
+  },
+  {
+    "path": "results/reserve_k3/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "55ef261b62bb866b223e2666ae18fe7fd60cd90bd55fc0b2c8148f7f560d7887"
+  },
+  {
+    "path": "results/reserve_k3/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2f11ace272291ef1871921cbc646d3971518a8bcadbc19823d24ace7d6903a56"
+  },
+  {
+    "path": "results/reserve_k3/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "52ad697c5e732eb1dce32a39399cb402e4c26e3d5edba9ca8b7a4a7489fc7d7a"
+  },
+  {
+    "path": "results/reserve_k3/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "94d8b7ace06aba5a07e3aa10a3bd5e6478082f74dd547b05bd470a8d80968bd0"
+  },
+  {
+    "path": "results/reserve_k3/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5049a4eded09a14806b7a847e7289bd13276c95f1112c0286e7425818d74f758"
+  },
+  {
+    "path": "results/reserve_k3/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "dea27585f43a3884199917216329019d8cf4aac6fb6b869f790f25f983fb8294"
+  },
+  {
+    "path": "results/reserve_k3/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d4d4a744f315b1004c0021c15465c15a3ab37ed73927be0b4f7d2aefc1b98bfa"
+  },
+  {
+    "path": "results/reserve_k3/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fd63ac1965acd16c32e0e124ed1d7df5c1ef3cfda9dabb8e22c9c3b6af114aba"
+  },
+  {
+    "path": "results/reserve_k3/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b7157f1b99874fc6173fd10370f2f81dc4b649d81899bd464bca11ea7d4ee83d"
+  },
+  {
+    "path": "results/reserve_k3/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9fde5d0c9daed204f17d7a1309d8eecbf888533f9c513dab3a73cb5a34898ecd"
+  },
+  {
+    "path": "results/reserve_k3/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "30b10b80e7a633a67f4124a625d29a8f257813050cb3d332e41cede90d99ad74"
+  },
+  {
+    "path": "results/reserve_k3/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "715e78be38d2c6dc5510cea3d45e6d66b7215d26b6066f2e76380486a74a5a61"
+  },
+  {
+    "path": "results/reserve_k3/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5631353366b1c7c46a27a21641e7c00a9b60247ab6cd56b4fcb0c23209dc0a79"
+  },
+  {
+    "path": "results/reserve_k3/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1e5433a15d61bf8335b11051000b478f7f0c03d3b4ab54024c9d7f29569885b0"
+  },
+  {
+    "path": "results/reserve_k3/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "239dfd6419e35e4bea894f0fc6f384a81e3452eddfd60c0214bfbb2689d292f7"
+  },
+  {
+    "path": "results/reserve_k3/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "12e846468d2d0f2a02cd603e6096e76c97e2e5854f91997dc2514da952bf9699"
+  },
+  {
+    "path": "results/reserve_k3/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "323d294f57ca056eeeff25c878ed4c0d49cf6edbbd6467d8ce7605940d24ab52"
+  },
+  {
+    "path": "results/reserve_k3/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2ee646b3134d1a74549961f0c3f6f255dae15d32ec158487d13c701a2f148ffb"
+  },
+  {
+    "path": "results/reserve_k3/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b187ff2c25188c8c59b012d400e1e03d5dbd43085ae03af88e2649481dc2c084"
+  },
+  {
+    "path": "results/reserve_k3/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7c7e89192844d36a064da8f472c7d35b6b86bc2e1334e358edb1c0c69c053d7d"
+  },
+  {
+    "path": "results/reserve_k3/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "978c1f10d94888e70ef7aab57c93e777a2fbf1faf1a3525641b310bc5b364a06"
+  },
+  {
+    "path": "results/reserve_k3/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b6762b2bbed8ed4cd9ef4183b107fc70a3ed30aa62568b3cd4650ec0dbada047"
+  },
+  {
+    "path": "results/reserve_k3/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6969927df0b0153790c2e63804cdbbe9ba01531e5b6b9462cf4f67853fd6d3d1"
+  },
+  {
+    "path": "results/reserve_k3/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "71f0a0e9d68fb4102bbfd8c74fb5801c28acd854f1c49b1d275647104dc09d7a"
+  },
+  {
+    "path": "results/reserve_k3/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "349a682e16f2311bc2976ea564e081e823508a561e59848b3569fef3799fa31b"
+  },
+  {
+    "path": "results/reserve_k3/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a6161a57a33864bc597e60896648e8949107c39e5c3d41b33e7ec7af86460dd6"
+  },
+  {
+    "path": "results/reserve_k4/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fa2f78f7d787a74a318a26a1ecc174949e03b4f61ddfdfe2a9beee081c4bd9b1"
+  },
+  {
+    "path": "results/reserve_k4/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f5d8874da3de58368fc667b3fed7f5ba6f136c8f92dac306c56e1f10b20ff2fd"
+  },
+  {
+    "path": "results/reserve_k4/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "16089371b3b9f7623bbd3521f52b1167b6744d7ddcf8c32c1aafffa7d8f4de60"
+  },
+  {
+    "path": "results/reserve_k4/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bef4935aa3cc2b00d6e7d97cfd64108f098e7b87a3107e511298263bbee952f5"
+  },
+  {
+    "path": "results/reserve_k4/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a6fc9a63c03a604402e1c490cc0005d199569374340ab9af9514c554e2c3cba5"
+  },
+  {
+    "path": "results/reserve_k4/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1d642d0637b2231b92bed421ad9368cb10d84d306c170350526f5d8861dae092"
+  },
+  {
+    "path": "results/reserve_k4/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6452a4cce16aa555093290f649f482209275d62b13bb230f8c0b9fcfad06d6b1"
+  },
+  {
+    "path": "results/reserve_k4/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "590b5c885ed4881fcaa3c5e186cee1066a626149068f71e725de12b5a80fcb34"
+  },
+  {
+    "path": "results/reserve_k4/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "aa179fa7b40d6b0d69e56afe60896d5dfaaae84c3f20040cb1d0ac29b19e18b1"
+  },
+  {
+    "path": "results/reserve_k4/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "39d97dd7123f858856d47b5d8aade57ca099f6ccc7f8779ce9bf192874aa4bc3"
+  },
+  {
+    "path": "results/reserve_k4/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8a12f0aed69ab68918c400ebac3cbc58651d51f0d6f7aa789c2538bbfd59afe4"
+  },
+  {
+    "path": "results/reserve_k4/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "91f12be8418d9e89ca99158d8cc211744260e8b2115c6ed94c5849a5c075c7a3"
+  },
+  {
+    "path": "results/reserve_k4/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "cb8df410b1112f4b2a806ae341665760867b074047176cfe5ee0f55ca9df23da"
+  },
+  {
+    "path": "results/reserve_k4/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "21031a3d545d3a69ada1a7092c4a3a4b04aae69550539de1178f56c525fceaf1"
+  },
+  {
+    "path": "results/reserve_k4/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "317f1062d08583852d6d0c42abddedc4362c8c7bf74dbba6fd3a1df87b698862"
+  },
+  {
+    "path": "results/reserve_k4/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f7e12a98faf6e018eda7bec04ede957e6ec93abdad57f31cef423b886148cf4a"
+  },
+  {
+    "path": "results/reserve_k4/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bff14e16bc651b0478aa0b3691156610a28cf0a7b458488a8b9b5f10569c9269"
+  },
+  {
+    "path": "results/reserve_k4/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "77c2430d0ed4f891ef5c1c53c42e15e4dcc88bf2fb3807b3c747cc2af4f5a18e"
+  },
+  {
+    "path": "results/reserve_k4/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "af8b8e887c8f5d93082d79af8e7452ab0962adf57d8c6b3ed34c766309ddb6c6"
+  },
+  {
+    "path": "results/reserve_k4/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a7c227ad3c0149cb8f0f92d0cfa4ee89cd877431d0a7f2ba80e8720d06e65860"
+  },
+  {
+    "path": "results/reserve_k4/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b412fa7052adf8eced4329fef87609ce159544d798fb462bb315569aa88e7b0b"
+  },
+  {
+    "path": "results/reserve_k4/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "96a884cff07a88eb6721b107f05acb3700819cac12671b6d0ac75d098c2bdc53"
+  },
+  {
+    "path": "results/reserve_k4/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8e3ddc8c4cce242d4a10e2f235ec6c8dcd024b26f68c62d6585750da62eb3021"
+  },
+  {
+    "path": "results/reserve_k4/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f0ee1f41548f2af78073d3c2ff8791f5026d9ceccec583c612bd4d0ecb4b667e"
+  },
+  {
+    "path": "results/reserve_k4/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e5317e14dc3267150e5de0e101631dbabda9845ea737bff2f2ccc8422ea2aa8a"
+  },
+  {
+    "path": "results/reserve_k4/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f99aceb16b8829467d682d1c68d141eb2d02ef25bb10606b0d5a7880dce83c4b"
+  },
+  {
+    "path": "results/reserve_k4/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6016f9f0766e1c7c65ee0803665ffa069c7b7fb3f83948fd12014d1b6423f757"
+  },
+  {
+    "path": "results/reserve_k4/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ea61c3e21e230fa824164d6a0dbf442fb185dd835eac681914f102581aa1cb1f"
+  },
+  {
+    "path": "results/reserve_k4/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "58bf3f4c2f590bf2e7473a4f4860b0c4035498a9734fcd2b3049f042e3bea957"
+  },
+  {
+    "path": "results/reserve_k4/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5494ca346184f78fe6d83b6039122dd5679baae1a556eafb19e57c77b7d8775b"
+  },
+  {
+    "path": "results/reserve_k4/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9b3c1adc79ddec4372e4466cb0fdbebd44de822a682c7711c498bb6949a546c3"
+  },
+  {
+    "path": "results/reserve_k4/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1b16eb55afb7f16c422358d11a5fd830413e5cb273dde60577bad0943cc84e95"
+  },
+  {
+    "path": "results/reserve_k4/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "75afb95397cb7d5ec4368c85b97a68adac47ad675d5a87a55e6ea15e0d82dca0"
+  },
+  {
+    "path": "results/reserve_k4/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a8a222ff2d5deb921f777beed5aa65b1f1c6ad86bbb001cf6c521b5014312f7e"
+  },
+  {
+    "path": "results/reserve_k4/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "92e1cca322ef90bb8b2f6426cc3531e29a63c0e7525eae61a7d91abff43a0106"
+  },
+  {
+    "path": "results/reserve_k4/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6fb49963da6821e020f5e7e5b48fa4ecafdbec20713c5fb8781d2bd4bc5f3a4b"
+  },
+  {
+    "path": "results/reserve_k4/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "06cecea91a6bc18cbcb7a66a22011fd7872b75e63d24fe6b1d86d13fde3feb07"
+  },
+  {
+    "path": "results/reserve_k4/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "76c4846eec5a398eae4a6ac19f74df356274cfa98458edce006967f19686c74f"
+  },
+  {
+    "path": "results/reserve_k4/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a5d761f40c58b8c9cc9c74a63df332298ef0b0f0280dbd3ccafe7972f1f5a11b"
+  },
+  {
+    "path": "results/reserve_k4/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5df50cbb7882dd0bb84e66cdd570e3f9f6d1675857104e9af833fe6c52df2b98"
+  },
+  {
+    "path": "results/return_cap_summary.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bcb39e84635a10ba6a646a7223851e346090f621b8cd3ee4598c64679b77a000"
+  },
+  {
+    "path": "results/small_case_diagnosis.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "80224343b86764951a2496b8c3c4b955c34fe231cf9d68a459782a16c6572f00"
+  },
+  {
+    "path": "results/window_departure_compare/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "533ba0a150c398d004df4a32a12ff20ab79db60f59c62c0e5f2d0d1d66cd1c8d"
+  },
+  {
+    "path": "results/window_departure_compare/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "95322054b75218278d416f8a0ca320937792054558bdb89d7fdd7859561a1057"
+  },
+  {
+    "path": "results/window_departure_compare/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "1bf9100beea4215d767a621c8631af8a261f9d06234f0c19e61b7daf929e7be5"
+  },
+  {
+    "path": "results/window_departure_compare/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ed3bf041b1f519a107dd5da2cf9d1150f56ae2758fb1cebb8d300b3915ad585c"
+  },
+  {
+    "path": "results/window_departure_compare/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "305e957e73484f994b6d4b79422f666be56c5eef98409b3c29ecb443ffb57444"
+  },
+  {
+    "path": "results/window_departure_compare/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f10bc2fa04e2f8603399df90223dc1b4856ed698ce016e21d7e287021f9f10c3"
+  },
+  {
+    "path": "results/window_departure_compare/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "684527952990995b1c069380f35e290e3294f2902cb77f9eede0066b80d98123"
+  },
+  {
+    "path": "results/window_departure_compare/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "930c34321580b278e49453b7a335326632678dfb71def7c23c013870a37f4521"
+  },
+  {
+    "path": "results/window_departure_compare/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b391eb1cb450e744d4dcad66f7bab4a129d26b6bbee1dd7f82c07f909e014bf8"
+  },
+  {
+    "path": "results/window_departure_compare/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2fcc23b4deda2f38cad605230a6185e613a4d58d87559ea870506a9d2bbd43b0"
+  },
+  {
+    "path": "results/window_departure_compare/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "d76eb5f77c48b5460abbc377dd678c202a71606dd40f5853a0a7468a8dca894a"
+  },
+  {
+    "path": "results/window_departure_compare/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "16186acc053b7daba3103f3794dfdf141a6ef4968948c2b171ea9975dc1f4514"
+  },
+  {
+    "path": "results/window_departure_compare/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fc0f6f451de104243314a2e510e65124d5d7c72ac9455900fa6e6427427d3a56"
+  },
+  {
+    "path": "results/window_departure_compare/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "907f9e95bd7135be9c761b3f4a1be9eebcf296542074b1cef886dc096c367302"
+  },
+  {
+    "path": "results/window_departure_compare/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "63091c025bca9ad1849cb99cd04bb0442c723bc32710f2bece9a59f3d63369be"
+  },
+  {
+    "path": "results/window_departure_compare/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b93c394183c3a4d5b0e8126f6e19cee84ca3261b9add70d3fc18903fe29160ef"
+  },
+  {
+    "path": "results/window_departure_compare/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5be378953523c5d284f553a1d79d40b6e92b3c91840e09cbcee1a928c1a86ec2"
+  },
+  {
+    "path": "results/window_departure_compare/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "60667a7eee3930456858cb0180400d9eca57669a2b154706049d48c4dd0a7d25"
+  },
+  {
+    "path": "results/window_departure_compare/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "901489b276c45fed58d1a378022cd6923410ff46facac09736a7e063f559fa5e"
+  },
+  {
+    "path": "results/window_departure_compare/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6be7ce8f4bdb50e98cf452f898ad1466df9ab858e72012021623072a3526030b"
+  },
+  {
+    "path": "results/window_departure_compare/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "60205594833600d234529d33769f76b65504cf1f1aac9b2e9e780d397ab2c993"
+  },
+  {
+    "path": "results/window_departure_compare/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0be58802a5baaf2567de82962722c35757750e273555e61d5630bd52e4400270"
+  },
+  {
+    "path": "results/window_departure_compare/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c0a2a8ede6f7aa117bcd1aec87e36a71e74fcf9f62e80b78766619fc42945c3d"
+  },
+  {
+    "path": "results/window_departure_compare/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "da923843ca95b9360499bac356e328d38dccb560258008e9267a62913ed8a172"
+  },
+  {
+    "path": "results/window_departure_compare/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "df1c9541e93e3e2adee4d3026c3549a6a79581c241f05e0cb4eb9490f0b42ee6"
+  },
+  {
+    "path": "results/window_departure_compare/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "32332e42b41e9ae17684894a2581f64ad2805d9b542af0395dec9a84812ef827"
+  },
+  {
+    "path": "results/window_departure_compare/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8b6a9f4cdb4f927b5ca68e31947dc255518e7df70beb9e523f67a4ea85648bd2"
+  },
+  {
+    "path": "results/window_departure_compare/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "06fb225adf45c14806f6762cb74dd31252b62602ef36835aa921332df2b5ee41"
+  },
+  {
+    "path": "results/window_departure_compare/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "45a986168fe5f515641654ff21ebc1b4544878e45a696c932e5b65c3f1e7b24e"
+  },
+  {
+    "path": "results/window_departure_compare/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0c2be03710558f976707c8e846400f6f5de5909497df100f981bffe2ea5cbdb7"
+  },
+  {
+    "path": "results/window_departure_compare/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "80b450cc14233e11bc9e1d265e7120b4f6de165b7dcaeab5bf0ecc139669c604"
+  },
+  {
+    "path": "results/window_departure_compare/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e1d0cdd83efa3ae20a419df712ce927406d66962c445f9a7fac71f3a9d2b09ce"
+  },
+  {
+    "path": "results/window_departure_compare/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e1fb09367232d719b8fbd210ffca57a1c589302516be0d3dc502f98ee633b8fd"
+  },
+  {
+    "path": "results/window_departure_compare/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a206ba7b8aa7a49551ade08eced1918dec52ec0657df537aaf93034270213ec0"
+  },
+  {
+    "path": "results/window_departure_compare/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ce00c28a2e41a0ef0e48e6d648bc766ae545006383822167413dc6428b2420ef"
+  },
+  {
+    "path": "results/window_departure_compare/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bf6e0e3ccfe60d17d22282017139f292ef6203c07af274056c08dca56cfe3678"
+  },
+  {
+    "path": "results/window_departure_compare/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "abb588f7d14cbf00c41a615b4d30057e0d734d7f01b0d3b6053cb3c24565b5a4"
+  },
+  {
+    "path": "results/window_departure_compare/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a069ab3759c239aeeb934cf0d0bfcb5e6d0ae4da2e14010300f0d9ecce9d6410"
+  },
+  {
+    "path": "results/window_departure_compare/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7fd70060bee4dc2a6477562912e05ccbe3ca2c3d15f974dd694ebd9c1408fbcf"
+  },
+  {
+    "path": "results/window_departure_compare/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f96ce7c8cc7932cf280b0b7af0ad0a8bb669e4a92639e7ae1d1051f8676ded58"
+  },
+  {
+    "path": "results/window_departure_diagnosis.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "948da5eb4f7f5be554188e8df0c17c832fd020641821ea98c1caf0869086e8fb"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_001/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "67319ba48e34e587a3f775998dc27f1fa4ac639f2ff64bb8a0b042e4ede36a70"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_001/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "359ecc9f0efdf11b8a5668edaaf529494a82f40510e24d215adab2482d750d49"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_002/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "39bf9c49d3be7efd13cf2e68aec392f34098e60355ea6842392ff6e06c2a2eff"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_002/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8b23d839cc170b123552126fc15a20838b0f22bf67c6246a421b881c4427e856"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_003/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "7b5f5b623120c0548f1aef23147dc5cf21f527f42947968fa463556f54394a77"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_003/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fb7f004e92dae27c2ef5fcf3ca1acc35f753fb37d146db682a8eec8ae1b4f87d"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_004/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3023213ad01af5d6b10689cebbeb526e9e5a5569f0107856d0ee46afacffcf19"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_004/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a9311bab2c035d042c803c80e897d0f21ba24765d678f9ded6c53b5278d0ea94"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_005/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "59a3993e75b49627e1864bf6bda95ea535c88d1283dc60f329eaccd97ed9371c"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_005/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "19421d9ea14b77e70f125d57a1c9144387f98c374e9983f02c4141734489ad7d"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_006/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "c3aa07a0528143126f187590e806002776629ed11e4fd392752cdc0b57a2761f"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_006/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "9ea1cb8312130f6c349bb6f7a1ee624610fcc48c7d46515ccec8843cc82d0ec3"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_007/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "181cfe9483bb08797a42e4796288953cd317837b555a136a88d4aad863c1618e"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_007/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e1a10768d3fdac9dc950fd6ec56895058b9ccf08ec72bb80215cc7718170e4cf"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_008/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6315cca25a67da1736f977bc989f1b6568ca07a14cdca7664d5f513cc1f2010e"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_008/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "21e242dbb5639827717b3fc529ea55a22fa2fba59548e5a67ba33673c9a0be00"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_009/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f9407ec93bbc6277f82fbe51fe360b7268d4972bdc51bf97a3b4372aad99fc40"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_009/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "364f20502798d8235d152aea1cf5e2da570a50001ab28ed1666c956d506458f0"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_010/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e542991e51fccfef6d0d01b20540e85821fe47395f8618af521328176f772af7"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_010/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e949079a8cd3c0fb68ce1f0b68b7bc3e61641e6f14da8c1f5d9025f4720c498c"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_011/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3da0cb00d667d4c85595cec0ed3f00c42cacd76d0bc987ca505ce75b62c1ac65"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_011/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "6aa5f1bf8fef24bc0dcd798465bfe57c7fa2c9ce235a8f85b448517f26a4620f"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_012/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "63e25c2b3dd4833dc00e5e30e94f28443bb8ca67c9b7899ff97ae0d635da7a6d"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_012/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8d18623fcc674c31eced68201dad111181dd023bbdb286e4b9a31ea185c6b800"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_013/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e9e5ea07e1aafaf56df31992cdc21d5b358d57ae7996d06d81ad7782784f6d7a"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_013/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3d769672c441eeb6f55541ffaa31e5bdb039ec94bfa05c6caea41c998760ffd4"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_014/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a4ca3e7ef6d81fddb25bd886d582e474e1e9f00268cf3516a6e239fda16f702e"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_014/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f5e63e4d3d11d28458d814347787498616ab4d5f3a90c570e4cdbc4d9e155617"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_015/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4bfd7bc690e52e2863fb3f537ae0d355ab983bdad6c5ee284d5b4a93702b623b"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_015/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "fa327e934dda0737f39c3ca65b9adb7d9988b3fb4a1ed23831da09029bf3f1f6"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_016/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "dc517dc1a838e8d332f17ef8b7d7e31f43453be32c6eb0f9294ce5b73318d7e4"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_016/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f75ecbaf7ce7bf7188d60137f44078b34401c32aee784d7a486a3792bf571b5a"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_017/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b05730dfffae0067635c4804753403542840d1f87e2a3528829a0c0041eced3f"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_017/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "97ced28252faac06ea89cdabadb0b651d73ca411f5da5047bed238d905af5b38"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_018/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2f3b26a5e6aae16c9ff5d3057afdce09d9e124784922c6d615e9fed1ae744da5"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_018/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "55223b9174f078c8c72b940677bffaf770d24cc3b9306ad46230ee7fa7dfb722"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_019/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e0802abd81d89a45b002b5bb1c7e11da2416ea46e22d8292bd26766227289dc1"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_019/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "960ac1896ea468e570a7ff15194ee89cd5ef36f278ea83c863459e03b7038c28"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_020/log.txt",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4a58d2f09f33cfbc2cc52c2dc2c86d8a98199c4045abe16d6044a04e4596380f"
+  },
+  {
+    "path": "results/window_departure_post2opt/day_020/metrics.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "aa163701a80dd2c05b3817bdbd34f551fd6581877d271eb1a8ce0c0a9cd5209c"
+  },
+  {
+    "path": "results/window_departure_sensitivity.json",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "45e9292a79e5bdd666fff2557ec4928fa7fcf9b52238ae67f1842878ad908704"
+  },
+  {
+    "path": "solution/policies/deadline_backfill.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "bdfcbb317603dee4c8b658f19bd0238c149dd100c0e13d1c2671b0b73ac9dd61"
+  },
+  {
+    "path": "solution/policies/deadline_cap0.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "61537ad12da6ac0b943ea8e185be3c0ae64c76e21264e63b0ae260ec7c803259"
+  },
+  {
+    "path": "solution/policies/deadline_cap15.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4da89008c521a82bcb5f88c3e3343237cf75aad2870a914d19c0d46b90a53fd4"
+  },
+  {
+    "path": "solution/policies/deadline_cap30.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "b1be339c7ca2d1f8e8212f04c51f725dad970d76c9e20357b70771b8bab34a61"
+  },
+  {
+    "path": "solution/policies/deadline_exchange.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2b47962dfbcf59e635eb6fb17646e646c73085b881083b72254be292e6500b4b"
+  },
+  {
+    "path": "solution/policies/deadline_morning_cap.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "0b286cb24afe0748a9a6fd6d0914d790978d2bbea1fa508e62d8b526035e934c"
+  },
+  {
+    "path": "solution/policies/deadline_relocate.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e766733f4b76a0bc65b699ff8639f7bdd9af529f364aa9a9de0c19a60ecf51a4"
+  },
+  {
+    "path": "solution/policies/deadline_return_cap.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "eb9fd7653180846afb31ae35b66a654ea895bbdd808c041c870b58237c1cd07e"
+  },
+  {
+    "path": "solution/policies/deadline_size_ties.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "87dd761ff2a9ecd67b94189405eadd0deb1ff4dec4e132c59c33c1c9f8126cde"
+  },
+  {
+    "path": "solution/policies/morning_rush.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "3eff5e6273b49ef8bdc23347063eb8bc8429940edadf6ddc11675e70d4f3fa02"
+  },
+  {
+    "path": "solution/policies/reserve_k1.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "f24f845bef1653b8d52974d1cdad56535897b6e28727cb765233e4d07a92abc2"
+  },
+  {
+    "path": "solution/policies/reserve_k2.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "cfd1f8a74705855eb03a769cb5bd1cdba81d7a5f23a6dfb302bd8b2d9f71abfd"
+  },
+  {
+    "path": "solution/policies/reserve_k3.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "e0ed4dd5085ae7b91a23107895599a7a634c0ee40703ad764fbb0e8e087faae8"
+  },
+  {
+    "path": "solution/policies/reserve_k4.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "42b99f2bbaaa8b154377c5fa74d50b72856900f1804356c8ba77b11ca305cece"
+  },
+  {
+    "path": "solution/policies/window_departure_compare.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "983d91e5ab1da156790a85fcd2a21af4fad918c795160cf81ce8d55584f39c4c"
+  },
+  {
+    "path": "solution/policies/window_departure_post2opt.py",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "4d51a7fa867e45ec72fc74f4ad0da7ecda8fdcdd36c1e15769d6176a85f3abf9"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_017/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_017/metrics.json",
+    "sha256": "eddea145e128dd4f25984685468ee43a1b4902f644ae4c32e0b120357457216a"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_017/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_017/log.txt",
+    "sha256": "28a86fb0bbe670b7cd356bf03db11d0eaf0e1b77b51154f6d58d26e15f551267"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_010/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_010/metrics.json",
+    "sha256": "e6f807e17fb984883abe5ece738764ad3dac152bf024342cdf5ac70cce6673d6"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_010/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_010/log.txt",
+    "sha256": "3d7af7ee04123268c05cf6241cf4609adca2be897959a705665442f982c16d59"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_019/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_019/metrics.json",
+    "sha256": "318c3537687110429a403a61273839e2377f0506a70dac1ab6c839390f39b119"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_019/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_019/log.txt",
+    "sha256": "a74f683bff46c9dec986e518e8eb7f95a5e4ec09009de6fe6422fe48bc0c8d40"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_020/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_020/metrics.json",
+    "sha256": "783ed1c040cb2035e3af90437e07aada6b98dc98d57e1523b4867593af5156f4"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_020/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_020/log.txt",
+    "sha256": "2016037067397fbae0f23c990562c1aaff7a7e2df0c1860bdca07f33407bf632"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_018/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_018/metrics.json",
+    "sha256": "adf9956e299eb56911d8da19ba3ab47cb829725b5e2120f63127872ea940b38e"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_018/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_018/log.txt",
+    "sha256": "ff4b3fd7e7a013c36e22bd4793942a3e6ac68ed58ec2c22010a985be00f244c7"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_011/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_011/metrics.json",
+    "sha256": "f62eda48b83cb0207294021ac7c80916982168557006011aeb2336f68174ed40"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_011/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_011/log.txt",
+    "sha256": "f636651c122492a51a36a9c37b467c29834db059965f1bb697be3b23f54aab78"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_016/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_016/metrics.json",
+    "sha256": "b9e896b6b7fe7744e7d4a8a143d4dc38890f111787463058409478c038d27919"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_016/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_016/log.txt",
+    "sha256": "7d8d95749acb834305f4dffb67bd6cb14fe85d516ce662816c6271a05794e4e8"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_005/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_005/metrics.json",
+    "sha256": "e573c5bae0cce5f010cb2548f086728457ee60639e0977411d5fbab849f2bf17"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_005/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_005/log.txt",
+    "sha256": "d5faea82c6c937188cbe17b2e69561e1055bb3777d974bd824279b87a1bcca76"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_002/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_002/metrics.json",
+    "sha256": "8106a9e5c1be503879f7daf93a85f8fff80590839b7d5f5819397c7245bed811"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_002/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_002/log.txt",
+    "sha256": "ffaebf655e3fa1a4a118cbb6119722cd464595586f24d8602af903c9dd1fe1cd"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_003/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_003/metrics.json",
+    "sha256": "9c33922c30fb7abab350d77d29f4f27d7d6af8a77156262ea434bd2238bbd514"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_003/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_003/log.txt",
+    "sha256": "3778497e52534ba76d88177483003c006d2c05760dc3f1968fe81d27ae6a011a"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_004/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_004/metrics.json",
+    "sha256": "f8b64d58392a64bfd041e696f9406c45cce3cd74c2cd58d35d46d7879c8c1b7c"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_004/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_004/log.txt",
+    "sha256": "d5ca4e6e846592fe68f7da3cfd953be4a3c59edb875961ca9b56127a91589eef"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_013/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_013/metrics.json",
+    "sha256": "918505f93878d3052d4a3ff007ada0b1c9ef6fc42a7c6f4631ed7b35b42544da"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_013/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_013/log.txt",
+    "sha256": "35088504178afc20ab11441be86d5196377f729f96ef5c04709ffc0c617e6d81"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_014/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_014/metrics.json",
+    "sha256": "68f6c390086dd89049fef16bddb4bd8d101e56e6242c20d5183b44979fc7c1ae"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_014/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_014/log.txt",
+    "sha256": "8d87f8dc007db897bc59f8006c638fccec66b7f9b9f060d49c4cc26a7657c8dd"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_015/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_015/metrics.json",
+    "sha256": "52cbf6db4f0fb5477727113d6ad2862add4cf042fe9460982113e3f2d4e3571d"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_015/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_015/log.txt",
+    "sha256": "9a1e6bf4ab75fd95eca16d3569545125246286fdc539e6ff539bf8599da904d7"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_012/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_012/metrics.json",
+    "sha256": "85b5c80b0c0c683503d4b58b52802b2e30725053e3cd6781534cbbd316954a51"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_012/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_012/log.txt",
+    "sha256": "32e9c5436e222ad5008e4b53233fa777806873a59bac76147b148e427a2f1425"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_008/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_008/metrics.json",
+    "sha256": "7ff04a8406f407a52ad0d3fbb9837a1a781ce7dad39b0bdd53ff5f022b0d3977"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_008/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_008/log.txt",
+    "sha256": "95c5fd2a2931c7fb720be2a7d90d9257e037357aedc987048e329c16588e8c77"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_001/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_001/metrics.json",
+    "sha256": "cf617ecb0c93b47100455c10cf5d03ddb06bbb8bc9b2fb2add01e9fc4a56f420"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_001/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_001/log.txt",
+    "sha256": "580bb3791f567d42a641b117c27d4a5302f5fdd8f1c328159f9d64e7cd6612e3"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_006/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_006/metrics.json",
+    "sha256": "1cd44bde2d35ef5c99a0a5315e5c7d543c05887df24bcd664222ff2e1bc1aafd"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_006/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_006/log.txt",
+    "sha256": "b5165209e195c0a5f6ffe00ac7263a765f58508dcb89103385b760b15e2d0632"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_007/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_007/metrics.json",
+    "sha256": "54527ec0ba8c7423c0cf3289dcc893f1319345adf9dae9045458896666ae9aec"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_007/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_007/log.txt",
+    "sha256": "8786f2b88f2ea91d3fb5593a65d7957a9bef12ef8a68e6e381d247d591697b45"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_009/metrics.json",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_009/metrics.json",
+    "sha256": "738254ad8fa0ac763b95a538bcdddf563353f7efbbcfaf3902e93e86ef37a778"
+  },
+  {
+    "path": "results/deadline_fleet_limit/day_009/log.txt",
+    "source": "Report Drafts/fleet-limit-experiment-2026-11-04/results/deadline_fleet_limit/day_009/log.txt",
+    "sha256": "0d179cf3dc43165970453c1ab83835ecb48cf58bb2c840ac46bc2972f250686f"
+  },
+  {
+    "path": "results/deadline_return_ties/day_017/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_017/metrics.json",
+    "sha256": "328ad6fc532c4340bf30ed1152fe1cbf4c477bfdccb0024c52c14973cdfe5911"
+  },
+  {
+    "path": "results/deadline_return_ties/day_017/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_017/log.txt",
+    "sha256": "32805b4f93552450dc96349f656d7e4640bd5604203ded6ff5a01abb5a707c6b"
+  },
+  {
+    "path": "results/deadline_return_ties/day_010/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_010/metrics.json",
+    "sha256": "2349c2d1a132f71ad30809f1916c997c7f6a88dbe992a88d55d4a3d396dfdbb6"
+  },
+  {
+    "path": "results/deadline_return_ties/day_010/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_010/log.txt",
+    "sha256": "79e434c3a14763ac0a059212d3384caecbe2dfe3c08247961731dfa9e665b638"
+  },
+  {
+    "path": "results/deadline_return_ties/day_019/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_019/metrics.json",
+    "sha256": "48fa7ac27b9a79bd9c1f18baa4653cdaaa8263d26a7c1911f714e7aafffc08a6"
+  },
+  {
+    "path": "results/deadline_return_ties/day_019/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_019/log.txt",
+    "sha256": "fc47d3f42ef28812f92a8c8595cf62dd5b6f269ac134a5b8d4bf887cb6a5b4ec"
+  },
+  {
+    "path": "results/deadline_return_ties/day_020/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_020/metrics.json",
+    "sha256": "399eec9becf4053ede7393a535d03b31081ae270a923fd1e9610a80a9ae7e7b9"
+  },
+  {
+    "path": "results/deadline_return_ties/day_020/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_020/log.txt",
+    "sha256": "b5832209e1ea3f8f2ce0cfbed0e03e73777abca60e0ac37e4cc791161e7389c3"
+  },
+  {
+    "path": "results/deadline_return_ties/day_018/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_018/metrics.json",
+    "sha256": "470d574d29bea78fea3fedbc8be8bf165edfc40fb9cb528022cfc88d4a5e7c76"
+  },
+  {
+    "path": "results/deadline_return_ties/day_018/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_018/log.txt",
+    "sha256": "3eae89f1ea18f5c9982a63b9955a5410a64feccdccb323340bb1f3c5c877f225"
+  },
+  {
+    "path": "results/deadline_return_ties/day_011/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_011/metrics.json",
+    "sha256": "ca3cd25a539326e05af110016e5aa88aa6dfb3e452743b450da4bb4bfb54621a"
+  },
+  {
+    "path": "results/deadline_return_ties/day_011/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_011/log.txt",
+    "sha256": "8e62aab095a334c56e7bb8ecd71b4f63266622db132119dc003c83ab691652ed"
+  },
+  {
+    "path": "results/deadline_return_ties/day_016/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_016/metrics.json",
+    "sha256": "71d958ff476d04eccdc862b9330fabbfc78cb34787d44d5271cd8a6b8b7e1c31"
+  },
+  {
+    "path": "results/deadline_return_ties/day_016/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_016/log.txt",
+    "sha256": "94e5a6708e8000d42c808787b2b3c5d12e30c954bd66a6eb980b4e7a0f8a9e21"
+  },
+  {
+    "path": "results/deadline_return_ties/day_005/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_005/metrics.json",
+    "sha256": "5c0b0cb13c27e1c47535d02c76330a31f09430a2447cef564f24882cdb08fb1f"
+  },
+  {
+    "path": "results/deadline_return_ties/day_005/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_005/log.txt",
+    "sha256": "fb578b4f6362a8998c18badf7888136fce86299a24f435fbea243ebf5134c2b8"
+  },
+  {
+    "path": "results/deadline_return_ties/day_002/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_002/metrics.json",
+    "sha256": "4be2a532bd9e004ded6c6ca5b5a3e3e3f560cd420ff17c3a1324803d9d50afc3"
+  },
+  {
+    "path": "results/deadline_return_ties/day_002/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_002/log.txt",
+    "sha256": "4aebef1ce61c378e7917a0a476056f89f5003df8de11c3374876683857d066d3"
+  },
+  {
+    "path": "results/deadline_return_ties/day_003/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_003/metrics.json",
+    "sha256": "12eade43804b8789e2bdc06cbf169847553b760cf983f0a51f06bb463770d51c"
+  },
+  {
+    "path": "results/deadline_return_ties/day_003/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_003/log.txt",
+    "sha256": "db4fde30ca81cd4358aff2d643968e21b67ebe5cb688bc82b3c2fa4894ddee64"
+  },
+  {
+    "path": "results/deadline_return_ties/day_004/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_004/metrics.json",
+    "sha256": "27efd12faf59564117606d98655c1e8aad0b53fe37dda677ad5bcdf60038d641"
+  },
+  {
+    "path": "results/deadline_return_ties/day_004/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_004/log.txt",
+    "sha256": "43ffc3ad35c967bfc77c09d033f96e62a60f2b32948188507e314b03a2b786c3"
+  },
+  {
+    "path": "results/deadline_return_ties/day_013/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_013/metrics.json",
+    "sha256": "2dc668c0495f0f286145e7134fa712780ad5eba52503d2985a4ca1e37dd25fde"
+  },
+  {
+    "path": "results/deadline_return_ties/day_013/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_013/log.txt",
+    "sha256": "e2d1eec0450268695d123bb1d0b3122be0279bcc5ede6ad36ffba4053e847ced"
+  },
+  {
+    "path": "results/deadline_return_ties/day_014/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_014/metrics.json",
+    "sha256": "64f687352adefbb3e8831f9c156cb5e5278c639afd11c926215ee63529549def"
+  },
+  {
+    "path": "results/deadline_return_ties/day_014/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_014/log.txt",
+    "sha256": "09511b08c3035159cb0a22215641b7a7f6e17a79f937989469c5584362593e64"
+  },
+  {
+    "path": "results/deadline_return_ties/day_015/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_015/metrics.json",
+    "sha256": "f3926945cd258b1ae8b10d38231f11fd164510ee04227f83648b83a96b22cb1b"
+  },
+  {
+    "path": "results/deadline_return_ties/day_015/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_015/log.txt",
+    "sha256": "6f00eb000d6f8311430af3ddadfa580b226dc504760fb07b4465dd8eaf766ffb"
+  },
+  {
+    "path": "results/deadline_return_ties/day_012/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_012/metrics.json",
+    "sha256": "ebca9baf0f75ca1c1d3f6bef75f7c49631e8744d1865017e6e6b8171920dcd7e"
+  },
+  {
+    "path": "results/deadline_return_ties/day_012/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_012/log.txt",
+    "sha256": "081760d69972be30ffff280b8b9efabfc610b02564ab7b09572d4312e893de98"
+  },
+  {
+    "path": "results/deadline_return_ties/day_008/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_008/metrics.json",
+    "sha256": "55369d3744926a6e42fb21fd68372a9d6d6b7f3fd9a3ab1e2f5dc0b933e29404"
+  },
+  {
+    "path": "results/deadline_return_ties/day_008/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_008/log.txt",
+    "sha256": "f03ded6640ca42c0d0067f26cb8d8044b494aad51f33c81c8b9e81d7389618ad"
+  },
+  {
+    "path": "results/deadline_return_ties/day_001/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_001/metrics.json",
+    "sha256": "396c8323d75877ba74293b673fd4dc07bb786524babbca85ad8fab271c4b95eb"
+  },
+  {
+    "path": "results/deadline_return_ties/day_001/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_001/log.txt",
+    "sha256": "8b33a8643ffbd46f8fa2a53a6894f0fc9e734032f5655d351466ba5a244f7c3d"
+  },
+  {
+    "path": "results/deadline_return_ties/day_006/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_006/metrics.json",
+    "sha256": "14091422e07f54ab7e826be6aaf86fe175e8c05fd684b527e5c258b609b11683"
+  },
+  {
+    "path": "results/deadline_return_ties/day_006/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_006/log.txt",
+    "sha256": "c5692f7c154efb0e7087ef86e8a20f0baf0a39ff6ca2f1a5c3ad3afaa9077ff8"
+  },
+  {
+    "path": "results/deadline_return_ties/day_007/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_007/metrics.json",
+    "sha256": "42a2a5695424e8dd7cbd64d6fec95553ab629ff9d0fac167ef025b30c8325aae"
+  },
+  {
+    "path": "results/deadline_return_ties/day_007/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_007/log.txt",
+    "sha256": "5e668a2acc8b85a53a565ceb0e2d64568f51563076dbe1f4c52542e4a36f9ad1"
+  },
+  {
+    "path": "results/deadline_return_ties/day_009/metrics.json",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_009/metrics.json",
+    "sha256": "738254ad8fa0ac763b95a538bcdddf563353f7efbbcfaf3902e93e86ef37a778"
+  },
+  {
+    "path": "results/deadline_return_ties/day_009/log.txt",
+    "source": "Report Drafts/return-tie-experiment-2026-11-04/results/deadline_return_ties/day_009/log.txt",
+    "sha256": "8f0ddb097cf27b1c8e80add18e6f612ab2de611ec668b9ff078c38502f1f8363"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_017/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_017/metrics.json",
+    "sha256": "c4ccc65921a06d0c6841ddf760027fd9ea8036f6ede92ee463ea469b9bbddf91"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_017/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_017/log.txt",
+    "sha256": "d3f82781f864b825673cefc41302a44a7669be9e2dd5ec6a5fb007ddfe149608"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_010/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_010/metrics.json",
+    "sha256": "1339b0a6f1d5fa283d79705f33ceb1c489cd80a135a4e69deba4ac17c36ffab2"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_010/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_010/log.txt",
+    "sha256": "f4f98e18496a7e600bfab212c8411075abd58372ce485507e44a3e7bba8d101b"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_019/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_019/metrics.json",
+    "sha256": "6b9326c6c4eb9d36a7a58d94ffc69ae9538f6e1f31ffb0f46ee13e59766b180b"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_019/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_019/log.txt",
+    "sha256": "0e4d353c607593b0577e1dcf31bcd4de188bc004e4c17023c48cf96e811a2c58"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_020/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_020/metrics.json",
+    "sha256": "6e987c8be627c9487004d6c8a8f653242b7ba479fce4951658408ffdda0d38b1"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_020/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_020/log.txt",
+    "sha256": "199de4f3cdef2d7969752a29d78492573db2a32c563ac3fc4d16dc5a38178072"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_018/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_018/metrics.json",
+    "sha256": "f8f7b22bff53643f4cea38f99efb994065ba68a92b8c6dd59a95efa6677caced"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_018/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_018/log.txt",
+    "sha256": "fe1fcf0e12003ab334de45509e348fcbae22fece380ebdf51dbcf0b0d7b4696c"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_011/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_011/metrics.json",
+    "sha256": "41de66b007e9fa03da35f37dd5b6afe234f979c335966403a130eae5059ee057"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_011/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_011/log.txt",
+    "sha256": "a6c1f00ae80b20efb511de362e6c311334601ce5b14a5a0f114b6d551da805aa"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_016/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_016/metrics.json",
+    "sha256": "7b9bada37302a8cfd5f2b4591a1a03a6a14cdb899c60860b634b87117ea1be81"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_016/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_016/log.txt",
+    "sha256": "e0e95e5bdcce93d048cab57499ca3873ea6cf79ab9ce624e1482d1f2a09f89be"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_005/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_005/metrics.json",
+    "sha256": "896abba3b23717cb9dec6c727471d714dac0adfefd984e503a70692fb3524127"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_005/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_005/log.txt",
+    "sha256": "ce7a1f1d625eaaf845a06e67700a504ed30fd90bed9b8dcf316d205f496cd244"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_002/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_002/metrics.json",
+    "sha256": "7679a13b935870a9f6c4713e1113a60e63ec5e920fbaf0cb2861ebea6c557404"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_002/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_002/log.txt",
+    "sha256": "3ad56d8165f33de6dc1aee1d275616bef617029db58f73cd37cb42cc1affefe2"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_003/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_003/metrics.json",
+    "sha256": "669827b72a0d6b795805c6dee573e3d26a6746586c1333d5c442c72c71c1b02b"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_003/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_003/log.txt",
+    "sha256": "6426a3a183728a6916b1dc2b43ff2574d3b19d2006aa879597ccde29147187cf"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_004/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_004/metrics.json",
+    "sha256": "cb2357cfdb6d4d62cda36b5e5a22bc8b5ca9ed2b377b1bf76d993083be42e38c"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_004/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_004/log.txt",
+    "sha256": "516ea5c9eab61a9d76cc53ffd7835e8022153f489e1a00bd8dbc2a4a61275bab"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_013/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_013/metrics.json",
+    "sha256": "b321cd9ebc01a360bd83a9621b2f80d157ad6d3e6dd0766028bc8d763dbcc6ef"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_013/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_013/log.txt",
+    "sha256": "b45092bff043fb1dcbe34a0bd46e391b7fd8a8996142029a7b013ec77cabd690"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_014/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_014/metrics.json",
+    "sha256": "f2044ed1323611eb42d51d3642d12a98afdb9979edbd5993462e071d13e28a62"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_014/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_014/log.txt",
+    "sha256": "90dd678f568ffe539c2387e0ee90303749bcf215577a2d1f8052a0479eda9029"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_015/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_015/metrics.json",
+    "sha256": "d072d345d7912d5f4c65c52af76af8b461c338340c479e864115568890bc0acf"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_015/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_015/log.txt",
+    "sha256": "24d9844fe9a0adf0f8deb212bd44d87ad8324b12c8a06d1f64f127703112b347"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_012/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_012/metrics.json",
+    "sha256": "f523eb7b9ca9fa0e570fc714330a32ed78b060ab4dc25e4eae738137b898d705"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_012/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_012/log.txt",
+    "sha256": "b58ac2d6546f037a6122c52e5dd7413bfd760ca010de5c7f0356aa36ca7ab0fc"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_008/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_008/metrics.json",
+    "sha256": "976d88d08db6c28be66cbeb23dcf7b7257c8c114dae5f6e3cb392a7fc73b70ef"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_008/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_008/log.txt",
+    "sha256": "7eb922475f53d3ad0522252766c5e1ca6272d7759336704dc90734185370e99e"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_001/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_001/metrics.json",
+    "sha256": "df9b43e3a4c86c9856f4a6eba607bd62024b72c2c530c08b7c7caba1283a8cb6"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_001/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_001/log.txt",
+    "sha256": "b66d3806d925c1c1c2cb61559b09bad12c4b2161dd88a89037432e033561f5e2"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_006/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_006/metrics.json",
+    "sha256": "34e5dc690a36984b3b512d5c84d167462238cd256fe6d51ce2db5fe816cd6649"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_006/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_006/log.txt",
+    "sha256": "f8cad28ab5359a29ebae9f0d5490fd337f0a8d60f15637ec1b38aefbe849eaa4"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_007/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_007/metrics.json",
+    "sha256": "967e635c99e8fce87481328d39302e5d10fe260fff2945728845e9ca11b521a6"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_007/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_007/log.txt",
+    "sha256": "99ee9088bf53d64389bd4b7704ada97240daac22defe617944cf7bf2713a9db7"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_009/metrics.json",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_009/metrics.json",
+    "sha256": "b95e6c4ad9c848511fed6dcd49f8dd6cabd2b055ef3a2d9ff60123fa41834bd4"
+  },
+  {
+    "path": "results/deadline_slack_limit/day_009/log.txt",
+    "source": "Report Drafts/slack-selection-experiment-2026-11-04/results/deadline_slack_limit/day_009/log.txt",
+    "sha256": "be7a26757ff63bf5e79a28d20fb6c65e9d9d6eb73a9eca5933770163aa7f7136"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_017/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_017/metrics.json",
+    "sha256": "eddea145e128dd4f25984685468ee43a1b4902f644ae4c32e0b120357457216a"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_017/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_017/log.txt",
+    "sha256": "28a86fb0bbe670b7cd356bf03db11d0eaf0e1b77b51154f6d58d26e15f551267"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_010/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_010/metrics.json",
+    "sha256": "e6f807e17fb984883abe5ece738764ad3dac152bf024342cdf5ac70cce6673d6"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_010/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_010/log.txt",
+    "sha256": "3d7af7ee04123268c05cf6241cf4609adca2be897959a705665442f982c16d59"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_019/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_019/metrics.json",
+    "sha256": "318c3537687110429a403a61273839e2377f0506a70dac1ab6c839390f39b119"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_019/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_019/log.txt",
+    "sha256": "a74f683bff46c9dec986e518e8eb7f95a5e4ec09009de6fe6422fe48bc0c8d40"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_020/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_020/metrics.json",
+    "sha256": "783ed1c040cb2035e3af90437e07aada6b98dc98d57e1523b4867593af5156f4"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_020/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_020/log.txt",
+    "sha256": "2016037067397fbae0f23c990562c1aaff7a7e2df0c1860bdca07f33407bf632"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_018/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_018/metrics.json",
+    "sha256": "c15d8a81c4c8e8f517e89d2668c7b144e5e99278e0b989109be8b1778acdd199"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_018/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_018/log.txt",
+    "sha256": "a5a0145a50709aa43e67213c0f21e229158088c728654ba70391cf64abbf7034"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_011/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_011/metrics.json",
+    "sha256": "f62eda48b83cb0207294021ac7c80916982168557006011aeb2336f68174ed40"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_011/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_011/log.txt",
+    "sha256": "f636651c122492a51a36a9c37b467c29834db059965f1bb697be3b23f54aab78"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_016/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_016/metrics.json",
+    "sha256": "b9e896b6b7fe7744e7d4a8a143d4dc38890f111787463058409478c038d27919"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_016/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_016/log.txt",
+    "sha256": "7d8d95749acb834305f4dffb67bd6cb14fe85d516ce662816c6271a05794e4e8"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_005/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_005/metrics.json",
+    "sha256": "e573c5bae0cce5f010cb2548f086728457ee60639e0977411d5fbab849f2bf17"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_005/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_005/log.txt",
+    "sha256": "d5faea82c6c937188cbe17b2e69561e1055bb3777d974bd824279b87a1bcca76"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_002/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_002/metrics.json",
+    "sha256": "d02100cb13dccd4b04116bd7cea68616bc900398cf2d1b8a41cd76dc5ffe9e89"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_002/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_002/log.txt",
+    "sha256": "cb3388582d4dd4fc5e65be7726ce3078c9f20e1c32a7fd800dd1e79e48e98af6"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_003/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_003/metrics.json",
+    "sha256": "74a2ae16296f5ef145647e28539bf089cc256714018839aa80f052fdf0b9ca2f"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_003/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_003/log.txt",
+    "sha256": "f1abdee07e8d5a4c95487fa196d9916eef4d87654aa3d1b7782c92c7e5ccc7bb"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_004/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_004/metrics.json",
+    "sha256": "ee52647732c39ace6e0bd6fa48359a67d301171116bcc6dbbd1dd1f3b7547324"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_004/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_004/log.txt",
+    "sha256": "5f322a5f4931c5be0e5b28a5d7b5935ad692bbf60f0974c31d968af62d30b511"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_013/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_013/metrics.json",
+    "sha256": "8b40827d051a2fe2a31eedb7fb5509935ca68a19d88f167d105a0acf15ae7e04"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_013/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_013/log.txt",
+    "sha256": "15d6934a41103f1d70ca42bf3042892cdcc9d66954b5422a1af467796be76fe7"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_014/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_014/metrics.json",
+    "sha256": "8888b0028bcc7c4ac454434736f929b389b6e72bc72be1e873e025a2cf1a82b2"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_014/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_014/log.txt",
+    "sha256": "3c08dd348ce4940420808268aa10e2770fe0d647792c20a13c4d2d5421723a57"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_015/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_015/metrics.json",
+    "sha256": "5bf46a19b081c89e9f639d13c3fec07a2f5124737f29b9d8eb1ded586d942b9b"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_015/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_015/log.txt",
+    "sha256": "74f5c05aa30572bc64ec77f3862563268713fb531b454057c86563e4253a88c4"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_012/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_012/metrics.json",
+    "sha256": "85b5c80b0c0c683503d4b58b52802b2e30725053e3cd6781534cbbd316954a51"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_012/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_012/log.txt",
+    "sha256": "32e9c5436e222ad5008e4b53233fa777806873a59bac76147b148e427a2f1425"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_008/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_008/metrics.json",
+    "sha256": "6128945852ec71d8b7ab18edf80b021c59ab66d14e82166b5b15d69183ba5e69"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_008/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_008/log.txt",
+    "sha256": "0231cef9d1baf56a02dd39da1c25fc2b5a8ee21be44cff34cafc696f3bd1c951"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_001/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_001/metrics.json",
+    "sha256": "c0b09a4e39651fdca812ccc70dc8b159e73adbecb4bb3e8bdb6023e76aab5938"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_001/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_001/log.txt",
+    "sha256": "7a2bdfb01640d7331edfb4e03a17870f494c608c825980aa2975cd3f4c500415"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_006/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_006/metrics.json",
+    "sha256": "1cd44bde2d35ef5c99a0a5315e5c7d543c05887df24bcd664222ff2e1bc1aafd"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_006/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_006/log.txt",
+    "sha256": "b5165209e195c0a5f6ffe00ac7263a765f58508dcb89103385b760b15e2d0632"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_007/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_007/metrics.json",
+    "sha256": "bb3b9f85ef692273652eb5e4c48fc454a4337168fb86c85fdf45a2607b33c1aa"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_007/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_007/log.txt",
+    "sha256": "5347072b73d0efeaa43cf2f390d2fa1d68735e0cf73916e6f0eb74a23875fc22"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_009/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_009/metrics.json",
+    "sha256": "738254ad8fa0ac763b95a538bcdddf563353f7efbbcfaf3902e93e86ef37a778"
+  },
+  {
+    "path": "results/deadline_trip_wait_guard/day_009/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_trip_wait_guard/day_009/log.txt",
+    "sha256": "0d179cf3dc43165970453c1ab83835ecb48cf58bb2c840ac46bc2972f250686f"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_017/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_017/metrics.json",
+    "sha256": "eddea145e128dd4f25984685468ee43a1b4902f644ae4c32e0b120357457216a"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_017/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_017/log.txt",
+    "sha256": "28a86fb0bbe670b7cd356bf03db11d0eaf0e1b77b51154f6d58d26e15f551267"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_010/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_010/metrics.json",
+    "sha256": "e6f807e17fb984883abe5ece738764ad3dac152bf024342cdf5ac70cce6673d6"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_010/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_010/log.txt",
+    "sha256": "3d7af7ee04123268c05cf6241cf4609adca2be897959a705665442f982c16d59"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_019/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_019/metrics.json",
+    "sha256": "318c3537687110429a403a61273839e2377f0506a70dac1ab6c839390f39b119"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_019/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_019/log.txt",
+    "sha256": "a74f683bff46c9dec986e518e8eb7f95a5e4ec09009de6fe6422fe48bc0c8d40"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_020/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_020/metrics.json",
+    "sha256": "783ed1c040cb2035e3af90437e07aada6b98dc98d57e1523b4867593af5156f4"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_020/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_020/log.txt",
+    "sha256": "2016037067397fbae0f23c990562c1aaff7a7e2df0c1860bdca07f33407bf632"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_018/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_018/metrics.json",
+    "sha256": "c15d8a81c4c8e8f517e89d2668c7b144e5e99278e0b989109be8b1778acdd199"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_018/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_018/log.txt",
+    "sha256": "a5a0145a50709aa43e67213c0f21e229158088c728654ba70391cf64abbf7034"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_011/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_011/metrics.json",
+    "sha256": "f62eda48b83cb0207294021ac7c80916982168557006011aeb2336f68174ed40"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_011/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_011/log.txt",
+    "sha256": "f636651c122492a51a36a9c37b467c29834db059965f1bb697be3b23f54aab78"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_016/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_016/metrics.json",
+    "sha256": "b9e896b6b7fe7744e7d4a8a143d4dc38890f111787463058409478c038d27919"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_016/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_016/log.txt",
+    "sha256": "7d8d95749acb834305f4dffb67bd6cb14fe85d516ce662816c6271a05794e4e8"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_005/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_005/metrics.json",
+    "sha256": "e573c5bae0cce5f010cb2548f086728457ee60639e0977411d5fbab849f2bf17"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_005/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_005/log.txt",
+    "sha256": "d5faea82c6c937188cbe17b2e69561e1055bb3777d974bd824279b87a1bcca76"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_002/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_002/metrics.json",
+    "sha256": "8106a9e5c1be503879f7daf93a85f8fff80590839b7d5f5819397c7245bed811"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_002/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_002/log.txt",
+    "sha256": "ffaebf655e3fa1a4a118cbb6119722cd464595586f24d8602af903c9dd1fe1cd"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_003/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_003/metrics.json",
+    "sha256": "7cf36c559fdb53eadf97d379a23322f2ae1d5d72337ecfd3bc58d717930d2946"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_003/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_003/log.txt",
+    "sha256": "35d0e747c5f33f6219a54a40ad254723fd98d9e3b5461d2c4215b318b9622dc0"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_004/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_004/metrics.json",
+    "sha256": "f8b64d58392a64bfd041e696f9406c45cce3cd74c2cd58d35d46d7879c8c1b7c"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_004/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_004/log.txt",
+    "sha256": "d5ca4e6e846592fe68f7da3cfd953be4a3c59edb875961ca9b56127a91589eef"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_013/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_013/metrics.json",
+    "sha256": "918505f93878d3052d4a3ff007ada0b1c9ef6fc42a7c6f4631ed7b35b42544da"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_013/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_013/log.txt",
+    "sha256": "35088504178afc20ab11441be86d5196377f729f96ef5c04709ffc0c617e6d81"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_014/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_014/metrics.json",
+    "sha256": "68f6c390086dd89049fef16bddb4bd8d101e56e6242c20d5183b44979fc7c1ae"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_014/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_014/log.txt",
+    "sha256": "8d87f8dc007db897bc59f8006c638fccec66b7f9b9f060d49c4cc26a7657c8dd"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_015/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_015/metrics.json",
+    "sha256": "52cbf6db4f0fb5477727113d6ad2862add4cf042fe9460982113e3f2d4e3571d"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_015/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_015/log.txt",
+    "sha256": "9a1e6bf4ab75fd95eca16d3569545125246286fdc539e6ff539bf8599da904d7"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_012/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_012/metrics.json",
+    "sha256": "85b5c80b0c0c683503d4b58b52802b2e30725053e3cd6781534cbbd316954a51"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_012/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_012/log.txt",
+    "sha256": "32e9c5436e222ad5008e4b53233fa777806873a59bac76147b148e427a2f1425"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_008/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_008/metrics.json",
+    "sha256": "7ff04a8406f407a52ad0d3fbb9837a1a781ce7dad39b0bdd53ff5f022b0d3977"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_008/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_008/log.txt",
+    "sha256": "95c5fd2a2931c7fb720be2a7d90d9257e037357aedc987048e329c16588e8c77"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_001/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_001/metrics.json",
+    "sha256": "cf617ecb0c93b47100455c10cf5d03ddb06bbb8bc9b2fb2add01e9fc4a56f420"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_001/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_001/log.txt",
+    "sha256": "580bb3791f567d42a641b117c27d4a5302f5fdd8f1c328159f9d64e7cd6612e3"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_006/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_006/metrics.json",
+    "sha256": "1cd44bde2d35ef5c99a0a5315e5c7d543c05887df24bcd664222ff2e1bc1aafd"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_006/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_006/log.txt",
+    "sha256": "b5165209e195c0a5f6ffe00ac7263a765f58508dcb89103385b760b15e2d0632"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_007/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_007/metrics.json",
+    "sha256": "54527ec0ba8c7423c0cf3289dcc893f1319345adf9dae9045458896666ae9aec"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_007/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_007/log.txt",
+    "sha256": "8786f2b88f2ea91d3fb5593a65d7957a9bef12ef8a68e6e381d247d591697b45"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_009/metrics.json",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_009/metrics.json",
+    "sha256": "738254ad8fa0ac763b95a538bcdddf563353f7efbbcfaf3902e93e86ef37a778"
+  },
+  {
+    "path": "results/deadline_fleet_wait_guard/day_009/log.txt",
+    "source": "Report Drafts/wait-guard-experiment-2026-11-04/results/deadline_fleet_wait_guard/day_009/log.txt",
+    "sha256": "0d179cf3dc43165970453c1ab83835ecb48cf58bb2c840ac46bc2972f250686f"
+  },
+  {
+    "path": "results/deadline_time_limit/day_017/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_017/metrics.json",
+    "sha256": "eddea145e128dd4f25984685468ee43a1b4902f644ae4c32e0b120357457216a"
+  },
+  {
+    "path": "results/deadline_time_limit/day_017/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_017/log.txt",
+    "sha256": "28a86fb0bbe670b7cd356bf03db11d0eaf0e1b77b51154f6d58d26e15f551267"
+  },
+  {
+    "path": "results/deadline_time_limit/day_010/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_010/metrics.json",
+    "sha256": "e6f807e17fb984883abe5ece738764ad3dac152bf024342cdf5ac70cce6673d6"
+  },
+  {
+    "path": "results/deadline_time_limit/day_010/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_010/log.txt",
+    "sha256": "3d7af7ee04123268c05cf6241cf4609adca2be897959a705665442f982c16d59"
+  },
+  {
+    "path": "results/deadline_time_limit/day_019/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_019/metrics.json",
+    "sha256": "318c3537687110429a403a61273839e2377f0506a70dac1ab6c839390f39b119"
+  },
+  {
+    "path": "results/deadline_time_limit/day_019/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_019/log.txt",
+    "sha256": "a74f683bff46c9dec986e518e8eb7f95a5e4ec09009de6fe6422fe48bc0c8d40"
+  },
+  {
+    "path": "results/deadline_time_limit/day_020/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_020/metrics.json",
+    "sha256": "166eb22060dcc903a98f6515fe59e35464575cab2810709ef0af89f6d0adae2b"
+  },
+  {
+    "path": "results/deadline_time_limit/day_020/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_020/log.txt",
+    "sha256": "8bbb17e8bee3479b19e0f3fdc4ee07720f1bba33fe22fc3ffbbda29cf31f0a66"
+  },
+  {
+    "path": "results/deadline_time_limit/day_018/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_018/metrics.json",
+    "sha256": "c15d8a81c4c8e8f517e89d2668c7b144e5e99278e0b989109be8b1778acdd199"
+  },
+  {
+    "path": "results/deadline_time_limit/day_018/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_018/log.txt",
+    "sha256": "a5a0145a50709aa43e67213c0f21e229158088c728654ba70391cf64abbf7034"
+  },
+  {
+    "path": "results/deadline_time_limit/day_011/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_011/metrics.json",
+    "sha256": "f62eda48b83cb0207294021ac7c80916982168557006011aeb2336f68174ed40"
+  },
+  {
+    "path": "results/deadline_time_limit/day_011/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_011/log.txt",
+    "sha256": "f636651c122492a51a36a9c37b467c29834db059965f1bb697be3b23f54aab78"
+  },
+  {
+    "path": "results/deadline_time_limit/day_016/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_016/metrics.json",
+    "sha256": "b9e896b6b7fe7744e7d4a8a143d4dc38890f111787463058409478c038d27919"
+  },
+  {
+    "path": "results/deadline_time_limit/day_016/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_016/log.txt",
+    "sha256": "7d8d95749acb834305f4dffb67bd6cb14fe85d516ce662816c6271a05794e4e8"
+  },
+  {
+    "path": "results/deadline_time_limit/day_005/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_005/metrics.json",
+    "sha256": "e573c5bae0cce5f010cb2548f086728457ee60639e0977411d5fbab849f2bf17"
+  },
+  {
+    "path": "results/deadline_time_limit/day_005/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_005/log.txt",
+    "sha256": "d5faea82c6c937188cbe17b2e69561e1055bb3777d974bd824279b87a1bcca76"
+  },
+  {
+    "path": "results/deadline_time_limit/day_002/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_002/metrics.json",
+    "sha256": "d02100cb13dccd4b04116bd7cea68616bc900398cf2d1b8a41cd76dc5ffe9e89"
+  },
+  {
+    "path": "results/deadline_time_limit/day_002/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_002/log.txt",
+    "sha256": "cb3388582d4dd4fc5e65be7726ce3078c9f20e1c32a7fd800dd1e79e48e98af6"
+  },
+  {
+    "path": "results/deadline_time_limit/day_003/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_003/metrics.json",
+    "sha256": "74a2ae16296f5ef145647e28539bf089cc256714018839aa80f052fdf0b9ca2f"
+  },
+  {
+    "path": "results/deadline_time_limit/day_003/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_003/log.txt",
+    "sha256": "f1abdee07e8d5a4c95487fa196d9916eef4d87654aa3d1b7782c92c7e5ccc7bb"
+  },
+  {
+    "path": "results/deadline_time_limit/day_004/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_004/metrics.json",
+    "sha256": "ee52647732c39ace6e0bd6fa48359a67d301171116bcc6dbbd1dd1f3b7547324"
+  },
+  {
+    "path": "results/deadline_time_limit/day_004/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_004/log.txt",
+    "sha256": "5f322a5f4931c5be0e5b28a5d7b5935ad692bbf60f0974c31d968af62d30b511"
+  },
+  {
+    "path": "results/deadline_time_limit/day_013/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_013/metrics.json",
+    "sha256": "ad4dcc8fa6456fcfe38adbdaf2c106229f94bf5faf9b8e5acc3a8f3749dff03b"
+  },
+  {
+    "path": "results/deadline_time_limit/day_013/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_013/log.txt",
+    "sha256": "24ed96d96f0d9ea03deb6a13cf457310e8d5e37412f4f0208f457eaebc8a57ee"
+  },
+  {
+    "path": "results/deadline_time_limit/day_014/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_014/metrics.json",
+    "sha256": "8888b0028bcc7c4ac454434736f929b389b6e72bc72be1e873e025a2cf1a82b2"
+  },
+  {
+    "path": "results/deadline_time_limit/day_014/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_014/log.txt",
+    "sha256": "3c08dd348ce4940420808268aa10e2770fe0d647792c20a13c4d2d5421723a57"
+  },
+  {
+    "path": "results/deadline_time_limit/day_015/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_015/metrics.json",
+    "sha256": "5bf46a19b081c89e9f639d13c3fec07a2f5124737f29b9d8eb1ded586d942b9b"
+  },
+  {
+    "path": "results/deadline_time_limit/day_015/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_015/log.txt",
+    "sha256": "74f5c05aa30572bc64ec77f3862563268713fb531b454057c86563e4253a88c4"
+  },
+  {
+    "path": "results/deadline_time_limit/day_012/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_012/metrics.json",
+    "sha256": "85b5c80b0c0c683503d4b58b52802b2e30725053e3cd6781534cbbd316954a51"
+  },
+  {
+    "path": "results/deadline_time_limit/day_012/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_012/log.txt",
+    "sha256": "32e9c5436e222ad5008e4b53233fa777806873a59bac76147b148e427a2f1425"
+  },
+  {
+    "path": "results/deadline_time_limit/day_008/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_008/metrics.json",
+    "sha256": "6128945852ec71d8b7ab18edf80b021c59ab66d14e82166b5b15d69183ba5e69"
+  },
+  {
+    "path": "results/deadline_time_limit/day_008/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_008/log.txt",
+    "sha256": "0231cef9d1baf56a02dd39da1c25fc2b5a8ee21be44cff34cafc696f3bd1c951"
+  },
+  {
+    "path": "results/deadline_time_limit/day_001/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_001/metrics.json",
+    "sha256": "0ca9788ce8773770419acad397e7b9689e81c4f9a2e1cb77db66ba2020ff9a67"
+  },
+  {
+    "path": "results/deadline_time_limit/day_001/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_001/log.txt",
+    "sha256": "e981340b60e5cef36e66a874280393fcb5831107095ebe87e3b32ae029b970b8"
+  },
+  {
+    "path": "results/deadline_time_limit/day_006/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_006/metrics.json",
+    "sha256": "1cd44bde2d35ef5c99a0a5315e5c7d543c05887df24bcd664222ff2e1bc1aafd"
+  },
+  {
+    "path": "results/deadline_time_limit/day_006/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_006/log.txt",
+    "sha256": "b5165209e195c0a5f6ffe00ac7263a765f58508dcb89103385b760b15e2d0632"
+  },
+  {
+    "path": "results/deadline_time_limit/day_007/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_007/metrics.json",
+    "sha256": "bb3b9f85ef692273652eb5e4c48fc454a4337168fb86c85fdf45a2607b33c1aa"
+  },
+  {
+    "path": "results/deadline_time_limit/day_007/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_007/log.txt",
+    "sha256": "5347072b73d0efeaa43cf2f390d2fa1d68735e0cf73916e6f0eb74a23875fc22"
+  },
+  {
+    "path": "results/deadline_time_limit/day_009/metrics.json",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_009/metrics.json",
+    "sha256": "738254ad8fa0ac763b95a538bcdddf563353f7efbbcfaf3902e93e86ef37a778"
+  },
+  {
+    "path": "results/deadline_time_limit/day_009/log.txt",
+    "source": "Report Drafts/time-limit-experiment-2026-11-04/results/deadline_time_limit/day_009/log.txt",
+    "sha256": "0d179cf3dc43165970453c1ab83835ecb48cf58bb2c840ac46bc2972f250686f"
+  },
+  {
+    "path": "experiments/history/docs/backfill_experiment.md",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2cd15231f22fcba0ec3665bd638ac72618aa1206913a338efb6e2cce232d42e6"
+  },
+  {
+    "path": "experiments/history/docs/complexity_analysis.md",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "379f16a630b71cc5cb8b16756e17c25c31efa539cd83c5120b942a546381ba39"
+  },
+  {
+    "path": "experiments/history/docs/experiment_notes.md",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "a5d0eb3daf84d121801f67237f07cd55d1d880145d5b253ef68188a17d0d57ec"
+  },
+  {
+    "path": "experiments/history/docs/followup_search_results.md",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "ff4b6bbfa3eed43d174cdaaef6722f553216caed698aac598e5074a08d32c8c3"
+  },
+  {
+    "path": "experiments/history/docs/morning_cap_experiment.md",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "8484aa2973438f0328c511073dcac851cb4489e3e992523c472f4e076ee8af6f"
+  },
+  {
+    "path": "experiments/history/docs/report_draft.md",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "72b826668dacfe012c9d562db0776e04ea13886829bdc6a45911bdfdf51801b6"
+  },
+  {
+    "path": "experiments/history/docs/reproduction.md",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "5087959fff66b0bbf5c7772c95a4f41f8575f5a15416611b006663886706b387"
+  },
+  {
+    "path": "experiments/history/docs/return_time_cap_experiment.md",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "953cdfae1d706a43e19388953f269027c710b88c1c0e4985c4479e085d3bf6e0"
+  },
+  {
+    "path": "experiments/history/docs/small_case_diagnosis.md",
+    "source_commit": "3078c33a53b1b4299727181f7a738bac7acc312e",
+    "sha256": "2ba1a8574e72854e2b254848528a2e079e1a9dcfa74a3ea954309157450f6d0d"
+  }
+]
