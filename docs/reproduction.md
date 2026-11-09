@@ -9,7 +9,7 @@ python3 run_all.py solution.policies.baseline replay_baseline
 python3 check_trips.py replay_baseline
 ```
 
-To run the monitor separately on the saved first-day baseline log:
+The saved baseline results are in `results/baseline/day_XXX/`. The `replay_` commands above write to a new folder, `results/replay_baseline/`, which is created when you run them, so the saved results are not overwritten. After running the replay, to run the monitor separately on its first-day log:
 
 ```bash
 python3 -m solution.performance_monitor --data data --day day_001 --log results/replay_baseline/day_001/log.txt
@@ -178,4 +178,4 @@ These rescore existing schedules and write to `results_sweep/` and `results_expe
 
 The experiment scripts and results were recovered from existing local files. Six scripts received path-only adjustments so they can use this submission folder. Historical findings are retained as dated notes and may refer to earlier folder locations or provisional recommendations. The current recommendation remains `deadline_trip_limit`.
 
-The final report is `report.pdf`. Its references include the seven Gemini exchanges supplied during the final review. These exchanges document that review rather than the complete development history.
+The final report is `report.pdf`. Its references include the record of AI assistance used in the project.
