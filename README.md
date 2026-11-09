@@ -52,6 +52,26 @@ We chose 240 to balance completed deliveries against timing: one undelivered
 parcel costs the same as 240 minutes outside delivery windows. This is a
 modelling choice, not a monetary cost supplied in the dataset. `sweep_weights.py` rescores saved logs under other weights.
 
+## Reproducing the baseline
+
+Run these from the repository folder, as described under "Running the project" below.
+
+To run the supplied baseline for all 20 days and check its trips:
+
+```bash
+python3 run_all.py solution.policies.baseline replay_baseline
+python3 check_trips.py replay_baseline
+```
+
+To run just one day and then the performance monitor on that day's log:
+
+```bash
+python3 -m simulator --policy solution.policies.baseline --data data --day day_001 --output results/replay_baseline/day_001
+python3 -m solution.performance_monitor --data data --day day_001 --log results/replay_baseline/day_001/log.txt
+```
+
+The saved baseline results are in `results/baseline/day_001` to `results/baseline/day_020`, each with a `log.txt` and a `metrics.json`; the `replay_` prefix writes to a new folder, so the saved results are not overwritten.
+
 ## Running the project
 
 Use Python 3.9 or later. No additional packages are needed. Run the commands
@@ -93,10 +113,20 @@ See [reproduction commands](docs/reproduction.md) for all recovered experiments 
 | `docs/` | Experiment details, complexity analysis and run instructions |
 | `experiments/` | Recovered sweep, stress-study and runtime evidence |
 
-The [final report](report.pdf) contains the findings, references and Gemini exchanges supplied during the final review. See [supporting experiments](experiments/README.md) for the saved experiment records and how they were recovered.
+The final report, [report.pdf](report.pdf), contains the findings, references and the record of AI assistance used in the project. See [supporting experiments](experiments/README.md) for the saved experiment records and how they were recovered.
 
 ## Further reading
 
 - [Final report](report.pdf)
 - [Trip limit experiment](docs/trip_limit_experiment.md)
 - [Time and space complexity](docs/complexity_analysis.md)
+
+## References
+
+[1] Singapore Management University. (2026). IS115 project: Last-mile delivery planning [Project brief].
+
+[2] Singapore Management University. (2026). Heuristics Part 2a: Greedy algorithms [IS115 Week 11 lecture slides].
+
+[3] Singapore Management University. (2026). Heuristics Part 3: Local search [IS115 Week 11 lecture slides].
+
+[4] Croes, G. A. (1958). A method for solving traveling-salesman problems. *Operations Research*, 6(6), 791–812.
