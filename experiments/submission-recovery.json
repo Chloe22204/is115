@@ -22,7 +22,7 @@
   "files": [
     {
       "path": "report.pdf",
-      "sha256": "c2965692739631789720701f5f4822298b390bc6f80c0c9cfe353e97318d611d"
+      "sha256": "72ad43f38b65f9fd22c94cebf475995432b8d4da2930e8a7774e6e89ff9ed023"
     },
     {
       "path": "verify_results.py",
