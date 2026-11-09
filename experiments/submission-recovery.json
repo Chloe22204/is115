@@ -30,7 +30,7 @@
     },
     {
       "path": "docs/reproduction.md",
-      "sha256": "c0494323183702bbde0b9efbe1cd164383228b3344ace79138c85037b7bfd262"
+      "sha256": "104a672c592e600516c0763376d9c4ca1a77cc230f3e32a05a7edda4803ecea6"
     },
     {
       "path": "docs/policy_inventory.md",
@@ -49,5 +49,6 @@
       "sha256": "c84f157c40c2041e5ecb020ca6c38757c39b32a8016c25d51c8b0854ff7ae95e"
     }
   ],
-  "assistance_record_recovery_manifest": "Original recovery records retained in the private audit backup; supplied Gemini review exchanges appear in report.pdf references."
+  "assistance_record_recovery_manifest": "Original recovery records retained in the private audit backup; supplied Gemini review exchanges appear in report.pdf references.",
+  "helpers_refactor_validation": "experiments/helper_refactor_validation.json"
 }

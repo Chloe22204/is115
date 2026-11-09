@@ -17,3 +17,8 @@ The selected policy is still `deadline_trip_limit`. These records do not establi
 Historical draft notes were moved to a private backup outside this submission folder. Saved inputs, results, scripts and provenance manifests are retained here. Use the reproduction instructions for current commands.
 
 `recovery_manifest.json` records source hashes and the five script path adjustments. No dispatch logic was changed during this recovery.
+
+Shared policy code was moved into `solution/policies/helpers.py` on 9 November.
+`helper_refactor_validation.json` records the source changes and the successful
+replays of all 1,140 original-data and 800 stress policy-days. Logs and metrics
+matched byte-for-byte. The saved runtime samples predate this reorganisation.

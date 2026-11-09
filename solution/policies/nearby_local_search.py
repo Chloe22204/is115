@@ -2,7 +2,7 @@ import math
 from typing import Dict, List, Optional
 
 from simulator.models import Parcel, SimulationContext
-from solution.policies.nearby_first import dispatch as nearby_dispatch
+from solution.policies.helpers import build_nearby_route as nearby_dispatch
 
 
 def dispatch(parcel: Dict[str, Parcel], context: SimulationContext) -> List[str]:

@@ -77,6 +77,22 @@ python3 verify_results.py
 
 This reads saved logs and independently checks scores, hard constraints and supplied-file hashes. It writes nothing and does not certify that references or the assistance record are complete.
 
+## Check policy replays
+
+```bash
+python3 check_policy_replays.py
+python3 check_policy_replays.py --stress
+```
+
+The first command replays all 57 original-data variants over 20 days. The second
+also checks all 800 stress runs. Both compare generated logs and metrics
+byte-for-byte with the saved files, without replacing them.
+
+Shared policy code was moved into `solution/policies/helpers.py` on 9 November.
+Policy names, entry points and algorithm settings are unchanged. The saved
+runtime measurements predate this code reorganisation. They describe the
+measured version, rather than a fresh timing of the refactored source.
+
 ## Trip-limit sweep
 
 The original seven-setting validation, per-day results and split-half calculations are in `experiments/trip-limit-validation-2026-11-04/`.

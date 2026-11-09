@@ -1,0 +1,286 @@
+{
+  "date": "2026-11-09",
+  "starting_commit": "26f076ce766fdf7fcb10aca59c7b562b8859ece7",
+  "purpose": "Move shared builders and factories into helpers.py; remove policy-to-policy imports and temporary replacement of another policy builder.",
+  "algorithm_settings_changed": false,
+  "dispatch_interface_changed": false,
+  "report_changed": false,
+  "saved_results_changed": false,
+  "original_data_replay": {
+    "python": "3.13.7",
+    "policies": 57,
+    "policy_days": 1140,
+    "log_comparison": "byte-identical",
+    "metrics_comparison": "byte-identical"
+  },
+  "stress_replay": {
+    "python": "3.13.7",
+    "scenarios": 8,
+    "policies_per_scenario": 5,
+    "policy_days": 800,
+    "log_comparison": "byte-identical",
+    "metrics_comparison": "byte-identical"
+  },
+  "python39_replay": {
+    "python": "3.9.6",
+    "policies": [
+      "baseline",
+      "deadline_window_departure",
+      "deadline_trip_limit"
+    ],
+    "policy_days": 60,
+    "logs_and_metrics": "byte-identical"
+  },
+  "static_checks": {
+    "policy_imports_only_from_helpers": true,
+    "moved_function_bodies_unchanged_except_names": 12,
+    "protected_framework_data_and_package_files_unchanged": 30
+  },
+  "reproduce": [
+    "python3 check_policy_replays.py --stress",
+    "/usr/bin/python3 check_policy_replays.py --policy baseline --policy deadline_window_departure --policy deadline_trip_limit"
+  ],
+  "runtime_note": "Saved benchmark timings were measured before this organisational refactor; no new timing claim is made.",
+  "source_changes": {
+    "solution/policies/candidate_selection.py": {
+      "before": "340e091274b810a4f2be75ec86b4ed2302d787fa7bab999024e82a05e35288b4",
+      "after": "7524c1fddd5b040822180a0591c760e782e5cc9dafaca1c0ff06b5eefdb27166"
+    },
+    "solution/policies/trip_limit_140.py": {
+      "before": "cb571782ceb6fc767e9c894160c18fb13d0b8df7d5d14726deb08624c23315cd",
+      "after": "ebcdc6dc44fecdc20717c87a42d81789239229033996410c9fec9f306a58a63d"
+    },
+    "solution/policies/trip_limit_125.py": {
+      "before": "b6bbab1fa3fde5401e4949b56c7e98d4d01ae7fb8fa05ec55058fe13a355205b",
+      "after": "bbcf4dacb10e1ac50acd41f430fbcebeeebf379892885762a056f67966179750"
+    },
+    "solution/policies/deadline_trip_limit.py": {
+      "before": "0be9284efa2755641e33a7e7d9f9acfd67968ba4289909c21c0bf7536656b972",
+      "after": "d689864d0e0889ce02bb5400b815d669fe44e328a10f6bec2701ad013cadc898"
+    },
+    "solution/policies/trip_limit_135.py": {
+      "before": "6d128539e6093bf9d127c7352ce2ced6826b8251097d94d09f96dae95c54b208",
+      "after": "aa8ea088ac2674ecf7a5ff8dd13f982bc96ce1c7b223285541e48332df75ae8b"
+    },
+    "solution/policies/hybrid_u100_two_opt.py": {
+      "before": "c33603689762dd3e22df1c0c1468c71425b9547b2c9572aab17fc560d92616ca",
+      "after": "43e978692471ebc2222ed321ed2b9ce7be926aa5cd8a1960550165560deb6e5c"
+    },
+    "solution/policies/trip_limit_115.py": {
+      "before": "ce4452b32266dee889bd9f81a9158c7916ea4d94540513012232c1d5e2390c64",
+      "after": "6ae57ca0c83dcca49a6905a1b87c3d1e84a6ddb6d7b43d415ce48db62654a780"
+    },
+    "solution/policies/trip_limit_105.py": {
+      "before": "912b7ac91d1552f0509e137fcedcf0c726b6e890527617e23f03258be1b32cb4",
+      "after": "6978bbef623683724b2ea02cca51052fde4bd8da09173629262d777259db245b"
+    },
+    "solution/policies/trip_limit_120.py": {
+      "before": "d39923634cce8fe7246755df3f103f3edd626a713b98104844d6deb5a3905b62",
+      "after": "58433afa25d6fb41db296831eb7c9692d75188e73f0a496856940cb45a1aade1"
+    },
+    "solution/policies/cand_p2_A.py": {
+      "before": "a77d0f409960bf0dd1e0c278daee07207540d6dd0152c4756313989684e642ed",
+      "after": "e3cc50961d5a5f5287973c9c4d24878929ad41b02ef82e6ab3a70800a6963760"
+    },
+    "solution/policies/holdback_h120.py": {
+      "before": "f2766ca8b2598ccb5b09a8daa2aabdec6a3970d5bd5309028ddb7d6ed06633e0",
+      "after": "f0c86a369f046b7352905276e1c3e872a44ed35946daef5770f17037bf041888"
+    },
+    "solution/policies/deadline_relocate.py": {
+      "before": "e766733f4b76a0bc65b699ff8639f7bdd9af529f364aa9a9de0c19a60ecf51a4",
+      "after": "18fe87ea0b90b7b5229b7f59bf01d5c76a4cde46fcda53fb024ff4118036eea7"
+    },
+    "solution/policies/trip_limit_130.py": {
+      "before": "dfa9790ca5e0fb46ca008bf9236b1d399614fd232a731661495b2b31253f0271",
+      "after": "a532e6a5bc574a611a320a07e59dce3279348f02f17f93a982b55556fdc9cf05"
+    },
+    "solution/policies/window_departure_compare.py": {
+      "before": "983d91e5ab1da156790a85fcd2a21af4fad918c795160cf81ce8d55584f39c4c",
+      "after": "c359b00227f8dbd04c4ec75a98de627bcc325068a94fa11ef0adf76909a99eec"
+    },
+    "solution/policies/trip_limit_110.py": {
+      "before": "b957ec9d31b2b3c4726b31eb66b467d9c35dc9664c2bc7f58d850c36d217b34f",
+      "after": "e103df3a251e3294c8660072c55ac03f85cd01fda1bca3e867bfc5a84ed29191"
+    },
+    "solution/policies/nearby_two_opt.py": {
+      "before": "28fab4fcedfec2508a12abaea00c990eb4dac5447ba167bd1486b6f367dfd685",
+      "after": "5c2194e206d94e9a743c3cba39283272cf36feba952d0f2f39acf67450847643"
+    },
+    "solution/policies/trip_limit_100.py": {
+      "before": "8c3d3e910430df8473f722c7e4f213c7784c286cee96d771d4217dda43dd4e9e",
+      "after": "fa2fa39ca5f65b5733a621774057b2951f74e9637cb90b7df7c9b8684ac391aa"
+    },
+    "solution/policies/hybrid_u50_two_opt.py": {
+      "before": "6c0a6857c1eba740b7269f2468853a2eed1ae624680b24c7bb5b0827e7d70bb4",
+      "after": "b16cbf4fa1bb110cc698bace5a4749b6e7583a98753cc5d4e2d6d5f1dcd87417"
+    },
+    "solution/policies/deadline_return_ties.py": {
+      "before": "1fcc7ac7c5c2cbffb603f561de969f4a058975f4ef4fcb3e74b139a52e9d1a6f",
+      "after": "791e4e23153843495db61f1e14b97b1809aac0bb6ed620012971f12736093a90"
+    },
+    "solution/policies/cand_p5_A.py": {
+      "before": "d7340602cc39b86ce49d2a4b333c4b49f0fb6fa194443660acc26866d283d1da",
+      "after": "9b4a592e7290c2d51366b6d602868e8780a9a815af6409be5785829d03bbb65d"
+    },
+    "solution/policies/deadline_trip_wait_guard.py": {
+      "before": "58c94a8e5b2d661011b36cd3894539ef12bfb728c48d1392fddbfd1f774b4d26",
+      "after": "110d08212d38e12a4540baf3db434ac0cfb74655a43748038531ea3480a599f4"
+    },
+    "solution/policies/deadline_return_cap.py": {
+      "before": "eb9fd7653180846afb31ae35b66a654ea895bbdd808c041c870b58237c1cd07e",
+      "after": "85d1a68d420ac9248699ecea44834e77bb3121a214314138d19bf29f43d4966e"
+    },
+    "solution/policies/deadline_cap15.py": {
+      "before": "4da89008c521a82bcb5f88c3e3343237cf75aad2870a914d19c0d46b90a53fd4",
+      "after": "fccaf782feee53743a604561bc943e3cc5df5ff434158cff83f8524e9393e2d2"
+    },
+    "solution/policies/reserve_k4.py": {
+      "before": "42b99f2bbaaa8b154377c5fa74d50b72856900f1804356c8ba77b11ca305cece",
+      "after": "d14d44e451b89767b5a8b134afb4c1bd258d1d2a62dc1f288a52c33ccfc55417"
+    },
+    "solution/policies/wait_f50.py": {
+      "before": "b8f225dcf4c4ff38f390bc18d9f7fb414a1fea82b3d75ca8033855cbe4edbb39",
+      "after": "2f5c872ee448720d4b4cae8f82c599efaf12736437ac5a98bc13537f1b56f448"
+    },
+    "solution/policies/deadline_cap0.py": {
+      "before": "61537ad12da6ac0b943ea8e185be3c0ae64c76e21264e63b0ae260ec7c803259",
+      "after": "750c72ecfbc2221ac61c2671dd5699789333e837d94d60ab607aad2a6956841b"
+    },
+    "solution/policies/deadline_backfill.py": {
+      "before": "bdfcbb317603dee4c8b658f19bd0238c149dd100c0e13d1c2671b0b73ac9dd61",
+      "after": "5bc10c6b652b3a9d213284531a47620fc85946ccc29ac814923f0d31ddf4c227"
+    },
+    "solution/policies/deadline_cap30.py": {
+      "before": "b1be339c7ca2d1f8e8212f04c51f725dad970d76c9e20357b70771b8bab34a61",
+      "after": "e191e4b6f1bab0c11b8398b9c8abd8c12bee58a990deea761c6f3496e73a1c72"
+    },
+    "solution/policies/holdback_two_opt.py": {
+      "before": "d217f57370f4b56ebad41ec9c3a5995521cfee36475f5f0ee02f46b51076bf0f",
+      "after": "fbe8716706b9868e24e7cb808b467bcdfc926586394432fc48bb4bc3a6c1888b"
+    },
+    "solution/policies/hybrid_u0.py": {
+      "before": "40347068a9ccdfc9887e819f6f9eaf7126f9b52c5ef82f22250dd9a9e5f57778",
+      "after": "cf0cd92cc8112c209de03d2821fb4ac9a0f1abe743d24d7ba40b6eb27a8a9cf8"
+    },
+    "solution/policies/reserve_k1.py": {
+      "before": "f24f845bef1653b8d52974d1cdad56535897b6e28727cb765233e4d07a92abc2",
+      "after": "5b158381d6c5d334983919672500ba5181e38eaba92afbefe43ab664e73fb99e"
+    },
+    "solution/policies/wait_f70.py": {
+      "before": "a10f69f5e784ad57201d2f2959fe08984c3e2a14d805c181611b30d62a8d5b02",
+      "after": "ce7fb86d9daf1d1cf6d0c5c7c6e416c2ddba158d117b258dc962eefecf11d5d7"
+    },
+    "solution/policies/deadline_fleet_wait_guard.py": {
+      "before": "e9996abe70407f1fefc0e9a71f7c1d45b8ce136d8bc56eca2bc327efcb6917fe",
+      "after": "112b3360ac6ff83d94dbf07d3e0458d58bf0db1531372fb1016415d4a15e1ead"
+    },
+    "solution/policies/hybrid_u25_two_opt.py": {
+      "before": "f1c78658fa7f02f90cced90b9e0b9682c6cb6a0df6c5cd832a9430046ccd1777",
+      "after": "8b2a86fb52848f486363ac2ec22ed19a19d18f04517e8ea9a850f230d7169ec6"
+    },
+    "solution/policies/nearby_local_search.py": {
+      "before": "8659460164b9702cceaf8aabc0cdc923e6c685c47f0e896284f38b3d571577f8",
+      "after": "af1dda650d7704e66c8515eb2f66058b9c7b0b0180c931a8cfb0b620494b90ea"
+    },
+    "solution/policies/deadline_two_opt.py": {
+      "before": "365fbb2093a39708995e6c049e1af3e22b4fcafeacbe7a21a66c20a6dcaa91e7",
+      "after": "bdbc18a5d6ef2361dcbc44d8aa3b4aeede555b0c20d1d04b154139fe4cd3b96c"
+    },
+    "solution/policies/wait_f90.py": {
+      "before": "7571c40866d1eeea5f7c3e02db49601e09017c1a340bb381660ce26e9c98f229",
+      "after": "24447c6bd660801944bcb166aa2c1b9aef9d4e4f71061a097b240ddef06d0343"
+    },
+    "solution/policies/deadline_exchange.py": {
+      "before": "2b47962dfbcf59e635eb6fb17646e646c73085b881083b72254be292e6500b4b",
+      "after": "17638a60d1f0d0a3a37f79027c3477647b3a13d8d4ddfdbcc1f26e99528d2f0e"
+    },
+    "solution/policies/deadline_window_departure.py": {
+      "before": "623af51e2d53c0a73b2148d81e09ba60d1456ea171f572b1268543966815fa5c",
+      "after": "05f577ff484d2c5f1351cd22f7e18d8b7a3cfa72fd1f1e14d77e5121e529a2f7"
+    },
+    "solution/policies/reserve_k2.py": {
+      "before": "cfd1f8a74705855eb03a769cb5bd1cdba81d7a5f23a6dfb302bd8b2d9f71abfd",
+      "after": "3dfd132f926f8fee791695e317e0589472a8eba544b5da60ffd35a1fdc60cfd8"
+    },
+    "solution/policies/hybrid_urgent_nearby.py": {
+      "before": "56f9910526ae078da1b234e6c0bcd0abe5c09d0b9bd01110d5d4ae36c7c1a7bd",
+      "after": "56b5e17fe2790d04b2c1f6d507685e8991b492f897dddbdf936fbb81b85fcf16"
+    },
+    "solution/policies/deadline_morning_cap.py": {
+      "before": "0b286cb24afe0748a9a6fd6d0914d790978d2bbea1fa508e62d8b526035e934c",
+      "after": "d4d2b9747d38ca268a241b84417cd062d341073ba4bda89067995ea0ab712b25"
+    },
+    "solution/policies/reserve_k3.py": {
+      "before": "e0ed4dd5085ae7b91a23107895599a7a634c0ee40703ad764fbb0e8e087faae8",
+      "after": "7753e233f73b76f566d38c836186b0c947fd52b942b9cdda64006838d06330a7"
+    },
+    "solution/policies/cand_p5_B.py": {
+      "before": "6b442049a70e55c5fb3b973842c9aaaeb21633194726ee0e2fa2291f03e43512",
+      "after": "c7a67e5d8cbce087af53fd1ec25e0d65bd01c8d7962e457f785c3d5e2aa26ad3"
+    },
+    "solution/policies/deadline_time_limit.py": {
+      "before": "36a16ee880174440512bd6b3351eafe95bdf3e5d76796d8f4578eae5ed150223",
+      "after": "2156c0463aaad66a40cce59964f35519744f2f7593173ce5a06298461e7f800e"
+    },
+    "solution/policies/hybrid_u75_two_opt.py": {
+      "before": "60e1c6e4e4c625e0fcfd43a78baa026586dbd3d1570557f572c161bb9c795510",
+      "after": "21653955abfbb34e7b1d3427136ff8e470bdbd2805a0a60b91f38e094b1e7bca"
+    },
+    "solution/policies/cand_p2_B.py": {
+      "before": "1bdb82ac1a7bfe4177aea23c0eab21d56007c9984129576de10483a0728fd975",
+      "after": "dd269fee9615e226e7573ae1c98fd3ef16bab054516a3ec448985c8cdd23e925"
+    },
+    "solution/policies/hybrid_u75.py": {
+      "before": "b45b92b113f21d1b41e29066a49f6d6ea289886363233d9fc6632ca1a7a5c996",
+      "after": "7f5fde2217c6731d0bfad8215c6943595d9892f2ff05db1b9e41bbf81ea12919"
+    },
+    "solution/policies/holdback_h60.py": {
+      "before": "799e3d2bb0b5e07154d05df3d813253f82a7b3a3302ad11cf768ab1a34bef11d",
+      "after": "23a1383ce8c17fa0f60d36d7f1cd6bcdfc7e9051d8f39d2e50f3ce4e0d9f88ad"
+    },
+    "solution/policies/hybrid_u100.py": {
+      "before": "bdc2c00d2b6bb4f86c6dbfc4e0ad6fbbf6a573d9ace6c3fe21212a940ceafd95",
+      "after": "f9d27e96e65c783d1b21c00646856ca1d99dc9f89b3c3f33ac8a5d12edc68164"
+    },
+    "solution/policies/morning_rush.py": {
+      "before": "3eff5e6273b49ef8bdc23347063eb8bc8429940edadf6ddc11675e70d4f3fa02",
+      "after": "f29c227ccd226b2beda375cbdab7a234bfa66824be3cb2e0cb88955d7a070148"
+    },
+    "solution/policies/helpers.py": {
+      "before": "94779ea23c4f1d9deb08cb819b1a97c2a8d0d9611b19995df2f1b624bdf89978",
+      "after": "3e9deb66a0cb81164d6f095da5624f2ecabbd2e44a095509e870b954e10fcaa7"
+    },
+    "solution/policies/window_departure_post2opt.py": {
+      "before": "4d51a7fa867e45ec72fc74f4ad0da7ecda8fdcdd36c1e15769d6176a85f3abf9",
+      "after": "7c8bb463354cbcc1fc8350a1ce21ab17677921d11b2510d7ba0be3a50f3875e9"
+    },
+    "solution/policies/deadline_first.py": {
+      "before": "d72d44a32a44f8a1bf34d591534facea1a305f538ea7d299703333c9db6dadd0",
+      "after": "3e8eff6b935b98c5b1370278051d1f2379e985415f72bd39781b3c0bf4cf322c"
+    },
+    "solution/policies/nearby_first.py": {
+      "before": "aed6fc093e33f0ef12d6690edba133d7d2aa2d24f0903b54c37c1eee97cdf1a6",
+      "after": "4dcd2e6b5b47e71a20415b85cc3ac871eb549994714a759cf7addca4dade8882"
+    },
+    "solution/policies/deadline_fleet_limit.py": {
+      "before": "9b17b74929216c9b9f1d98290d44d7ac6774af8c0149826009df9d8ff5956383",
+      "after": "4ae80cdefd89151749efc5b00ab12ec8f09b2edabaa50c4cedbf0a26d175ea73"
+    },
+    "solution/policies/hybrid_u50.py": {
+      "before": "8b69b9195109e285f5170a4cd2a623d75fab05554539f5b4bedc926c8842bd18",
+      "after": "10cdcd97c03caf1221242d7f16354a458e0c841b71aad07bbb3090423cedf151"
+    },
+    "solution/policies/hybrid_u25.py": {
+      "before": "046a5a99ebf7713fa194d45c736029c33dc353bddaac0cc488df6c6284b0a742",
+      "after": "e23d063cfbf8237a22f7c1b4da219426bc950cfaf319ae4d0e850e7d5a0f62fe"
+    },
+    "solution/policies/holdback_h30.py": {
+      "before": "3ce3b776d84c7d96629a207f913bc20834e7c9e75d496b98faa3da6490e2cd7f",
+      "after": "2961e0275c51997d3b403dd282158bf51f2bf2665d30b285d91b8d5be5827c19"
+    },
+    "solution/policies/wait_to_fill.py": {
+      "before": "e40d726aec1b2893a51baf77a7a19672f1e20c096aa94a6e0051186172685957",
+      "after": "48e92b9552ef2928ce51386ca3f443bbb25fce03a69c3a66c8f0014ab94b2be2"
+    }
+  }
+}

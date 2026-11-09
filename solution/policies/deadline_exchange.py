@@ -3,8 +3,11 @@ import math
 from typing import Dict, List
 
 from simulator.models import Parcel, SimulationContext
-from solution.policies.deadline_two_opt import dispatch as initial_dispatch
-from solution.policies.helpers import route_timing_penalty, two_opt
+from solution.policies.helpers import (
+    build_deadline_two_opt as initial_dispatch,
+    route_timing_penalty,
+    two_opt,
+)
 
 
 def dispatch(parcel: Dict[str, Parcel], context: SimulationContext) -> List[str]:

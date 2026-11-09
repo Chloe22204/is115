@@ -2,8 +2,10 @@ import math
 from typing import Dict, List, Optional
 
 from simulator.models import Parcel, SimulationContext
-from solution.policies.deadline_first import dispatch as deadline_dispatch
-from solution.policies.helpers import route_timing_penalty
+from solution.policies.helpers import (
+    build_deadline_route as deadline_dispatch,
+    route_timing_penalty,
+)
 
 PLANNING_INTERVAL = 10.0
 

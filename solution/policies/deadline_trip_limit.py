@@ -1,7 +1,7 @@
 from typing import Dict, List
 
 from simulator.models import Parcel, SimulationContext
-from solution.policies.deadline_window_departure import dispatch as window_dispatch
+from solution.policies.helpers import build_window_aligned_route as window_dispatch
 
 # Longest a trip may last, from hub departure to return, in minutes.
 # 105-130 all score well on the supplied days; 100 and below or 135 and above

@@ -74,6 +74,10 @@ python3 -m solution.performance_monitor --data data --day day_001 --log results/
 The `replay_` folder names above preserve the submitted results. Each run saves an event log (`log.txt`) and a metrics report (`metrics.json`)
 in its policy and day folder. Repeating a run replaces those files.
 
+Each policy keeps its own module and dispatch entry point. Shared construction,
+waiting and local-search code is in `solution/policies/helpers.py`; policies do
+not import one another.
+
 See [reproduction commands](docs/reproduction.md) for all recovered experiments and [the policy inventory](docs/policy_inventory.md) for every saved original-data variant. Run `python3 verify_results.py` to independently check saved scores, trips and protected files.
 
 ## Files
@@ -83,7 +87,7 @@ See [reproduction commands](docs/reproduction.md) for all recovered experiments 
 | `data/` | Supplied demand, distances and configuration |
 | `simulator/` | Supplied simulation framework |
 | `solution/policies/` | Dispatch policies |
-| `solution/policies/helpers.py` | Shared route evaluation and 2-opt functions |
+| `solution/policies/helpers.py` | Shared route builders, dispatch rules and local search |
 | `solution/performance_monitor.py` | Penalty calculation and trip diagnostics |
 | `results/` | Saved logs, daily metrics and experiment summaries |
 | `docs/` | Experiment details, complexity analysis and run instructions |

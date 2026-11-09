@@ -1,5 +1,5 @@
 """Reproduce the reported 130-minute trip-limit setting."""
-from solution.policies.deadline_window_departure import dispatch as window_dispatch
+from solution.policies.helpers import build_window_aligned_route as window_dispatch
 
 
 def dispatch(parcel, context):
