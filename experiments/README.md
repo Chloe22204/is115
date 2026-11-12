@@ -16,7 +16,7 @@ The selected policy is still `deadline_trip_limit`. These records do not establi
 
 Earlier draft notes are kept outside this submission folder. Saved inputs, results, scripts and provenance manifests are retained here. Use the reproduction instructions for current commands.
 
-`recovery_manifest.json` records source hashes and the five script path adjustments. No dispatch logic was changed when the scripts were copied.
+Six scripts received path-only adjustments. `recovery_manifest.json` records source hashes and five of them (`portability_patches`); the sixth, `worked-example/capture_example.py`, is recorded in `submission-recovery.json` (`worked_example_script_adjustment`). No dispatch logic was changed when the scripts were copied.
 
 Shared policy code was moved into `solution/policies/helpers.py` on 9 November.
 `helper_refactor_validation.json` records the source changes and the successful
