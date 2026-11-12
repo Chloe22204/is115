@@ -1,0 +1,4 @@
+from solution.policies.helpers import make_cluster_dispatch
+
+# Seed-and-cluster: pool = window end within 240 min of the seed, nearest to any route stop first.
+dispatch = make_cluster_dispatch(tolerance=240.0, measure="route")

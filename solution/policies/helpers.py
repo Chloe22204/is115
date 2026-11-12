@@ -469,3 +469,152 @@ def make_morning_cap(before: float, return_by: float) -> DispatchPolicy:
             context = {**context, "return_cutoff": min(context["return_cutoff"], return_by)}
         return build_window_aligned_route(parcel, context)
     return dispatch
+
+
+# Seed-and-cluster construction
+CLUSTER_TRIP_MINUTES = 125.0  # same trip cap as deadline_trip_limit
+
+
+def build_cluster_route(parcel: Dict[str, Parcel], context: SimulationContext,
+                        tolerance: float, measure: str = "seed") -> List[str]:
+    """Build a feasible route around one urgent seed parcel.
+
+    Seed: the parcel deadline_first would pick first (earliest window end, then
+    hub distance, then parcel ID) among those that fit as a one-stop trip.
+    Pool: other waiting parcels whose window end is at most `tolerance` minutes
+    after the seed's. Pool parcels are added nearest first, by distance to the
+    seed ("seed") or to the closest stop already in the route ("route"), then
+    window end, then parcel ID. Each one is inserted at its cheapest position
+    and kept only if capacity, range and return cutoff still hold.
+    """
+    if measure not in ("seed", "route"):
+        raise ValueError('measure must be "seed" or "route"')
+    distances = context["travel_distance"]
+    departure_time = context["current_time"] + context["departure_delay"]
+    max_distance = context["max_trip_distance_km"] + 1e-9
+    latest_distance = context["return_cutoff"] - departure_time  # 1 km = 1 minute
+    capacity = context["capacity"] + 1e-9
+
+    waiting = sorted(
+        (parcel_id for parcel_id, record in parcel.items()
+         if record["vehicle_assigned"] is None and record["delivery_time"] is None),
+        key=lambda parcel_id: (
+            parcel[parcel_id]["delivery_window_end"],
+            distances["HUB"][parcel[parcel_id]["delivery_location_id"]],
+            parcel_id,
+        ),
+    )
+
+    # Seed: first parcel in deadline order that fits on its own.
+    seed = None
+    for parcel_id in waiting:
+        record = parcel[parcel_id]
+        location = record["delivery_location_id"]
+        round_trip = distances["HUB"][location] + distances[location]["HUB"]
+        if (record["size"] <= capacity and round_trip <= max_distance
+                and round_trip <= latest_distance):
+            seed = parcel_id
+            break
+    if seed is None:
+        return []
+
+    seed_location = parcel[seed]["delivery_location_id"]
+    seed_end = parcel[seed]["delivery_window_end"]
+    route = [seed]
+    stops = ["HUB", seed_location, "HUB"]
+    load = parcel[seed]["size"]
+    length = distances["HUB"][seed_location] + distances[seed_location]["HUB"]
+    pool = [parcel_id for parcel_id in waiting
+            if parcel_id != seed and parcel[parcel_id]["delivery_window_end"] <= seed_end + tolerance]
+    # Distance from each pool parcel to the cluster (seed only, or nearest route stop).
+    near = {parcel_id: distances[seed_location][parcel[parcel_id]["delivery_location_id"]]
+            for parcel_id in pool}
+
+    def order_key(parcel_id: str):
+        return (near[parcel_id], parcel[parcel_id]["delivery_window_end"], parcel_id)
+
+    pool.sort(key=order_key)
+    while pool:
+        for parcel_id in pool:
+            record = parcel[parcel_id]
+            if load + record["size"] > capacity:
+                continue
+            location = record["delivery_location_id"]
+            # Cheapest insertion position (ties keep the earliest position).
+            best_extra = math.inf
+            best_index = 0
+            for index in range(1, len(stops)):
+                extra = (distances[stops[index - 1]][location] + distances[location][stops[index]]
+                         - distances[stops[index - 1]][stops[index]])
+                if extra < best_extra - 1e-12:
+                    best_extra = extra
+                    best_index = index
+            new_length = length + best_extra
+            if new_length > max_distance or new_length > latest_distance:
+                continue
+
+            route.insert(best_index - 1, parcel_id)
+            stops.insert(best_index, location)
+            load += record["size"]
+            length = new_length
+            pool.remove(parcel_id)
+            if measure == "route":
+                # The new stop may now be the closest one for other pool parcels.
+                for other in pool:
+                    gap = distances[location][parcel[other]["delivery_location_id"]]
+                    if gap < near[other]:
+                        near[other] = gap
+                pool.sort(key=order_key)
+            break
+        else:
+            break  # No remaining pool parcel can be added.
+
+    return route
+
+
+def wait_or_two_opt(route: List[str], parcel: Dict[str, Parcel],
+                    context: SimulationContext) -> List[str]:
+    """Apply build_window_aligned_route's departure rule and 2-opt to a given route."""
+    if not route:
+        return route
+    distances = context["travel_distance"]
+    departure = context["current_time"] + context["departure_delay"]
+    arrival_time = departure
+    location = "HUB"
+    legs = []
+    all_early = True
+    for pid in route:
+        record = parcel[pid]
+        destination = record["delivery_location_id"]
+        leg = distances[location][destination]
+        legs.append(leg)
+        arrival_time += leg
+        if record["delivery_window_start"] - arrival_time < PLANNING_INTERVAL:
+            all_early = False
+        location = destination
+    trip_distance = math.fsum(legs + [distances[location]["HUB"]])
+    if all_early and departure + trip_distance + PLANNING_INTERVAL <= context["return_cutoff"]:
+        return []
+    return two_opt(route, parcel, context)
+
+
+def make_cluster_dispatch(tolerance: float, measure: str = "seed",
+                          cluster_before: Optional[float] = None) -> DispatchPolicy:
+    """deadline_trip_limit with build_cluster_route in place of build_deadline_route.
+
+    cluster_before: if given, use clustering only for calls before this time
+    (minutes after midnight) and plain deadline-first construction afterwards.
+    """
+    if tolerance < 0:
+        raise ValueError("tolerance must be non-negative")
+
+    def dispatch(parcel: Dict[str, Parcel], context: SimulationContext) -> List[str]:
+        departure = context["current_time"] + context["departure_delay"]
+        limited = {**context,
+                   "return_cutoff": min(context["return_cutoff"], departure + CLUSTER_TRIP_MINUTES)}
+        if cluster_before is not None and context["current_time"] >= cluster_before:
+            return build_window_aligned_route(parcel, limited)
+        route = build_cluster_route(parcel, limited, tolerance, measure)
+        return wait_or_two_opt(route, parcel, limited)
+
+    return dispatch
