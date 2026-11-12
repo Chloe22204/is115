@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-12",
+  "locked_commit": "2539477ec167c12b5d9e66de57935a99ac0e2a57",
+  "reference_policy": "deadline_trip_limit",
+  "hypothesis": "Grouping parcels near the earliest-deadline anchor, within a limited deadline band, reduces route mixing and morning lateness.",
+  "bands_minutes": [0, 30, 60],
+  "selection_rule": "Start with the earliest-deadline feasible parcel, breaking ties by current distance and ID. At each later step, find all feasible parcels; consider deadlines at most band minutes after the earliest feasible deadline; rank by distance from the first stop, current-leg distance, deadline, then ID.",
+  "fixed_components": {
+    "trip_limit_minutes": 125,
+    "preparation_minutes": 30,
+    "waiting_rule": "Same all-deliveries-at-least-ten-minutes-early check as the locked policy, before 2-opt",
+    "route_improvement": "Existing best-improvement 2-opt",
+    "weights": {"undelivered": 240, "early": 1, "late": 1}
+  },
+  "development_days": [1, 10],
+  "comparison_days": [11, 20],
+  "choose_candidate": "Lowest total penalty on days 1-10 only; ties use smaller deadline band.",
+  "adoption_gate": "Chosen candidate must not increase days 1-10 penalty and must improve days 11-20 penalty by at least 2%, with no hard-constraint or input-mutation violations.",
+  "limits": "All 20 days have been used before. This is a split comparison on reused development data, not an unseen test. No additional settings will be added after seeing the results in this experiment.",
+  "checks": [
+    "Earliest-deadline feasible anchor",
+    "Geography can change selection only within the prescribed deadline band",
+    "Capacity, directed range and return cutoff",
+    "Duplicate, assigned and delivered parcel exclusion",
+    "Input snapshots unchanged",
+    "Locked control replays match existing logs and metrics byte-for-byte"
+  ],
+  "promotion": "Do not modify main, the report or the submission ZIP. Present results for joint review."
+}

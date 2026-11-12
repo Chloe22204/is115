@@ -178,13 +178,14 @@ def build_deadline_two_opt(parcel: Dict[str, Parcel], context: SimulationContext
 
 
 # Window-aligned departure
-def build_window_aligned_route(parcel: Dict[str, Parcel], context: SimulationContext) -> List[str]:
+def build_window_aligned_route(parcel: Dict[str, Parcel], context: SimulationContext,
+                               builder: DispatchPolicy = build_deadline_route) -> List[str]:
     """Defer an entirely early route one planning round when its return still fits.
 
     This uses only the currently constructed route. It does not predict future
     arrivals. Recompute normally at the next simulator planning round.
     """
-    route = build_deadline_route(parcel, context)
+    route = builder(parcel, context)
     if not route:
         return route
     distances = context["travel_distance"]
@@ -206,6 +207,76 @@ def build_window_aligned_route(parcel: Dict[str, Parcel], context: SimulationCon
     if all_early and departure + trip_distance + PLANNING_INTERVAL <= context["return_cutoff"]:
         return []
     return two_opt(route, parcel, context)
+
+
+# Geographic selection experiment
+def build_anchor_geo_route(parcel: Dict[str, Parcel], context: SimulationContext,
+                           deadline_band: float) -> List[str]:
+    """Keep the earliest feasible deadline as an anchor, then group nearby stops."""
+    waiting = [pid for pid, record in parcel.items()
+               if record["vehicle_assigned"] is None and record["delivery_time"] is None]
+    distances = context["travel_distance"]
+    departure = context["current_time"] + context["departure_delay"]
+    route: List[str] = []
+    anchor = None
+    location = "HUB"
+    load = 0.0
+    travelled = 0.0
+
+    while waiting:
+        feasible = []
+        for pid in waiting:
+            record = parcel[pid]
+            destination = record["delivery_location_id"]
+            distance = travelled + distances[location][destination]
+            round_trip = distance + distances[destination]["HUB"]
+            if load + record["size"] > context["capacity"] + 1e-9:
+                continue
+            if round_trip > context["max_trip_distance_km"] + 1e-9:
+                continue
+            if departure + round_trip > context["return_cutoff"]:
+                continue
+            feasible.append(pid)
+        if not feasible:
+            break
+
+        if anchor is None:
+            chosen = min(feasible, key=lambda pid: (
+                parcel[pid]["delivery_window_end"],
+                distances[location][parcel[pid]["delivery_location_id"]], pid,
+            ))
+        else:
+            earliest = min(parcel[pid]["delivery_window_end"] for pid in feasible)
+            group = [pid for pid in feasible
+                     if parcel[pid]["delivery_window_end"] <= earliest + deadline_band]
+            chosen = min(group, key=lambda pid: (
+                distances[anchor][parcel[pid]["delivery_location_id"]],
+                distances[location][parcel[pid]["delivery_location_id"]],
+                parcel[pid]["delivery_window_end"], pid,
+            ))
+
+        destination = parcel[chosen]["delivery_location_id"]
+        route.append(chosen)
+        waiting.remove(chosen)
+        travelled += distances[location][destination]
+        load += parcel[chosen]["size"]
+        location = destination
+        if anchor is None:
+            anchor = destination
+    return route
+
+
+def make_anchor_geo_dispatch(deadline_band: float) -> DispatchPolicy:
+    """Use geographic selection with the locked trip cap, waiting rule and 2-opt."""
+    def construct(parcel: Dict[str, Parcel], context: SimulationContext) -> List[str]:
+        return build_anchor_geo_route(parcel, context, deadline_band)
+
+    def dispatch(parcel: Dict[str, Parcel], context: SimulationContext) -> List[str]:
+        departure = context["current_time"] + context["departure_delay"]
+        limited = {**context, "return_cutoff": min(context["return_cutoff"], departure + 125.0)}
+        return build_window_aligned_route(parcel, limited, builder=construct)
+
+    return dispatch
 
 
 # Urgency-share construction

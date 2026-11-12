@@ -1,0 +1,9 @@
+{
+  "chosen_from_days_1_to_10": "geo_anchor0",
+  "first10_penalties": {
+    "deadline_trip_limit": 90383.74,
+    "geo_anchor0": 96716.05,
+    "geo_anchor30": 96716.05,
+    "geo_anchor60": 96716.05
+  }
+}
