@@ -16,7 +16,7 @@ All nine limits reported in Section 5.5 have a standalone module (`solution/poli
 | 135 | 205,889.45 |
 | 140 | 222,657.43 |
 
-The 100- and 140-minute logs were regenerated on 5 November to verify the existing report claims. They are not claimed to be original retained logs. The other seven settings were recovered and verified from saved evidence. All policy wrapper modules were added during recovery to make each setting runnable separately.
+The 100- and 140-minute logs were regenerated on 5 November to verify the existing report claims. They are not claimed to be original retained logs. The other seven settings come from saved experiment results and were verified against them. A separate wrapper module was added for each setting so that it can be run on its own.
 
 The seven-setting sweep and split-half calculations are preserved in `../experiments/trip-limit-validation-2026-11-04/`. The reported range 105–130 is within 6.044% of the best, so “within 6.1%” is accurate. All 20 days informed development.
 

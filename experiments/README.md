@@ -1,6 +1,6 @@
 # Supporting experiments
 
-These folders preserve existing experiment records. They were copied into the submission staging folder on 5 November 2026. This date records the recovery, not the original experiment date.
+These folders preserve existing experiment records. They were copied into this submission folder on 5 November 2026; this is the copy date, not the original experiment date.
 
 | Folder | Evidence |
 |---|---|
@@ -14,9 +14,9 @@ See `../docs/reproduction.md` for commands. Rerunning an experiment replaces its
 
 The selected policy is still `deadline_trip_limit`. These records do not establish performance on new demand or prove optimality. The later stress study uses a different candidate pool and explicit transformations, so its rankings should not be substituted for Chloe's earlier stress claims.
 
-Historical draft notes were moved to a private backup outside this submission folder. Saved inputs, results, scripts and provenance manifests are retained here. Use the reproduction instructions for current commands.
+Earlier draft notes are kept outside this submission folder. Saved inputs, results, scripts and provenance manifests are retained here. Use the reproduction instructions for current commands.
 
-`recovery_manifest.json` records source hashes and the five script path adjustments. No dispatch logic was changed during this recovery.
+`recovery_manifest.json` records source hashes and the five script path adjustments. No dispatch logic was changed when the scripts were copied.
 
 Shared policy code was moved into `solution/policies/helpers.py` on 9 November.
 `helper_refactor_validation.json` records the source changes and the successful

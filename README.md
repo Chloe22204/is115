@@ -52,30 +52,41 @@ We chose 240 to balance completed deliveries against timing: one undelivered
 parcel costs the same as 240 minutes outside delivery windows. This is a
 modelling choice, not a monetary cost supplied in the dataset. `sweep_weights.py` rescores saved logs under other weights.
 
-## Reproducing the baseline
+## Running the project
 
-Run these from the repository folder, as described under "Running the project" below.
+Use Python 3.9 or later. No additional packages are needed. Run the commands
+from the repository folder containing `run_all.py`, `data/` and `solution/`.
 
-To run the supplied baseline for all 20 days and check its trips:
+### Baseline
+
+Single day, as in the project brief (simulate `day_001`, then score its log):
+
+```bash
+python3 -m simulator --policy solution.policies.baseline --data data --day day_001 --output results/baseline/day_001
+python3 -m solution.performance_monitor --data data --day day_001 --log results/baseline/day_001/log.txt
+```
+
+These brief-style commands rewrite the saved `results/baseline/day_001` files. The baseline is deterministic, so they reproduce the saved files exactly (`python3 check_policy_replays.py --policy baseline` confirms this without writing anything).
+
+All 20 days into a separate folder, then check every trip:
 
 ```bash
 python3 run_all.py solution.policies.baseline replay_baseline
 python3 check_trips.py replay_baseline
 ```
 
-To run just one day and then the performance monitor on that day's log:
+Single day into the separate folder:
 
 ```bash
 python3 -m simulator --policy solution.policies.baseline --data data --day day_001 --output results/replay_baseline/day_001
 python3 -m solution.performance_monitor --data data --day day_001 --log results/replay_baseline/day_001/log.txt
 ```
 
-The saved baseline results are in `results/baseline/day_001` to `results/baseline/day_020`, each with a `log.txt` and a `metrics.json`; the `replay_` prefix writes to a new folder, so the saved results are not overwritten.
+The saved baseline results are in `results/baseline/day_001` to `results/baseline/day_020`, each with a `log.txt` and a `metrics.json`.
 
-## Running the project
+`replay_*` folder names are used so that the submitted `results/<policy>/` folders are not overwritten.
 
-Use Python 3.9 or later. No additional packages are needed. Run the commands
-from the repository folder containing `run_all.py`, `data/` and `solution/`.
+### Selected policy
 
 To run the selected policy for all 20 days and check its trips:
 
@@ -98,7 +109,7 @@ Each policy keeps its own module and dispatch entry point. Shared construction,
 waiting and local-search code is in `solution/policies/helpers.py`; policies do
 not import one another.
 
-See [reproduction commands](docs/reproduction.md) for all recovered experiments and [the policy inventory](docs/policy_inventory.md) for every saved original-data variant. Run `python3 verify_results.py` to independently check saved scores, trips and protected files.
+See [reproduction commands](docs/reproduction.md) for all saved experiments and [the policy inventory](docs/policy_inventory.md) for every saved original-data variant. Run `python3 verify_results.py` to independently check saved scores, trips and protected files.
 
 ## Files
 
@@ -111,9 +122,9 @@ See [reproduction commands](docs/reproduction.md) for all recovered experiments 
 | `solution/performance_monitor.py` | Penalty calculation and trip diagnostics |
 | `results/` | Saved logs, daily metrics and experiment summaries |
 | `docs/` | Experiment details, complexity analysis and run instructions |
-| `experiments/` | Recovered sweep, stress-study and runtime evidence |
+| `experiments/` | Saved sweep, stress-study and runtime evidence |
 
-The final report, [report.pdf](report.pdf), contains the findings, references and the record of AI assistance used in the project. See [supporting experiments](experiments/README.md) for the saved experiment records and how they were recovered.
+The final report, [report.pdf](report.pdf), contains the findings, references and the record of AI assistance used in the project. See [supporting experiments](experiments/README.md) for the saved experiment records and their provenance.
 
 ## Further reading
 

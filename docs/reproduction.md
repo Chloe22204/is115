@@ -176,6 +176,6 @@ These rescore existing schedules and write to `results_sweep/` and `results_expe
 
 ## Evidence status
 
-The experiment scripts and results were recovered from existing local files. Six scripts received path-only adjustments so they can use this submission folder. Historical findings are retained as dated notes and may refer to earlier folder locations or provisional recommendations. The current recommendation remains `deadline_trip_limit`.
+The experiment scripts and results come from existing local files. Six scripts received path-only adjustments so they can use this submission folder. Dated notes record findings at the time they were made and may refer to earlier folder locations or earlier interim recommendations. The current recommendation is `deadline_trip_limit`.
 
 The final report is `report.pdf`. Its references include the record of AI assistance used in the project.

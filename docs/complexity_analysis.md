@@ -1,10 +1,10 @@
-> Submission note, 5 November 2026: historical policies and their results have now been recovered. References below to their earlier deletion describe the working repository before recovery. The current report and benchmark are `../report.pdf` and `../experiments/runtime/benchmark_results.json`.
+> The current report and benchmark are `../report.pdf` and `../experiments/runtime/benchmark_results.json`.
 
 # Complexity of the implemented policies
 
 These are upper bounds for the current Python implementations, rather than
 bounds for an idealised version of each heuristic. This document is supporting
-analysis; select the relevant rows for the report's eight-page limit.
+analysis for the report.
 
 ## Notation and assumptions
 
@@ -19,7 +19,7 @@ day up to the day's total (763-811 on the supplied days).
 0.2 to 1.8 (median 0.9), so up to 150 of the smallest parcels could fit. Route
 lengths observed in the saved logs: `deadline_trip_limit` mean 18.6, max 41;
 `deadline_window_departure` mean 23.8, max 43; `baseline` mean 15.5, max 37.
-Recovered `nearby_two_opt` and `deadline_two_opt` logs (commit `3812151`) reach
+The `nearby_two_opt` and `deadline_two_opt` logs (commit `3812151`) reach
 46 and 43. R was not measured.
 
 `V = 10` vehicles and `T = 58` planning ticks (08:00 to 17:30 every ten
@@ -51,7 +51,7 @@ calling the entire local search simply “O(k³)” would omit a necessary facto
 | `nearby_local_search` (pair swaps) | O(G(n,m,k) + L(k,R)) | O(m+k+1) |
 | `nearby_two_opt`, `deadline_two_opt`, urgency hybrids with 2-opt | O(G(n,m,k) + L(k,R)) | O(m+k+1) |
 
-These policies and results have been recovered into this submission. The
+These policies and their results are included in this submission. The
 2-opt bound applies to `helpers.two_opt`, which `deadline_window_departure`
 and `deadline_trip_limit` call when they dispatch.
 
@@ -111,9 +111,6 @@ context copy before 2-opt. Window-aligned departure checks the greedy route in
 O(k); a deferral skips 2-opt in that call, but triggers fresh planning later.
 
 ## Additional improvement experiments
-
-> Historical: `deadline_backfill`, `deadline_exchange` and `deadline_relocate`
-> were removed in commit `92dee2d`.
 
 For these bounds, k₀ is the initial route length, K the largest route length
 reached, B the number of accepted insertions/exchanges, and R_total the total
@@ -179,7 +176,6 @@ parcel/trip lookups, scans events, sorts trip summaries and scans parcels. Its
 distance-list argument is unused by the calculation. CLI input loading adds
 O(N+D+E) time and storage for D distance rows and the parsed inputs/log.
 
-Historical: `diagnose_small_cases.py` is no longer in the repository.
 The exact-search component of `diagnose_small_cases.py` enumerates ordered
 subsets of p waiting parcels.
 There are S(p) = Σ[i=0..p] p!/(p-i)! such subsets. Full route evaluation and

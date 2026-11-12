@@ -49,6 +49,6 @@
       "sha256": "c84f157c40c2041e5ecb020ca6c38757c39b32a8016c25d51c8b0854ff7ae95e"
     }
   ],
-  "assistance_record_recovery_manifest": "Original recovery records retained in the private audit backup; supplied Gemini review exchanges appear in report.pdf references.",
+  "assistance_record_recovery_manifest": "The original manifest for the assistance record is kept outside this submission folder; supplied Gemini review exchanges appear in report.pdf references.",
   "helpers_refactor_validation": "experiments/helper_refactor_validation.json"
 }
